@@ -145,7 +145,7 @@ namespace Proyecto_ML
             this.tabControl1.Multiline = true;
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(902, 653);
+            this.tabControl1.Size = new System.Drawing.Size(1076, 576);
             this.tabControl1.TabIndex = 9;
             // 
             // tabPageRegistrar
@@ -155,7 +155,7 @@ namespace Proyecto_ML
             this.tabPageRegistrar.Location = new System.Drawing.Point(4, 29);
             this.tabPageRegistrar.Name = "tabPageRegistrar";
             this.tabPageRegistrar.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageRegistrar.Size = new System.Drawing.Size(894, 620);
+            this.tabPageRegistrar.Size = new System.Drawing.Size(1068, 543);
             this.tabPageRegistrar.TabIndex = 0;
             this.tabPageRegistrar.Text = "Registrar Nuevo";
             this.tabPageRegistrar.Click += new System.EventHandler(this.tabPage1_Click);
@@ -188,7 +188,7 @@ namespace Proyecto_ML
             this.panel1.Controls.Add(this.label3);
             this.panel1.Location = new System.Drawing.Point(199, 19);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(516, 563);
+            this.panel1.Size = new System.Drawing.Size(690, 486);
             this.panel1.TabIndex = 21;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -216,7 +216,7 @@ namespace Proyecto_ML
             // button1
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Location = new System.Drawing.Point(396, 508);
+            this.button1.Location = new System.Drawing.Point(570, 431);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(90, 35);
             this.button1.TabIndex = 21;
@@ -631,8 +631,10 @@ namespace Proyecto_ML
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(926, 677);
+            this.ClientSize = new System.Drawing.Size(1100, 600);
             this.Controls.Add(this.tabControl1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MinimumSize = new System.Drawing.Size(680, 500);
             this.Name = "Form1";
             this.Text = "Form1";
             this.tabControl1.ResumeLayout(false);
