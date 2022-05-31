@@ -18,6 +18,13 @@ namespace Proyecto_ML
             InitializeComponent();
         }
 
+        Registros reg = new Registros();
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            dgvDatos.DataSource = reg.MostrarRegistros();
+        }
+
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -79,11 +86,6 @@ namespace Proyecto_ML
         }
 
         private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
         {
 
         }
