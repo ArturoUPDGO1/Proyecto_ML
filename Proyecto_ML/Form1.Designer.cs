@@ -31,20 +31,20 @@ namespace Proyecto_ML
         {
             this.panelContenedor = new System.Windows.Forms.Panel();
             this.panelRegistrar = new System.Windows.Forms.Panel();
-            this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.dateCOT_reg = new System.Windows.Forms.DateTimePicker();
             this.label20 = new System.Windows.Forms.Label();
             this.btnGuardar = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtOT_reg = new System.Windows.Forms.TextBox();
+            this.cboxCIUDAD_reg = new System.Windows.Forms.ComboBox();
+            this.txtMON_reg = new System.Windows.Forms.TextBox();
+            this.cboxRS_reg = new System.Windows.Forms.ComboBox();
+            this.txtNFAC_reg = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.txtECO_reg = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.txtMCI_reg = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.txtCON_reg = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -74,20 +74,20 @@ namespace Proyecto_ML
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelRegistrar.BackColor = System.Drawing.Color.White;
-            this.panelRegistrar.Controls.Add(this.dateTimePicker);
+            this.panelRegistrar.Controls.Add(this.dateCOT_reg);
             this.panelRegistrar.Controls.Add(this.label20);
             this.panelRegistrar.Controls.Add(this.btnGuardar);
-            this.panelRegistrar.Controls.Add(this.textBox1);
-            this.panelRegistrar.Controls.Add(this.comboBox2);
-            this.panelRegistrar.Controls.Add(this.textBox6);
-            this.panelRegistrar.Controls.Add(this.comboBox1);
-            this.panelRegistrar.Controls.Add(this.textBox4);
+            this.panelRegistrar.Controls.Add(this.txtOT_reg);
+            this.panelRegistrar.Controls.Add(this.cboxCIUDAD_reg);
+            this.panelRegistrar.Controls.Add(this.txtMON_reg);
+            this.panelRegistrar.Controls.Add(this.cboxRS_reg);
+            this.panelRegistrar.Controls.Add(this.txtNFAC_reg);
             this.panelRegistrar.Controls.Add(this.label10);
-            this.panelRegistrar.Controls.Add(this.textBox7);
+            this.panelRegistrar.Controls.Add(this.txtECO_reg);
             this.panelRegistrar.Controls.Add(this.label9);
-            this.panelRegistrar.Controls.Add(this.textBox8);
+            this.panelRegistrar.Controls.Add(this.txtMCI_reg);
             this.panelRegistrar.Controls.Add(this.label7);
-            this.panelRegistrar.Controls.Add(this.textBox9);
+            this.panelRegistrar.Controls.Add(this.txtCON_reg);
             this.panelRegistrar.Controls.Add(this.label6);
             this.panelRegistrar.Controls.Add(this.label5);
             this.panelRegistrar.Controls.Add(this.label1);
@@ -99,18 +99,18 @@ namespace Proyecto_ML
             this.panelRegistrar.Size = new System.Drawing.Size(530, 500);
             this.panelRegistrar.TabIndex = 23;
             // 
-            // dateTimePicker
+            // dateCOT_reg
             // 
-            this.dateTimePicker.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.dateTimePicker.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dateTimePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker.Location = new System.Drawing.Point(185, 178);
-            this.dateTimePicker.MinDate = new System.DateTime(2021, 1, 1, 0, 0, 0, 0);
-            this.dateTimePicker.Name = "dateTimePicker";
-            this.dateTimePicker.Size = new System.Drawing.Size(185, 26);
-            this.dateTimePicker.TabIndex = 42;
-            this.dateTimePicker.Value = new System.DateTime(2022, 5, 5, 0, 0, 0, 0);
+            this.dateCOT_reg.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.dateCOT_reg.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dateCOT_reg.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateCOT_reg.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateCOT_reg.Location = new System.Drawing.Point(185, 178);
+            this.dateCOT_reg.MinDate = new System.DateTime(2021, 1, 1, 0, 0, 0, 0);
+            this.dateCOT_reg.Name = "dateCOT_reg";
+            this.dateCOT_reg.Size = new System.Drawing.Size(185, 26);
+            this.dateCOT_reg.TabIndex = 42;
+            this.dateCOT_reg.Value = new System.DateTime(2022, 5, 5, 0, 0, 0, 0);
             // 
             // label20
             // 
@@ -133,61 +133,61 @@ namespace Proyecto_ML
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnGuardar.Location = new System.Drawing.Point(230, 447);
+            this.btnGuardar.Location = new System.Drawing.Point(280, 453);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(90, 35);
             this.btnGuardar.TabIndex = 21;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
             // 
-            // textBox1
+            // txtOT_reg
             // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(185, 67);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(185, 26);
-            this.textBox1.TabIndex = 0;
+            this.txtOT_reg.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.txtOT_reg.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtOT_reg.Location = new System.Drawing.Point(185, 67);
+            this.txtOT_reg.Name = "txtOT_reg";
+            this.txtOT_reg.Size = new System.Drawing.Size(185, 26);
+            this.txtOT_reg.TabIndex = 0;
             // 
-            // comboBox2
+            // cboxCIUDAD_reg
             // 
-            this.comboBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(185, 371);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(185, 28);
-            this.comboBox2.TabIndex = 20;
+            this.cboxCIUDAD_reg.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.cboxCIUDAD_reg.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboxCIUDAD_reg.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboxCIUDAD_reg.FormattingEnabled = true;
+            this.cboxCIUDAD_reg.Location = new System.Drawing.Point(185, 371);
+            this.cboxCIUDAD_reg.Name = "cboxCIUDAD_reg";
+            this.cboxCIUDAD_reg.Size = new System.Drawing.Size(185, 28);
+            this.cboxCIUDAD_reg.TabIndex = 20;
             // 
-            // textBox6
+            // txtMON_reg
             // 
-            this.textBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(185, 141);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(185, 26);
-            this.textBox6.TabIndex = 5;
+            this.txtMON_reg.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.txtMON_reg.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMON_reg.Location = new System.Drawing.Point(185, 141);
+            this.txtMON_reg.Name = "txtMON_reg";
+            this.txtMON_reg.Size = new System.Drawing.Size(185, 26);
+            this.txtMON_reg.TabIndex = 5;
             // 
-            // comboBox1
+            // cboxRS_reg
             // 
-            this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(185, 215);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(185, 28);
-            this.comboBox1.TabIndex = 19;
+            this.cboxRS_reg.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.cboxRS_reg.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboxRS_reg.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboxRS_reg.FormattingEnabled = true;
+            this.cboxRS_reg.Location = new System.Drawing.Point(185, 215);
+            this.cboxRS_reg.Name = "cboxRS_reg";
+            this.cboxRS_reg.Size = new System.Drawing.Size(185, 28);
+            this.cboxRS_reg.TabIndex = 19;
             // 
-            // textBox4
+            // txtNFAC_reg
             // 
-            this.textBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(185, 254);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(185, 26);
-            this.textBox4.TabIndex = 3;
+            this.txtNFAC_reg.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.txtNFAC_reg.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNFAC_reg.Location = new System.Drawing.Point(185, 254);
+            this.txtNFAC_reg.Name = "txtNFAC_reg";
+            this.txtNFAC_reg.Size = new System.Drawing.Size(185, 26);
+            this.txtNFAC_reg.TabIndex = 3;
             // 
             // label10
             // 
@@ -200,14 +200,14 @@ namespace Proyecto_ML
             this.label10.TabIndex = 18;
             this.label10.Text = "Fecha de cotización";
             // 
-            // textBox7
+            // txtECO_reg
             // 
-            this.textBox7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(185, 104);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(185, 26);
-            this.textBox7.TabIndex = 6;
+            this.txtECO_reg.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.txtECO_reg.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtECO_reg.Location = new System.Drawing.Point(185, 104);
+            this.txtECO_reg.Name = "txtECO_reg";
+            this.txtECO_reg.Size = new System.Drawing.Size(185, 26);
+            this.txtECO_reg.TabIndex = 6;
             // 
             // label9
             // 
@@ -220,14 +220,14 @@ namespace Proyecto_ML
             this.label9.TabIndex = 17;
             this.label9.Text = "Razón social";
             // 
-            // textBox8
+            // txtMCI_reg
             // 
-            this.textBox8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.Location = new System.Drawing.Point(185, 410);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(185, 26);
-            this.textBox8.TabIndex = 7;
+            this.txtMCI_reg.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.txtMCI_reg.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMCI_reg.Location = new System.Drawing.Point(185, 410);
+            this.txtMCI_reg.Name = "txtMCI_reg";
+            this.txtMCI_reg.Size = new System.Drawing.Size(185, 26);
+            this.txtMCI_reg.TabIndex = 7;
             // 
             // label7
             // 
@@ -240,15 +240,15 @@ namespace Proyecto_ML
             this.label7.TabIndex = 15;
             this.label7.Text = "Monto con Impuesto";
             // 
-            // textBox9
+            // txtCON_reg
             // 
-            this.textBox9.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox9.Location = new System.Drawing.Point(185, 291);
-            this.textBox9.Multiline = true;
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(185, 69);
-            this.textBox9.TabIndex = 8;
+            this.txtCON_reg.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtCON_reg.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCON_reg.Location = new System.Drawing.Point(185, 291);
+            this.txtCON_reg.Multiline = true;
+            this.txtCON_reg.Name = "txtCON_reg";
+            this.txtCON_reg.Size = new System.Drawing.Size(185, 69);
+            this.txtCON_reg.TabIndex = 8;
             // 
             // label6
             // 
@@ -337,20 +337,20 @@ namespace Proyecto_ML
         #endregion
         private System.Windows.Forms.Panel panelContenedor;
         private System.Windows.Forms.Panel panelRegistrar;
-        private System.Windows.Forms.DateTimePicker dateTimePicker;
+        private System.Windows.Forms.DateTimePicker dateCOT_reg;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Button btnGuardar;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtOT_reg;
+        private System.Windows.Forms.ComboBox cboxCIUDAD_reg;
+        private System.Windows.Forms.TextBox txtMON_reg;
+        private System.Windows.Forms.ComboBox cboxRS_reg;
+        private System.Windows.Forms.TextBox txtNFAC_reg;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox txtECO_reg;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox txtMCI_reg;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox txtCON_reg;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label1;
