@@ -35,13 +35,13 @@ namespace Proyecto_ML
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnHome = new FontAwesome.Sharp.IconButton();
             this.panelBarraTitulo = new System.Windows.Forms.Panel();
+            this.btnMin = new FontAwesome.Sharp.IconButton();
+            this.btnMax = new FontAwesome.Sharp.IconButton();
             this.btnCerrar = new FontAwesome.Sharp.IconButton();
             this.lblTitleChildForm = new System.Windows.Forms.Label();
             this.iconCurrentChildForm = new FontAwesome.Sharp.IconPictureBox();
             this.panelShadow = new System.Windows.Forms.Panel();
             this.panelDesktop = new System.Windows.Forms.Panel();
-            this.btnMax = new FontAwesome.Sharp.IconButton();
-            this.btnMin = new FontAwesome.Sharp.IconButton();
             this.panelMenu.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panelBarraTitulo.SuspendLayout();
@@ -121,11 +121,13 @@ namespace Proyecto_ML
             | System.Windows.Forms.AnchorStyles.Left)));
             this.btnHome.BackColor = System.Drawing.Color.Transparent;
             this.btnHome.FlatAppearance.BorderSize = 0;
+            this.btnHome.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnHome.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHome.IconChar = FontAwesome.Sharp.IconChar.Home;
             this.btnHome.IconColor = System.Drawing.Color.Gainsboro;
             this.btnHome.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnHome.Location = new System.Drawing.Point(63, 25);
+            this.btnHome.Location = new System.Drawing.Point(61, 32);
             this.btnHome.Name = "btnHome";
             this.btnHome.Size = new System.Drawing.Size(75, 75);
             this.btnHome.TabIndex = 0;
@@ -146,6 +148,46 @@ namespace Proyecto_ML
             this.panelBarraTitulo.Size = new System.Drawing.Size(900, 70);
             this.panelBarraTitulo.TabIndex = 13;
             this.panelBarraTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelBarraTitulo_MouseDown);
+            // 
+            // btnMin
+            // 
+            this.btnMin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMin.BackColor = System.Drawing.Color.Transparent;
+            this.btnMin.FlatAppearance.BorderSize = 0;
+            this.btnMin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkBlue;
+            this.btnMin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
+            this.btnMin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMin.IconChar = FontAwesome.Sharp.IconChar.WindowMinimize;
+            this.btnMin.IconColor = System.Drawing.Color.Gainsboro;
+            this.btnMin.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.btnMin.IconSize = 20;
+            this.btnMin.Location = new System.Drawing.Point(810, 0);
+            this.btnMin.Name = "btnMin";
+            this.btnMin.Padding = new System.Windows.Forms.Padding(0, 3, 0, 0);
+            this.btnMin.Size = new System.Drawing.Size(30, 20);
+            this.btnMin.TabIndex = 5;
+            this.btnMin.UseVisualStyleBackColor = false;
+            this.btnMin.Click += new System.EventHandler(this.btnMin_Click);
+            // 
+            // btnMax
+            // 
+            this.btnMax.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMax.BackColor = System.Drawing.Color.Transparent;
+            this.btnMax.FlatAppearance.BorderSize = 0;
+            this.btnMax.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Purple;
+            this.btnMax.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumPurple;
+            this.btnMax.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMax.IconChar = FontAwesome.Sharp.IconChar.WindowRestore;
+            this.btnMax.IconColor = System.Drawing.Color.Gainsboro;
+            this.btnMax.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.btnMax.IconSize = 20;
+            this.btnMax.Location = new System.Drawing.Point(840, 0);
+            this.btnMax.Name = "btnMax";
+            this.btnMax.Padding = new System.Windows.Forms.Padding(0, 3, 0, 0);
+            this.btnMax.Size = new System.Drawing.Size(30, 20);
+            this.btnMax.TabIndex = 4;
+            this.btnMax.UseVisualStyleBackColor = false;
+            this.btnMax.Click += new System.EventHandler(this.btnMax_Click);
             // 
             // btnCerrar
             // 
@@ -210,46 +252,6 @@ namespace Proyecto_ML
             this.panelDesktop.Name = "panelDesktop";
             this.panelDesktop.Size = new System.Drawing.Size(900, 560);
             this.panelDesktop.TabIndex = 15;
-            // 
-            // btnMax
-            // 
-            this.btnMax.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMax.BackColor = System.Drawing.Color.Transparent;
-            this.btnMax.FlatAppearance.BorderSize = 0;
-            this.btnMax.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Purple;
-            this.btnMax.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumPurple;
-            this.btnMax.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMax.IconChar = FontAwesome.Sharp.IconChar.WindowRestore;
-            this.btnMax.IconColor = System.Drawing.Color.Gainsboro;
-            this.btnMax.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.btnMax.IconSize = 20;
-            this.btnMax.Location = new System.Drawing.Point(840, 0);
-            this.btnMax.Name = "btnMax";
-            this.btnMax.Padding = new System.Windows.Forms.Padding(0, 3, 0, 0);
-            this.btnMax.Size = new System.Drawing.Size(30, 20);
-            this.btnMax.TabIndex = 4;
-            this.btnMax.UseVisualStyleBackColor = false;
-            this.btnMax.Click += new System.EventHandler(this.btnMax_Click);
-            // 
-            // btnMin
-            // 
-            this.btnMin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMin.BackColor = System.Drawing.Color.Transparent;
-            this.btnMin.FlatAppearance.BorderSize = 0;
-            this.btnMin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkBlue;
-            this.btnMin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
-            this.btnMin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMin.IconChar = FontAwesome.Sharp.IconChar.WindowMinimize;
-            this.btnMin.IconColor = System.Drawing.Color.Gainsboro;
-            this.btnMin.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.btnMin.IconSize = 20;
-            this.btnMin.Location = new System.Drawing.Point(810, 0);
-            this.btnMin.Name = "btnMin";
-            this.btnMin.Padding = new System.Windows.Forms.Padding(0, 3, 0, 0);
-            this.btnMin.Size = new System.Drawing.Size(30, 20);
-            this.btnMin.TabIndex = 5;
-            this.btnMin.UseVisualStyleBackColor = false;
-            this.btnMin.Click += new System.EventHandler(this.btnMin_Click);
             // 
             // FormPricipal
             // 
