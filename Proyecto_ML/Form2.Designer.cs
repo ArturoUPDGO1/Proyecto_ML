@@ -31,24 +31,24 @@ namespace Proyecto_ML
         {
             this.panelContenedor = new System.Windows.Forms.Panel();
             this.panelConsulta = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.tabla_result_busqueda = new System.Windows.Forms.TableLayoutPanel();
+            this.dateCOT_buscar = new System.Windows.Forms.DateTimePicker();
             this.label8 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.label19 = new System.Windows.Forms.Label();
-            this.textBox15 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.txtID_buscar = new System.Windows.Forms.TextBox();
+            this.txtOT_buscar = new System.Windows.Forms.TextBox();
+            this.cboxCIUDAD_buscar = new System.Windows.Forms.ComboBox();
+            this.txtMON_buscar = new System.Windows.Forms.TextBox();
+            this.cboxRS_buscar = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.txtECO_buscar = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.txtMCI_buscar = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.txtCON_buscar = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.txtNFAC_buscar = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
@@ -77,24 +77,24 @@ namespace Proyecto_ML
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelConsulta.BackColor = System.Drawing.Color.White;
-            this.panelConsulta.Controls.Add(this.tableLayoutPanel1);
-            this.panelConsulta.Controls.Add(this.dateTimePicker1);
+            this.panelConsulta.Controls.Add(this.dateCOT_buscar);
+            this.panelConsulta.Controls.Add(this.tabla_result_busqueda);
             this.panelConsulta.Controls.Add(this.label8);
             this.panelConsulta.Controls.Add(this.button2);
             this.panelConsulta.Controls.Add(this.label19);
-            this.panelConsulta.Controls.Add(this.textBox15);
-            this.panelConsulta.Controls.Add(this.textBox3);
-            this.panelConsulta.Controls.Add(this.comboBox3);
-            this.panelConsulta.Controls.Add(this.textBox5);
-            this.panelConsulta.Controls.Add(this.comboBox4);
+            this.panelConsulta.Controls.Add(this.txtID_buscar);
+            this.panelConsulta.Controls.Add(this.txtOT_buscar);
+            this.panelConsulta.Controls.Add(this.cboxCIUDAD_buscar);
+            this.panelConsulta.Controls.Add(this.txtMON_buscar);
+            this.panelConsulta.Controls.Add(this.cboxRS_buscar);
             this.panelConsulta.Controls.Add(this.label11);
-            this.panelConsulta.Controls.Add(this.textBox11);
+            this.panelConsulta.Controls.Add(this.txtECO_buscar);
             this.panelConsulta.Controls.Add(this.label12);
-            this.panelConsulta.Controls.Add(this.textBox12);
+            this.panelConsulta.Controls.Add(this.txtMCI_buscar);
             this.panelConsulta.Controls.Add(this.label13);
-            this.panelConsulta.Controls.Add(this.textBox13);
+            this.panelConsulta.Controls.Add(this.txtCON_buscar);
             this.panelConsulta.Controls.Add(this.label14);
-            this.panelConsulta.Controls.Add(this.textBox14);
+            this.panelConsulta.Controls.Add(this.txtNFAC_buscar);
             this.panelConsulta.Controls.Add(this.label15);
             this.panelConsulta.Controls.Add(this.label16);
             this.panelConsulta.Controls.Add(this.label17);
@@ -105,40 +105,40 @@ namespace Proyecto_ML
             this.panelConsulta.Size = new System.Drawing.Size(900, 560);
             this.panelConsulta.TabIndex = 43;
             // 
-            // tableLayoutPanel1
+            // tabla_result_busqueda
             // 
-            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.tabla_result_busqueda.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.tableLayoutPanel1.BackColor = System.Drawing.Color.LightGray;
-            this.tableLayoutPanel1.ColumnCount = 10;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(396, 20);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 3.888889F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 96.11111F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(474, 510);
-            this.tableLayoutPanel1.TabIndex = 42;
+            this.tabla_result_busqueda.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.tabla_result_busqueda.BackColor = System.Drawing.Color.LightGray;
+            this.tabla_result_busqueda.ColumnCount = 10;
+            this.tabla_result_busqueda.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tabla_result_busqueda.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tabla_result_busqueda.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tabla_result_busqueda.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tabla_result_busqueda.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tabla_result_busqueda.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tabla_result_busqueda.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tabla_result_busqueda.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tabla_result_busqueda.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tabla_result_busqueda.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tabla_result_busqueda.Location = new System.Drawing.Point(396, 20);
+            this.tabla_result_busqueda.Name = "tabla_result_busqueda";
+            this.tabla_result_busqueda.RowCount = 2;
+            this.tabla_result_busqueda.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 3.888889F));
+            this.tabla_result_busqueda.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 96.11111F));
+            this.tabla_result_busqueda.Size = new System.Drawing.Size(474, 510);
+            this.tabla_result_busqueda.TabIndex = 42;
             // 
-            // dateTimePicker1
+            // dateCOT_buscar
             // 
-            this.dateTimePicker1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(175, 292);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(185, 26);
-            this.dateTimePicker1.TabIndex = 41;
+            this.dateCOT_buscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.dateCOT_buscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateCOT_buscar.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateCOT_buscar.Location = new System.Drawing.Point(175, 214);
+            this.dateCOT_buscar.Name = "dateCOT_buscar";
+            this.dateCOT_buscar.Size = new System.Drawing.Size(185, 26);
+            this.dateCOT_buscar.TabIndex = 41;
             // 
             // label8
             // 
@@ -154,7 +154,7 @@ namespace Proyecto_ML
             // button2
             // 
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.button2.Location = new System.Drawing.Point(217, 495);
+            this.button2.Location = new System.Drawing.Point(270, 495);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(90, 35);
             this.button2.TabIndex = 21;
@@ -172,54 +172,54 @@ namespace Proyecto_ML
             this.label19.TabIndex = 40;
             this.label19.Text = "ID Principal";
             // 
-            // textBox15
+            // txtID_buscar
             // 
-            this.textBox15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.textBox15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox15.Location = new System.Drawing.Point(175, 68);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(185, 26);
-            this.textBox15.TabIndex = 39;
+            this.txtID_buscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.txtID_buscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtID_buscar.Location = new System.Drawing.Point(175, 68);
+            this.txtID_buscar.Name = "txtID_buscar";
+            this.txtID_buscar.Size = new System.Drawing.Size(185, 26);
+            this.txtID_buscar.TabIndex = 39;
             // 
-            // textBox3
+            // txtOT_buscar
             // 
-            this.textBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(175, 105);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(185, 26);
-            this.textBox3.TabIndex = 0;
+            this.txtOT_buscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.txtOT_buscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtOT_buscar.Location = new System.Drawing.Point(175, 105);
+            this.txtOT_buscar.Name = "txtOT_buscar";
+            this.txtOT_buscar.Size = new System.Drawing.Size(185, 26);
+            this.txtOT_buscar.TabIndex = 0;
             // 
-            // comboBox3
+            // cboxCIUDAD_buscar
             // 
-            this.comboBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(175, 409);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(185, 28);
-            this.comboBox3.TabIndex = 20;
+            this.cboxCIUDAD_buscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.cboxCIUDAD_buscar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboxCIUDAD_buscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboxCIUDAD_buscar.FormattingEnabled = true;
+            this.cboxCIUDAD_buscar.Location = new System.Drawing.Point(175, 409);
+            this.cboxCIUDAD_buscar.Name = "cboxCIUDAD_buscar";
+            this.cboxCIUDAD_buscar.Size = new System.Drawing.Size(185, 28);
+            this.cboxCIUDAD_buscar.TabIndex = 20;
             // 
-            // textBox5
+            // txtMON_buscar
             // 
-            this.textBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(175, 179);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(185, 26);
-            this.textBox5.TabIndex = 5;
+            this.txtMON_buscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.txtMON_buscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMON_buscar.Location = new System.Drawing.Point(175, 179);
+            this.txtMON_buscar.Name = "txtMON_buscar";
+            this.txtMON_buscar.Size = new System.Drawing.Size(185, 26);
+            this.txtMON_buscar.TabIndex = 5;
             // 
-            // comboBox4
+            // cboxRS_buscar
             // 
-            this.comboBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.comboBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(175, 253);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(185, 28);
-            this.comboBox4.TabIndex = 19;
+            this.cboxRS_buscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.cboxRS_buscar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboxRS_buscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboxRS_buscar.FormattingEnabled = true;
+            this.cboxRS_buscar.Location = new System.Drawing.Point(175, 253);
+            this.cboxRS_buscar.Name = "cboxRS_buscar";
+            this.cboxRS_buscar.Size = new System.Drawing.Size(185, 28);
+            this.cboxRS_buscar.TabIndex = 19;
             // 
             // label11
             // 
@@ -232,14 +232,14 @@ namespace Proyecto_ML
             this.label11.TabIndex = 18;
             this.label11.Text = "Fecha de cotización";
             // 
-            // textBox11
+            // txtECO_buscar
             // 
-            this.textBox11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.textBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox11.Location = new System.Drawing.Point(175, 142);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(185, 26);
-            this.textBox11.TabIndex = 6;
+            this.txtECO_buscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.txtECO_buscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtECO_buscar.Location = new System.Drawing.Point(175, 142);
+            this.txtECO_buscar.Name = "txtECO_buscar";
+            this.txtECO_buscar.Size = new System.Drawing.Size(185, 26);
+            this.txtECO_buscar.TabIndex = 6;
             // 
             // label12
             // 
@@ -252,14 +252,14 @@ namespace Proyecto_ML
             this.label12.TabIndex = 17;
             this.label12.Text = "Razón social";
             // 
-            // textBox12
+            // txtMCI_buscar
             // 
-            this.textBox12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.textBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox12.Location = new System.Drawing.Point(175, 448);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(185, 26);
-            this.textBox12.TabIndex = 7;
+            this.txtMCI_buscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.txtMCI_buscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMCI_buscar.Location = new System.Drawing.Point(175, 448);
+            this.txtMCI_buscar.Name = "txtMCI_buscar";
+            this.txtMCI_buscar.Size = new System.Drawing.Size(185, 26);
+            this.txtMCI_buscar.TabIndex = 7;
             // 
             // label13
             // 
@@ -272,15 +272,15 @@ namespace Proyecto_ML
             this.label13.TabIndex = 15;
             this.label13.Text = "Monto con Impuesto";
             // 
-            // textBox13
+            // txtCON_buscar
             // 
-            this.textBox13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.textBox13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox13.Location = new System.Drawing.Point(175, 329);
-            this.textBox13.Multiline = true;
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(185, 69);
-            this.textBox13.TabIndex = 8;
+            this.txtCON_buscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.txtCON_buscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCON_buscar.Location = new System.Drawing.Point(175, 329);
+            this.txtCON_buscar.Multiline = true;
+            this.txtCON_buscar.Name = "txtCON_buscar";
+            this.txtCON_buscar.Size = new System.Drawing.Size(185, 69);
+            this.txtCON_buscar.TabIndex = 8;
             // 
             // label14
             // 
@@ -293,14 +293,14 @@ namespace Proyecto_ML
             this.label14.TabIndex = 14;
             this.label14.Text = "Ciudad";
             // 
-            // textBox14
+            // txtNFAC_buscar
             // 
-            this.textBox14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.textBox14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox14.Location = new System.Drawing.Point(175, 216);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(185, 26);
-            this.textBox14.TabIndex = 1;
+            this.txtNFAC_buscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.txtNFAC_buscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNFAC_buscar.Location = new System.Drawing.Point(175, 294);
+            this.txtNFAC_buscar.Name = "txtNFAC_buscar";
+            this.txtNFAC_buscar.Size = new System.Drawing.Size(185, 26);
+            this.txtNFAC_buscar.TabIndex = 1;
             // 
             // label15
             // 
@@ -379,29 +379,29 @@ namespace Proyecto_ML
         #endregion
         private System.Windows.Forms.Panel panelContenedor;
         private System.Windows.Forms.Panel panelConsulta;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dateCOT_buscar;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.TextBox textBox15;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.TextBox txtID_buscar;
+        private System.Windows.Forms.TextBox txtOT_buscar;
+        private System.Windows.Forms.ComboBox cboxCIUDAD_buscar;
+        private System.Windows.Forms.TextBox txtMON_buscar;
+        private System.Windows.Forms.ComboBox cboxRS_buscar;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.TextBox txtECO_buscar;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.TextBox txtMCI_buscar;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox textBox13;
+        private System.Windows.Forms.TextBox txtCON_buscar;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox textBox14;
+        private System.Windows.Forms.TextBox txtNFAC_buscar;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.TableLayoutPanel tabla_result_busqueda;
     }
 }
 
