@@ -11,10 +11,10 @@ using System.Runtime.InteropServices;
 
 namespace Proyecto_ML
 {
-    public partial class Form2 : Form
+    public partial class FormConsulta : Form
     {
         //Constructor
-        public Form2()
+        public FormConsulta()
         {
             InitializeComponent();
             //Estas lineas eliminan los parpadeos del formulario o controles en la interfaz grafica (Pero no en un 100%)

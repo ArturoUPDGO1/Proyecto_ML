@@ -1,7 +1,7 @@
 ﻿
 namespace Proyecto_ML
 {
-    partial class Form2
+    partial class FormConsulta
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -29,12 +29,6 @@ namespace Proyecto_ML
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
-            this.panelBarraTitulo = new System.Windows.Forms.Panel();
-            this.btnRestaurar = new System.Windows.Forms.Button();
-            this.btnMinimizar = new System.Windows.Forms.Button();
-            this.btnMaximizar = new System.Windows.Forms.Button();
-            this.btnCerrar = new System.Windows.Forms.Button();
             this.panelContenedor = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -60,123 +54,19 @@ namespace Proyecto_ML
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
-            this.panelBarraTitulo.SuspendLayout();
             this.panelContenedor.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // panelBarraTitulo
-            // 
-            this.panelBarraTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(182)))));
-            this.panelBarraTitulo.Controls.Add(this.btnRestaurar);
-            this.panelBarraTitulo.Controls.Add(this.btnMinimizar);
-            this.panelBarraTitulo.Controls.Add(this.btnMaximizar);
-            this.panelBarraTitulo.Controls.Add(this.btnCerrar);
-            this.panelBarraTitulo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelBarraTitulo.Location = new System.Drawing.Point(0, 0);
-            this.panelBarraTitulo.Name = "panelBarraTitulo";
-            this.panelBarraTitulo.Size = new System.Drawing.Size(1000, 40);
-            this.panelBarraTitulo.TabIndex = 10;
-            this.panelBarraTitulo.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelBarraTitulo_MouseMove);
-            // 
-            // btnRestaurar
-            // 
-            this.btnRestaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnRestaurar.BackColor = System.Drawing.Color.Transparent;
-            this.btnRestaurar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRestaurar.BackgroundImage")));
-            this.btnRestaurar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnRestaurar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRestaurar.FlatAppearance.BorderSize = 0;
-            this.btnRestaurar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnRestaurar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnRestaurar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRestaurar.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold);
-            this.btnRestaurar.ForeColor = System.Drawing.Color.White;
-            this.btnRestaurar.Location = new System.Drawing.Point(940, 10);
-            this.btnRestaurar.Margin = new System.Windows.Forms.Padding(0);
-            this.btnRestaurar.Name = "btnRestaurar";
-            this.btnRestaurar.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnRestaurar.Size = new System.Drawing.Size(20, 20);
-            this.btnRestaurar.TabIndex = 3;
-            this.btnRestaurar.UseVisualStyleBackColor = false;
-            this.btnRestaurar.Click += new System.EventHandler(this.btnRestaurar_Click);
-            // 
-            // btnMinimizar
-            // 
-            this.btnMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMinimizar.BackColor = System.Drawing.Color.Transparent;
-            this.btnMinimizar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnMinimizar.BackgroundImage")));
-            this.btnMinimizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMinimizar.FlatAppearance.BorderSize = 0;
-            this.btnMinimizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnMinimizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMinimizar.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold);
-            this.btnMinimizar.ForeColor = System.Drawing.Color.White;
-            this.btnMinimizar.Location = new System.Drawing.Point(910, 10);
-            this.btnMinimizar.Margin = new System.Windows.Forms.Padding(0);
-            this.btnMinimizar.Name = "btnMinimizar";
-            this.btnMinimizar.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnMinimizar.Size = new System.Drawing.Size(20, 20);
-            this.btnMinimizar.TabIndex = 2;
-            this.btnMinimizar.UseVisualStyleBackColor = false;
-            this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
-            // 
-            // btnMaximizar
-            // 
-            this.btnMaximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMaximizar.BackColor = System.Drawing.Color.Transparent;
-            this.btnMaximizar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnMaximizar.BackgroundImage")));
-            this.btnMaximizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnMaximizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMaximizar.FlatAppearance.BorderSize = 0;
-            this.btnMaximizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnMaximizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnMaximizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMaximizar.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold);
-            this.btnMaximizar.ForeColor = System.Drawing.Color.White;
-            this.btnMaximizar.Location = new System.Drawing.Point(940, 10);
-            this.btnMaximizar.Margin = new System.Windows.Forms.Padding(0);
-            this.btnMaximizar.Name = "btnMaximizar";
-            this.btnMaximizar.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnMaximizar.Size = new System.Drawing.Size(20, 20);
-            this.btnMaximizar.TabIndex = 1;
-            this.btnMaximizar.UseVisualStyleBackColor = false;
-            this.btnMaximizar.Click += new System.EventHandler(this.btnMaximizar_Click);
-            // 
-            // btnCerrar
-            // 
-            this.btnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCerrar.BackColor = System.Drawing.Color.Transparent;
-            this.btnCerrar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCerrar.BackgroundImage")));
-            this.btnCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCerrar.FlatAppearance.BorderSize = 0;
-            this.btnCerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrar.Font = new System.Drawing.Font("Calibri", 6F, System.Drawing.FontStyle.Bold);
-            this.btnCerrar.ForeColor = System.Drawing.Color.White;
-            this.btnCerrar.Location = new System.Drawing.Point(970, 10);
-            this.btnCerrar.Margin = new System.Windows.Forms.Padding(0);
-            this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnCerrar.Size = new System.Drawing.Size(20, 20);
-            this.btnCerrar.TabIndex = 0;
-            this.btnCerrar.UseVisualStyleBackColor = false;
-            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // panelContenedor
             // 
             this.panelContenedor.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panelContenedor.Controls.Add(this.panel3);
-            this.panelContenedor.Controls.Add(this.panelBarraTitulo);
             this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContenedor.Location = new System.Drawing.Point(0, 0);
             this.panelContenedor.MinimumSize = new System.Drawing.Size(530, 600);
             this.panelContenedor.Name = "panelContenedor";
-            this.panelContenedor.Size = new System.Drawing.Size(1000, 600);
+            this.panelContenedor.Size = new System.Drawing.Size(900, 600);
             this.panelContenedor.TabIndex = 11;
             // 
             // panel3
@@ -206,9 +96,9 @@ namespace Proyecto_ML
             this.panel3.Controls.Add(this.label18);
             this.panel3.Controls.Add(this.label21);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 40);
+            this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1000, 560);
+            this.panel3.Size = new System.Drawing.Size(900, 560);
             this.panel3.TabIndex = 43;
             // 
             // tableLayoutPanel1
@@ -234,7 +124,7 @@ namespace Proyecto_ML
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 3.888889F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 96.11111F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(486, 540);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(386, 540);
             this.tableLayoutPanel1.TabIndex = 42;
             // 
             // dateTimePicker1
@@ -440,18 +330,17 @@ namespace Proyecto_ML
             this.label21.TabIndex = 11;
             this.label21.Text = "Num. Económico";
             // 
-            // Form2
+            // FormConsulta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1000, 600);
+            this.ClientSize = new System.Drawing.Size(900, 560);
             this.Controls.Add(this.panelContenedor);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.MinimumSize = new System.Drawing.Size(530, 600);
-            this.Name = "Form2";
-            this.Text = "Form1";
+            this.MinimumSize = new System.Drawing.Size(900, 560);
+            this.Name = "FormConsulta";
+            this.Text = "Buscar Registro";
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.panelBarraTitulo.ResumeLayout(false);
             this.panelContenedor.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
@@ -460,12 +349,7 @@ namespace Proyecto_ML
         }
 
         #endregion
-        private System.Windows.Forms.Panel panelBarraTitulo;
-        private System.Windows.Forms.Button btnMaximizar;
-        private System.Windows.Forms.Button btnCerrar;
         private System.Windows.Forms.Panel panelContenedor;
-        private System.Windows.Forms.Button btnRestaurar;
-        private System.Windows.Forms.Button btnMinimizar;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label8;

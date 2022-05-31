@@ -33,7 +33,16 @@ namespace Proyecto_ML
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnHome = new FontAwesome.Sharp.IconButton();
+            this.panelBarraTitulo = new System.Windows.Forms.Panel();
+            this.iconCurrentChildForm = new FontAwesome.Sharp.IconPictureBox();
+            this.lblTitleChildForm = new System.Windows.Forms.Label();
+            this.panelShadow = new System.Windows.Forms.Panel();
+            this.panelDesktop = new System.Windows.Forms.Panel();
             this.panelMenu.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panelBarraTitulo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconCurrentChildForm)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -94,21 +103,101 @@ namespace Proyecto_ML
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.btnHome);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(220, 140);
             this.panel2.TabIndex = 0;
             // 
+            // btnHome
+            // 
+            this.btnHome.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnHome.BackColor = System.Drawing.Color.Transparent;
+            this.btnHome.FlatAppearance.BorderSize = 0;
+            this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHome.IconChar = FontAwesome.Sharp.IconChar.Home;
+            this.btnHome.IconColor = System.Drawing.Color.Gainsboro;
+            this.btnHome.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnHome.Location = new System.Drawing.Point(63, 25);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Size = new System.Drawing.Size(75, 75);
+            this.btnHome.TabIndex = 0;
+            this.btnHome.UseVisualStyleBackColor = false;
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
+            // 
+            // panelBarraTitulo
+            // 
+            this.panelBarraTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
+            this.panelBarraTitulo.Controls.Add(this.lblTitleChildForm);
+            this.panelBarraTitulo.Controls.Add(this.iconCurrentChildForm);
+            this.panelBarraTitulo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelBarraTitulo.Location = new System.Drawing.Point(220, 0);
+            this.panelBarraTitulo.Name = "panelBarraTitulo";
+            this.panelBarraTitulo.Size = new System.Drawing.Size(580, 70);
+            this.panelBarraTitulo.TabIndex = 13;
+            this.panelBarraTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelBarraTitulo_MouseDown);
+            // 
+            // iconCurrentChildForm
+            // 
+            this.iconCurrentChildForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
+            this.iconCurrentChildForm.ForeColor = System.Drawing.Color.MediumPurple;
+            this.iconCurrentChildForm.IconChar = FontAwesome.Sharp.IconChar.Home;
+            this.iconCurrentChildForm.IconColor = System.Drawing.Color.MediumPurple;
+            this.iconCurrentChildForm.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconCurrentChildForm.IconSize = 40;
+            this.iconCurrentChildForm.Location = new System.Drawing.Point(27, 22);
+            this.iconCurrentChildForm.Name = "iconCurrentChildForm";
+            this.iconCurrentChildForm.Size = new System.Drawing.Size(40, 40);
+            this.iconCurrentChildForm.TabIndex = 0;
+            this.iconCurrentChildForm.TabStop = false;
+            // 
+            // lblTitleChildForm
+            // 
+            this.lblTitleChildForm.AutoSize = true;
+            this.lblTitleChildForm.BackColor = System.Drawing.Color.Transparent;
+            this.lblTitleChildForm.ForeColor = System.Drawing.Color.Gainsboro;
+            this.lblTitleChildForm.Location = new System.Drawing.Point(73, 36);
+            this.lblTitleChildForm.Name = "lblTitleChildForm";
+            this.lblTitleChildForm.Size = new System.Drawing.Size(35, 13);
+            this.lblTitleChildForm.TabIndex = 1;
+            this.lblTitleChildForm.Text = "Home";
+            // 
+            // panelShadow
+            // 
+            this.panelShadow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(24)))), ((int)(((byte)(58)))));
+            this.panelShadow.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelShadow.Location = new System.Drawing.Point(220, 70);
+            this.panelShadow.Name = "panelShadow";
+            this.panelShadow.Size = new System.Drawing.Size(580, 9);
+            this.panelShadow.TabIndex = 14;
+            // 
+            // panelDesktop
+            // 
+            this.panelDesktop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelDesktop.Location = new System.Drawing.Point(220, 79);
+            this.panelDesktop.Name = "panelDesktop";
+            this.panelDesktop.Size = new System.Drawing.Size(580, 371);
+            this.panelDesktop.TabIndex = 15;
+            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.panelDesktop);
+            this.Controls.Add(this.panelShadow);
+            this.Controls.Add(this.panelBarraTitulo);
             this.Controls.Add(this.panelMenu);
             this.Name = "Form3";
             this.Text = "Form3";
             this.panelMenu.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panelBarraTitulo.ResumeLayout(false);
+            this.panelBarraTitulo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconCurrentChildForm)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -119,5 +208,11 @@ namespace Proyecto_ML
         private FontAwesome.Sharp.IconButton iconButton2;
         private FontAwesome.Sharp.IconButton iconButton1;
         private System.Windows.Forms.Panel panel2;
+        private FontAwesome.Sharp.IconButton btnHome;
+        private System.Windows.Forms.Panel panelBarraTitulo;
+        private System.Windows.Forms.Label lblTitleChildForm;
+        private FontAwesome.Sharp.IconPictureBox iconCurrentChildForm;
+        private System.Windows.Forms.Panel panelShadow;
+        private System.Windows.Forms.Panel panelDesktop;
     }
 }
