@@ -57,9 +57,11 @@ namespace Proyecto_ML
             // 
             // panelContenedor
             // 
+            this.panelContenedor.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panelContenedor.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panelContenedor.Controls.Add(this.panelRegistrar);
-            this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContenedor.Location = new System.Drawing.Point(0, 0);
             this.panelContenedor.MinimumSize = new System.Drawing.Size(530, 500);
             this.panelContenedor.Name = "panelContenedor";
@@ -68,6 +70,9 @@ namespace Proyecto_ML
             // 
             // panelRegistrar
             // 
+            this.panelRegistrar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panelRegistrar.BackColor = System.Drawing.Color.White;
             this.panelRegistrar.Controls.Add(this.dateTimePicker);
             this.panelRegistrar.Controls.Add(this.label20);
@@ -89,7 +94,6 @@ namespace Proyecto_ML
             this.panelRegistrar.Controls.Add(this.label4);
             this.panelRegistrar.Controls.Add(this.label2);
             this.panelRegistrar.Controls.Add(this.label3);
-            this.panelRegistrar.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelRegistrar.Location = new System.Drawing.Point(0, 0);
             this.panelRegistrar.Name = "panelRegistrar";
             this.panelRegistrar.Size = new System.Drawing.Size(530, 500);
@@ -100,6 +104,7 @@ namespace Proyecto_ML
             this.dateTimePicker.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.dateTimePicker.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dateTimePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker.Location = new System.Drawing.Point(185, 178);
             this.dateTimePicker.MinDate = new System.DateTime(2021, 1, 1, 0, 0, 0, 0);
             this.dateTimePicker.Name = "dateTimePicker";
@@ -112,7 +117,7 @@ namespace Proyecto_ML
             this.label20.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(200, 20);
+            this.label20.Location = new System.Drawing.Point(116, 20);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(159, 26);
             this.label20.TabIndex = 22;
@@ -315,10 +320,10 @@ namespace Proyecto_ML
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(530, 500);
+            this.ClientSize = new System.Drawing.Size(420, 500);
             this.Controls.Add(this.panelContenedor);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.MinimumSize = new System.Drawing.Size(530, 500);
+            this.MinimumSize = new System.Drawing.Size(420, 500);
             this.Name = "FormAgregarRegistro";
             this.Text = "Agregar Registro";
             this.Load += new System.EventHandler(this.Form1_Load);

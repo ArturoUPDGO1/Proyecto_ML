@@ -12,7 +12,7 @@ using FontAwesome.Sharp;
 
 namespace Proyecto_ML
 {
-    public partial class Form3 : Form
+    public partial class FormPricipal : Form
     {
 
         //Campos
@@ -21,7 +21,7 @@ namespace Proyecto_ML
         private Form currentChildForm;
 
         //Constructor
-        public Form3()
+        public FormPricipal()
         {
             InitializeComponent();
             leftBorderBtn = new Panel();
@@ -139,6 +139,24 @@ namespace Proyecto_ML
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnMax_Click(object sender, EventArgs e)
+        {
+            if (WindowState == FormWindowState.Normal)
+                WindowState = FormWindowState.Maximized;
+            else
+                WindowState = FormWindowState.Normal;
+        }
+
+        private void btnMin_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
         }
     }
 }
