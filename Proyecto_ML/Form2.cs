@@ -92,7 +92,25 @@ namespace Proyecto_ML
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-            dgvDatos.DataSource = consul.MostrarFacturas();
+            DataTable dt = (DataTable)dgvDatos.DataSource;
+            if (dt == null)
+            {
+
+            }
+            else
+            {
+                dt.Clear();
+            }
+            
+
+            string id, ot;
+            id = (String.IsNullOrEmpty(txtID_buscar.Text)) ? null : txtID_buscar.Text;
+            ot = (String.IsNullOrEmpty(txtOT_buscar.Text)) ? null : txtOT_buscar.Text;
+
+            dgvDatos.DataSource = consul.MostrarFacturas(id,ot);
+
+            txtID_buscar.Text = "";
+            txtOT_buscar.Text = "";
         }
     }
 }
