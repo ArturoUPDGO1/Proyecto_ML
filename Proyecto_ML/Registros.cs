@@ -38,7 +38,7 @@ namespace Proyecto_ML
 
             SqlParameter param = new SqlParameter("@IdMain", id);
             param = new SqlParameter("@OrdenDeTrabajo", ot);
-            param.Direction = ParameterDirection.Input;
+            //param.Direction = ParameterDirection.Input;
             command.Parameters.Add(param);
 
             SqlDataAdapter da = new SqlDataAdapter();
