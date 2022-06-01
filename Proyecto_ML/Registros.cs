@@ -26,7 +26,7 @@ namespace Proyecto_ML
     public class Consulta
     {
 
-        public DataTable MostrarFacturas(string id, string ot)
+        public DataTable MostrarFacturas(string id, string ot, string eco, string mon, string rs, string nf, string con, string ciu, string mci)
         {
             DataTable dt = new DataTable();
 
@@ -37,8 +37,22 @@ namespace Proyecto_ML
             command.CommandType = CommandType.StoredProcedure;
 
             SqlParameter param = new SqlParameter("@IdMain", id);
+            command.Parameters.Add(param);
             param = new SqlParameter("@OrdenDeTrabajo", ot);
-            //param.Direction = ParameterDirection.Input;
+            command.Parameters.Add(param);
+            param = new SqlParameter("@NumEconomico", eco);
+            command.Parameters.Add(param);
+            param = new SqlParameter("@Monto", mon);
+            command.Parameters.Add(param);
+            param = new SqlParameter("@RazonSocial", rs);
+            command.Parameters.Add(param);
+            param = new SqlParameter("@NumFactura", nf);
+            command.Parameters.Add(param);
+            param = new SqlParameter("@Conceptos", con);
+            command.Parameters.Add(param);
+            param = new SqlParameter("@Ciudad", ciu);
+            command.Parameters.Add(param);
+            param = new SqlParameter("@MontoCImpuesto", mci);
             command.Parameters.Add(param);
 
             SqlDataAdapter da = new SqlDataAdapter();

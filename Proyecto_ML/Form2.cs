@@ -103,14 +103,60 @@ namespace Proyecto_ML
             }
             
 
-            string id, ot;
+            string id, ot, eco, mon, rs, nf, con, ciu, mci;
+            //DateTime fc = this.dateCOT_buscar.Value.Date;
+
             id = (String.IsNullOrEmpty(txtID_buscar.Text)) ? null : txtID_buscar.Text;
             ot = (String.IsNullOrEmpty(txtOT_buscar.Text)) ? null : txtOT_buscar.Text;
+            eco = (String.IsNullOrEmpty(txtECO_buscar.Text)) ? null : txtECO_buscar.Text;
+            mon = (String.IsNullOrEmpty(txtMON_buscar.Text)) ? null : txtMON_buscar.Text;
+            //string fc1 = (String.IsNullOrEmpty(fc.ToString())) ? null : fc.ToString(); ;
+            //rs = (String.IsNullOrEmpty(cboxRS_buscar.SelectedItem.ToString())) ? null : cboxRS_buscar.SelectedItem.ToString();
+            if (cboxRS_buscar.SelectedItem == null ||
+                String.IsNullOrEmpty(cboxRS_buscar.SelectedItem.ToString()))
+            {
+                rs = "";
+            }
+            else
+            {
+                rs = cboxRS_buscar.SelectedItem.ToString();
+            }
+            nf = (String.IsNullOrEmpty(txtNFAC_buscar.Text)) ? null : txtNFAC_buscar.Text;
+            con = (String.IsNullOrEmpty(txtCON_buscar.Text)) ? null : txtCON_buscar.Text;
+            //ciu = (String.IsNullOrEmpty(cboxCIUDAD_buscar.SelectedItem.ToString())) ? null : cboxCIUDAD_buscar.SelectedItem.ToString();
+            if (cboxCIUDAD_buscar.SelectedItem == null ||
+                String.IsNullOrEmpty(cboxCIUDAD_buscar.SelectedItem.ToString()))
+            {
+                ciu = "";
+            }
+            else
+            {
+                ciu = cboxCIUDAD_buscar.SelectedItem.ToString();
+            }
+            mci = (String.IsNullOrEmpty(txtMCI_buscar.Text)) ? null : txtMCI_buscar.Text;
 
-            dgvDatos.DataSource = consul.MostrarFacturas(id,ot);
+            dgvDatos.DataSource = consul.MostrarFacturas(id,ot,eco,mon,rs,nf,con,ciu,mci);
 
             txtID_buscar.Text = "";
             txtOT_buscar.Text = "";
+            txtECO_buscar.Text = "";
+            txtMON_buscar.Text = "";
+            //dateCOT_buscar.DateTimePicker.Clear();
+            cboxRS_buscar.SelectedItem = null;
+            txtNFAC_buscar.Text = "";
+            txtCON_buscar.Text = "";
+            cboxCIUDAD_buscar.SelectedItem = null;
+            txtMCI_buscar.Text = "";
+
         }
+
+        //private void txtMON_buscar_Leave(object sender, EventArgs e)
+        //{
+        //    Double value;
+        //    if (Double.TryParse(txtMON_buscar.Text, out value))
+        //        txtMON_buscar.Text = String.Format(System.Globalization.CultureInfo.CurrentCulture, "{0:C2}", value);
+        //    else
+        //        txtMON_buscar.Text = String.Empty;
+        //}
     }
 }
