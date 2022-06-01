@@ -31,6 +31,7 @@ namespace Proyecto_ML
         {
             this.panelContenedor = new System.Windows.Forms.Panel();
             this.panelConsulta = new System.Windows.Forms.Panel();
+            this.dgvDatos = new System.Windows.Forms.DataGridView();
             this.dateCOT_buscar = new System.Windows.Forms.DateTimePicker();
             this.label8 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
@@ -53,7 +54,6 @@ namespace Proyecto_ML
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
-            this.dgvDatos = new System.Windows.Forms.DataGridView();
             this.panelContenedor.SuspendLayout();
             this.panelConsulta.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).BeginInit();
@@ -106,6 +106,19 @@ namespace Proyecto_ML
             this.panelConsulta.Size = new System.Drawing.Size(900, 560);
             this.panelConsulta.TabIndex = 43;
             // 
+            // dgvDatos
+            // 
+            this.dgvDatos.AllowUserToAddRows = false;
+            this.dgvDatos.AllowUserToDeleteRows = false;
+            this.dgvDatos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDatos.Location = new System.Drawing.Point(394, 20);
+            this.dgvDatos.Name = "dgvDatos";
+            this.dgvDatos.ReadOnly = true;
+            this.dgvDatos.Size = new System.Drawing.Size(474, 510);
+            this.dgvDatos.TabIndex = 42;
+            // 
             // dateCOT_buscar
             // 
             this.dateCOT_buscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
@@ -136,6 +149,7 @@ namespace Proyecto_ML
             this.button2.TabIndex = 21;
             this.button2.Text = "Buscar";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // label19
             // 
@@ -334,19 +348,6 @@ namespace Proyecto_ML
             this.label21.TabIndex = 11;
             this.label21.Text = "Num. Económico";
             // 
-            // dgvDatos
-            // 
-            this.dgvDatos.AllowUserToAddRows = false;
-            this.dgvDatos.AllowUserToDeleteRows = false;
-            this.dgvDatos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDatos.Location = new System.Drawing.Point(394, 20);
-            this.dgvDatos.Name = "dgvDatos";
-            this.dgvDatos.ReadOnly = true;
-            this.dgvDatos.Size = new System.Drawing.Size(474, 510);
-            this.dgvDatos.TabIndex = 42;
-            // 
             // FormConsulta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -357,7 +358,6 @@ namespace Proyecto_ML
             this.MinimumSize = new System.Drawing.Size(900, 560);
             this.Name = "FormConsulta";
             this.Text = "Buscar Registro";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.panelContenedor.ResumeLayout(false);
             this.panelConsulta.ResumeLayout(false);
             this.panelConsulta.PerformLayout();

@@ -18,12 +18,7 @@ namespace Proyecto_ML
             InitializeComponent();
         }
 
-        Registros reg = new Registros();
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            dgvDatos.DataSource = reg.MostrarRegistros();
-        }
+        Consulta consul = new Consulta();
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -95,5 +90,9 @@ namespace Proyecto_ML
 
         }
 
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            dgvDatos.DataSource = consul.MostrarFacturas();
+        }
     }
 }

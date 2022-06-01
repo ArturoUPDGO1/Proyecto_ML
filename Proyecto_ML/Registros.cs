@@ -21,4 +21,18 @@ namespace Proyecto_ML
             return dt;
         }
     }
+
+    class Consulta
+    {
+        Conexion cn = new Conexion();
+
+        public DataTable MostrarFacturas()
+        {
+            SqlDataAdapter da = new SqlDataAdapter("sp_SelectRegistroFacturas", cn.LeerCadena());
+            da.SelectCommand.CommandType = CommandType.StoredProcedure;
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            return dt;
+        }
+    }
 }
