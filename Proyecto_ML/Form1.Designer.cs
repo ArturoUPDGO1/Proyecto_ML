@@ -110,7 +110,7 @@ namespace Proyecto_ML
             this.dateCOT_reg.Name = "dateCOT_reg";
             this.dateCOT_reg.Size = new System.Drawing.Size(185, 26);
             this.dateCOT_reg.TabIndex = 42;
-            this.dateCOT_reg.Value = new System.DateTime(2022, 5, 5, 0, 0, 0, 0);
+            this.dateCOT_reg.Value = new System.DateTime(2022, 6, 1, 0, 0, 0, 0);
             // 
             // label20
             // 
@@ -139,6 +139,7 @@ namespace Proyecto_ML
             this.btnGuardar.TabIndex = 21;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // txtOT_reg
             // 
@@ -155,6 +156,10 @@ namespace Proyecto_ML
             this.cboxCIUDAD_reg.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboxCIUDAD_reg.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboxCIUDAD_reg.FormattingEnabled = true;
+            this.cboxCIUDAD_reg.Items.AddRange(new object[] {
+            "Chihuahua",
+            "Monterrey",
+            "Durango"});
             this.cboxCIUDAD_reg.Location = new System.Drawing.Point(185, 371);
             this.cboxCIUDAD_reg.Name = "cboxCIUDAD_reg";
             this.cboxCIUDAD_reg.Size = new System.Drawing.Size(185, 28);
@@ -175,6 +180,9 @@ namespace Proyecto_ML
             this.cboxRS_reg.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboxRS_reg.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboxRS_reg.FormattingEnabled = true;
+            this.cboxRS_reg.Items.AddRange(new object[] {
+            "General Carriers",
+            "Enlaces Terrestres Next"});
             this.cboxRS_reg.Location = new System.Drawing.Point(185, 215);
             this.cboxRS_reg.Name = "cboxRS_reg";
             this.cboxRS_reg.Size = new System.Drawing.Size(185, 28);

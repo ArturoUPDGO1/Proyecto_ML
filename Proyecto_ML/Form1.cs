@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -16,6 +18,7 @@ namespace Proyecto_ML
         public FormAgregarRegistro()
         {
             InitializeComponent();
+            dateCOT_reg.Value = DateTime.Now;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -88,5 +91,47 @@ namespace Proyecto_ML
 
         }
 
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            SqlConnection cn = new SqlConnection(ConfigurationManager.ConnectionStrings["unica"].ConnectionString);
+            cn.Open();
+
+            SqlCommand command = new SqlCommand("sp_InsertRegistroFacturas", cn);
+            command.CommandType = CommandType.StoredProcedure;
+
+            SqlParameter param = new SqlParameter("@OrdenDeTrabajo", txtOT_reg.Text);
+            command.Parameters.Add(param);
+            param = new SqlParameter("@NumEconomico", txtECO_reg.Text);
+            command.Parameters.Add(param);
+            param = new SqlParameter("@Monto", txtMON_reg.Text);
+            command.Parameters.Add(param);
+            param = new SqlParameter("@FechaCot", Convert.ToDateTime(dateCOT_reg.Text).ToString("yyyy-MM-dd"));
+            command.Parameters.Add(param);
+            param = new SqlParameter("@RazonSocial", cboxRS_reg.SelectedItem.ToString());
+            command.Parameters.Add(param);
+            param = new SqlParameter("@NumFactura", txtNFAC_reg.Text);
+            command.Parameters.Add(param);
+            param = new SqlParameter("@Conceptos", txtCON_reg.Text);
+            command.Parameters.Add(param);
+            param = new SqlParameter("@Ciudad", cboxCIUDAD_reg.SelectedItem.ToString());
+            command.Parameters.Add(param);
+            param = new SqlParameter("@MontoCImpuesto", txtMCI_reg.Text);
+            command.Parameters.Add(param);
+
+            command.ExecuteNonQuery();
+            cn.Close();
+
+            //MessageBox.Show("Insertado");
+
+            txtOT_reg.Text = "";
+            txtECO_reg.Text = "";
+            txtMON_reg.Text = "";
+            dateCOT_reg.Value = DateTime.Now;
+            cboxRS_reg.SelectedItem = null;
+            txtNFAC_reg.Text = "";
+            txtCON_reg.Text = "";
+            cboxCIUDAD_reg.SelectedItem = null;
+            txtMCI_reg.Text = "";
+        }
     }
 }

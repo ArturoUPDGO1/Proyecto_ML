@@ -12,13 +12,42 @@ namespace Proyecto_ML
 {
     public partial class FormConsulta : Form
     {
+        Consulta consul = new Consulta();
         //Constructor
         public FormConsulta()
         {
             InitializeComponent();
-        }
 
-        Consulta consul = new Consulta();
+            string id, ot, eco, mon, rs, nf, con, ciu, mci;
+
+            id = (String.IsNullOrEmpty(txtID_buscar.Text)) ? null : txtID_buscar.Text;
+            ot = (String.IsNullOrEmpty(txtOT_buscar.Text)) ? null : txtOT_buscar.Text;
+            eco = (String.IsNullOrEmpty(txtECO_buscar.Text)) ? null : txtECO_buscar.Text;
+            mon = (String.IsNullOrEmpty(txtMON_buscar.Text)) ? null : txtMON_buscar.Text;
+            if (cboxRS_buscar.SelectedItem == null ||
+                String.IsNullOrEmpty(cboxRS_buscar.SelectedItem.ToString()))
+            {
+                rs = "";
+            }
+            else
+            {
+                rs = cboxRS_buscar.SelectedItem.ToString();
+            }
+            nf = (String.IsNullOrEmpty(txtNFAC_buscar.Text)) ? null : txtNFAC_buscar.Text;
+            con = (String.IsNullOrEmpty(txtCON_buscar.Text)) ? null : txtCON_buscar.Text;
+            if (cboxCIUDAD_buscar.SelectedItem == null ||
+                String.IsNullOrEmpty(cboxCIUDAD_buscar.SelectedItem.ToString()))
+            {
+                ciu = "";
+            }
+            else
+            {
+                ciu = cboxCIUDAD_buscar.SelectedItem.ToString();
+            }
+            mci = (String.IsNullOrEmpty(txtMCI_buscar.Text)) ? null : txtMCI_buscar.Text;
+
+            dgvDatos.DataSource = consul.MostrarFacturas(id, ot, eco, mon, rs, nf, con, ciu, mci);
+        }
 
         private void label1_Click(object sender, EventArgs e)
         {

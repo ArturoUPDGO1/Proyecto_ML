@@ -55,6 +55,8 @@ namespace Proyecto_ML
             param = new SqlParameter("@MontoCImpuesto", mci);
             command.Parameters.Add(param);
 
+            cn.Close();
+
             SqlDataAdapter da = new SqlDataAdapter();
             da.SelectCommand = command;
             da.Fill(dt);
