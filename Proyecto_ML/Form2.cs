@@ -18,12 +18,22 @@ namespace Proyecto_ML
         {
             InitializeComponent();
 
-            string id, ot, eco, mon, rs, nf, con, ciu, mci;
+            var fecot = dateCOT_buscar.Value;
+
+            string id, ot, eco, mon, fc, rs, nf, con, ciu, mci;
 
             id = (String.IsNullOrEmpty(txtID_buscar.Text)) ? null : txtID_buscar.Text;
             ot = (String.IsNullOrEmpty(txtOT_buscar.Text)) ? null : txtOT_buscar.Text;
             eco = (String.IsNullOrEmpty(txtECO_buscar.Text)) ? null : txtECO_buscar.Text;
             mon = (String.IsNullOrEmpty(txtMON_buscar.Text)) ? null : txtMON_buscar.Text;
+            if (fecot == DateTime.Today)
+            {
+                fc = "";
+            }
+            else
+            {
+                fc = fecot.ToString("yyyy-MM-dd");
+            }
             if (cboxRS_buscar.SelectedItem == null ||
                 String.IsNullOrEmpty(cboxRS_buscar.SelectedItem.ToString()))
             {
@@ -46,7 +56,7 @@ namespace Proyecto_ML
             }
             mci = (String.IsNullOrEmpty(txtMCI_buscar.Text)) ? null : txtMCI_buscar.Text;
 
-            dgvDatos.DataSource = consul.MostrarFacturas(id, ot, eco, mon, rs, nf, con, ciu, mci);
+            dgvDatos.DataSource = consul.MostrarFacturas(id, ot, eco, mon, fc, rs, nf, con, ciu, mci);
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -121,6 +131,8 @@ namespace Proyecto_ML
 
         private void button2_Click_1(object sender, EventArgs e)
         {
+            var fecot = dateCOT_buscar.Value;
+
             DataTable dt = (DataTable)dgvDatos.DataSource;
             if (dt == null)
             {
@@ -132,15 +144,21 @@ namespace Proyecto_ML
             }
             
 
-            string id, ot, eco, mon, rs, nf, con, ciu, mci;
+            string id, ot, eco, mon, fc, rs, nf, con, ciu, mci;
             //DateTime fc = this.dateCOT_buscar.Value.Date;
 
             id = (String.IsNullOrEmpty(txtID_buscar.Text)) ? null : txtID_buscar.Text;
             ot = (String.IsNullOrEmpty(txtOT_buscar.Text)) ? null : txtOT_buscar.Text;
             eco = (String.IsNullOrEmpty(txtECO_buscar.Text)) ? null : txtECO_buscar.Text;
             mon = (String.IsNullOrEmpty(txtMON_buscar.Text)) ? null : txtMON_buscar.Text;
-            //string fc1 = (String.IsNullOrEmpty(fc.ToString())) ? null : fc.ToString(); ;
-            //rs = (String.IsNullOrEmpty(cboxRS_buscar.SelectedItem.ToString())) ? null : cboxRS_buscar.SelectedItem.ToString();
+            if (fecot == DateTime.Today)
+            {
+                fc = "";
+            }
+            else
+            {
+                fc = fecot.ToString("yyyy-MM-dd");
+            }
             if (cboxRS_buscar.SelectedItem == null ||
                 String.IsNullOrEmpty(cboxRS_buscar.SelectedItem.ToString()))
             {
@@ -152,7 +170,6 @@ namespace Proyecto_ML
             }
             nf = (String.IsNullOrEmpty(txtNFAC_buscar.Text)) ? null : txtNFAC_buscar.Text;
             con = (String.IsNullOrEmpty(txtCON_buscar.Text)) ? null : txtCON_buscar.Text;
-            //ciu = (String.IsNullOrEmpty(cboxCIUDAD_buscar.SelectedItem.ToString())) ? null : cboxCIUDAD_buscar.SelectedItem.ToString();
             if (cboxCIUDAD_buscar.SelectedItem == null ||
                 String.IsNullOrEmpty(cboxCIUDAD_buscar.SelectedItem.ToString()))
             {
@@ -164,13 +181,12 @@ namespace Proyecto_ML
             }
             mci = (String.IsNullOrEmpty(txtMCI_buscar.Text)) ? null : txtMCI_buscar.Text;
 
-            dgvDatos.DataSource = consul.MostrarFacturas(id,ot,eco,mon,rs,nf,con,ciu,mci);
+            dgvDatos.DataSource = consul.MostrarFacturas(id, ot, eco, mon, fc, rs, nf, con, ciu, mci);
 
             txtID_buscar.Text = "";
             txtOT_buscar.Text = "";
             txtECO_buscar.Text = "";
             txtMON_buscar.Text = "";
-            //dateCOT_buscar.DateTimePicker.Clear();
             cboxRS_buscar.SelectedItem = null;
             txtNFAC_buscar.Text = "";
             txtCON_buscar.Text = "";
@@ -178,14 +194,5 @@ namespace Proyecto_ML
             txtMCI_buscar.Text = "";
 
         }
-
-        //private void txtMON_buscar_Leave(object sender, EventArgs e)
-        //{
-        //    Double value;
-        //    if (Double.TryParse(txtMON_buscar.Text, out value))
-        //        txtMON_buscar.Text = String.Format(System.Globalization.CultureInfo.CurrentCulture, "{0:C2}", value);
-        //    else
-        //        txtMON_buscar.Text = String.Empty;
-        //}
     }
 }

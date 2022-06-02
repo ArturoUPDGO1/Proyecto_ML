@@ -26,7 +26,7 @@ namespace Proyecto_ML
     public class Consulta
     {
 
-        public DataTable MostrarFacturas(string id, string ot, string eco, string mon, string rs, string nf, string con, string ciu, string mci)
+        public DataTable MostrarFacturas(string id, string ot, string eco, string mon, string rs, string nf, string con, string ciu, string mci, string fc)
         {
             DataTable dt = new DataTable();
 
@@ -43,6 +43,8 @@ namespace Proyecto_ML
             param = new SqlParameter("@NumEconomico", eco);
             command.Parameters.Add(param);
             param = new SqlParameter("@Monto", mon);
+            command.Parameters.Add(param);
+            param = new SqlParameter("@FechaCot", fc);
             command.Parameters.Add(param);
             param = new SqlParameter("@RazonSocial", rs);
             command.Parameters.Add(param);
