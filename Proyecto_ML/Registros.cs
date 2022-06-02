@@ -26,7 +26,7 @@ namespace Proyecto_ML
     public class Consulta
     {
 
-        public DataTable MostrarFacturas(string id, string ot, string eco, string mon, string rs, string nf, string con, string ciu, string mci, string fc)
+        public DataTable MostrarFacturas(string id, string ot, string eco, string mon, string fc, string rs, string nf, string con, string ciu, string mci)
         {
             DataTable dt = new DataTable();
 

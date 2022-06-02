@@ -26,18 +26,11 @@ namespace Proyecto_ML
             ot = (String.IsNullOrEmpty(txtOT_buscar.Text)) ? null : txtOT_buscar.Text;
             eco = (String.IsNullOrEmpty(txtECO_buscar.Text)) ? null : txtECO_buscar.Text;
             mon = (String.IsNullOrEmpty(txtMON_buscar.Text)) ? null : txtMON_buscar.Text;
-            if (fecot == DateTime.Today)
-            {
-                fc = "";
-            }
-            else
-            {
-                fc = fecot.ToString("yyyy-MM-dd");
-            }
+            fc = null;
             if (cboxRS_buscar.SelectedItem == null ||
                 String.IsNullOrEmpty(cboxRS_buscar.SelectedItem.ToString()))
             {
-                rs = "";
+                rs = null;
             }
             else
             {
@@ -48,7 +41,7 @@ namespace Proyecto_ML
             if (cboxCIUDAD_buscar.SelectedItem == null ||
                 String.IsNullOrEmpty(cboxCIUDAD_buscar.SelectedItem.ToString()))
             {
-                ciu = "";
+                ciu = null;
             }
             else
             {
@@ -131,7 +124,7 @@ namespace Proyecto_ML
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-            var fecot = dateCOT_buscar.Value;
+            string fecot = dateCOT_buscar.Value.ToShortDateString();
 
             DataTable dt = (DataTable)dgvDatos.DataSource;
             if (dt == null)
@@ -142,7 +135,7 @@ namespace Proyecto_ML
             {
                 dt.Clear();
             }
-            
+
 
             string id, ot, eco, mon, fc, rs, nf, con, ciu, mci;
             //DateTime fc = this.dateCOT_buscar.Value.Date;
@@ -151,18 +144,20 @@ namespace Proyecto_ML
             ot = (String.IsNullOrEmpty(txtOT_buscar.Text)) ? null : txtOT_buscar.Text;
             eco = (String.IsNullOrEmpty(txtECO_buscar.Text)) ? null : txtECO_buscar.Text;
             mon = (String.IsNullOrEmpty(txtMON_buscar.Text)) ? null : txtMON_buscar.Text;
-            if (fecot == DateTime.Today)
+            string fcConf = Convert.ToDateTime(fecot).ToString("yyyy-MM-dd");
+            string fh = Convert.ToDateTime(DateTime.Today.ToString()).ToString("yyyy-MM-dd");
+            if (fcConf == fh)
             {
-                fc = "";
+                fc = null;
             }
             else
             {
-                fc = fecot.ToString("yyyy-MM-dd");
+                fc = fcConf;
             }
             if (cboxRS_buscar.SelectedItem == null ||
                 String.IsNullOrEmpty(cboxRS_buscar.SelectedItem.ToString()))
             {
-                rs = "";
+                rs = null;
             }
             else
             {
@@ -173,7 +168,7 @@ namespace Proyecto_ML
             if (cboxCIUDAD_buscar.SelectedItem == null ||
                 String.IsNullOrEmpty(cboxCIUDAD_buscar.SelectedItem.ToString()))
             {
-                ciu = "";
+                ciu = null;
             }
             else
             {
@@ -187,12 +182,20 @@ namespace Proyecto_ML
             txtOT_buscar.Text = "";
             txtECO_buscar.Text = "";
             txtMON_buscar.Text = "";
+            dateCOT_buscar.Value = DateTime.Now;
             cboxRS_buscar.SelectedItem = null;
             txtNFAC_buscar.Text = "";
             txtCON_buscar.Text = "";
             cboxCIUDAD_buscar.SelectedItem = null;
             txtMCI_buscar.Text = "";
 
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            OpenChildForm(new FormAgregarRegistro());
+            Heredado.Load("Hola");
+            Heredado.Show();
         }
     }
 }

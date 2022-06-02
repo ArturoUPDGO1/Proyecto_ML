@@ -26,8 +26,8 @@ namespace Proyecto_ML.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-4JGUS2G\\SQLEXPRESS;Initial Catalog=facturas;Integrated Securi" +
-            "ty=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-4JGUS2G\\SQLEXPRESS;Initial Catalog=testfacturas;Integrated Se" +
+            "curity=True")]
         public string unica {
             get {
                 return ((string)(this["unica"]));

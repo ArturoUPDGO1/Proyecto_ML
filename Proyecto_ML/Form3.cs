@@ -12,13 +12,13 @@ using System.Windows.Forms;
 
 namespace Proyecto_ML
 {
-    public partial class FormAgregarRegistro : Form
+    public partial class FormUpdateDelete : Form
     {
         //Constructor
-        public FormAgregarRegistro()
+        public FormUpdateDelete()
         {
             InitializeComponent();
-            dateCOT_reg.Value = DateTime.Now;
+            dateCOT_updel.Value = DateTime.Now;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -86,6 +86,10 @@ namespace Proyecto_ML
 
         }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
@@ -95,13 +99,13 @@ namespace Proyecto_ML
             SqlCommand command = new SqlCommand("sp_InsertRegistroFacturas", cn);
             command.CommandType = CommandType.StoredProcedure;
 
-            SqlParameter param = new SqlParameter("@OrdenDeTrabajo", txtOT_reg.Text);
+            SqlParameter param = new SqlParameter("@OrdenDeTrabajo", txtOT_updel.Text);
             command.Parameters.Add(param);
-            param = new SqlParameter("@NumEconomico", txtECO_reg.Text);
+            param = new SqlParameter("@NumEconomico", txtECO_updel.Text);
             command.Parameters.Add(param);
-            param = new SqlParameter("@Monto", txtMON_reg.Text);
+            param = new SqlParameter("@Monto", txtMON_updel.Text);
             command.Parameters.Add(param);
-            param = new SqlParameter("@FechaCot", Convert.ToDateTime(dateCOT_reg.Text).ToString("yyyy-MM-dd"));
+            param = new SqlParameter("@FechaCot", Convert.ToDateTime(dateCOT_updel.Text).ToString("yyyy-MM-dd"));
             command.Parameters.Add(param);
             param = new SqlParameter("@RazonSocial", cboxRS_reg.SelectedItem.ToString());
             command.Parameters.Add(param);
@@ -119,15 +123,16 @@ namespace Proyecto_ML
 
             //MessageBox.Show("Insertado");
 
-            txtOT_reg.Text = "";
-            txtECO_reg.Text = "";
-            txtMON_reg.Text = "";
-            dateCOT_reg.Value = DateTime.Now;
+            txtOT_updel.Text = "";
+            txtECO_updel.Text = "";
+            txtMON_updel.Text = "";
+            dateCOT_updel.Value = DateTime.Now;
             cboxRS_reg.SelectedItem = null;
             txtNFAC_reg.Text = "";
             txtCON_reg.Text = "";
             cboxCIUDAD_reg.SelectedItem = null;
             txtMCI_reg.Text = "";
         }
+
     }
 }
