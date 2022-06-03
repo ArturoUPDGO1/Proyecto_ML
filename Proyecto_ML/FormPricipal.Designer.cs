@@ -42,7 +42,6 @@ namespace Proyecto_ML
             this.iconCurrentChildForm = new FontAwesome.Sharp.IconPictureBox();
             this.panelShadow = new System.Windows.Forms.Panel();
             this.panelDesktop = new System.Windows.Forms.Panel();
-            this.iconButton3 = new FontAwesome.Sharp.IconButton();
             this.panelMenu.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panelBarraTitulo.SuspendLayout();
@@ -52,7 +51,6 @@ namespace Proyecto_ML
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            this.panelMenu.Controls.Add(this.iconButton3);
             this.panelMenu.Controls.Add(this.iconButton2);
             this.panelMenu.Controls.Add(this.iconButton1);
             this.panelMenu.Controls.Add(this.panel2);
@@ -255,28 +253,6 @@ namespace Proyecto_ML
             this.panelDesktop.Size = new System.Drawing.Size(900, 560);
             this.panelDesktop.TabIndex = 15;
             // 
-            // iconButton3
-            // 
-            this.iconButton3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButton3.FlatAppearance.BorderSize = 0;
-            this.iconButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton3.ForeColor = System.Drawing.Color.Gainsboro;
-            this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.Users;
-            this.iconButton3.IconColor = System.Drawing.Color.Gainsboro;
-            this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton3.IconSize = 32;
-            this.iconButton3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton3.Location = new System.Drawing.Point(0, 260);
-            this.iconButton3.Name = "iconButton3";
-            this.iconButton3.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.iconButton3.Size = new System.Drawing.Size(220, 60);
-            this.iconButton3.TabIndex = 3;
-            this.iconButton3.Text = "Actualizar registro";
-            this.iconButton3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton3.UseVisualStyleBackColor = true;
-            // 
             // FormPricipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -313,6 +289,5 @@ namespace Proyecto_ML
         private FontAwesome.Sharp.IconButton btnCerrar;
         private FontAwesome.Sharp.IconButton btnMin;
         private FontAwesome.Sharp.IconButton btnMax;
-        private FontAwesome.Sharp.IconButton iconButton3;
     }
 }
