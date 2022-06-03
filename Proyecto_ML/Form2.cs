@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -312,7 +314,46 @@ namespace Proyecto_ML
             button2.Visible = true;
             cboxActivo.Items.Add("Mostrar todos");
 
+            SqlConnection cn = new SqlConnection(ConfigurationManager.ConnectionStrings["unica"].ConnectionString);
+            cn.Open();
 
+            SqlCommand command = new SqlCommand("sp_UpdateRegistroFacturas", cn);
+            command.CommandType = CommandType.StoredProcedure;
+
+            SqlParameter param = new SqlParameter("@IdMain", txtID_buscar.Text);
+            command.Parameters.Add(param);
+            param = new SqlParameter("@OrdenDeTrabajo", txtOT_buscar.Text);
+            command.Parameters.Add(param);
+            param = new SqlParameter("@NumEconomico", txtECO_buscar.Text);
+            command.Parameters.Add(param);
+            param = new SqlParameter("@Monto", txtMON_buscar.Text);
+            command.Parameters.Add(param);
+            param = new SqlParameter("@FechaCot", Convert.ToDateTime(dateCOT_buscar.Text).ToString("yyyy-MM-dd"));
+            command.Parameters.Add(param);
+            param = new SqlParameter("@RazonSocial", cboxRS_buscar.SelectedItem.ToString());
+            command.Parameters.Add(param);
+            param = new SqlParameter("@NumFactura", txtNFAC_buscar.Text);
+            command.Parameters.Add(param);
+            param = new SqlParameter("@Conceptos", txtCON_buscar.Text);
+            command.Parameters.Add(param);
+            param = new SqlParameter("@Ciudad", cboxCIUDAD_buscar.SelectedItem.ToString());
+            command.Parameters.Add(param);
+            param = new SqlParameter("@MontoCImpuesto", txtMCI_buscar.Text);
+            command.Parameters.Add(param);
+            string estml;
+            if (cboxActivo.SelectedItem.ToString() == "Activo")
+            {
+                estml = "1";
+            }
+            else
+            {
+                estml = "0";
+            }
+            param = new SqlParameter("@Estatus", estml);
+            command.Parameters.Add(param);
+
+            command.ExecuteNonQuery();
+            cn.Close();
 
             txtID_buscar.Text = "";
             txtOT_buscar.Text = "";
