@@ -18,7 +18,7 @@ namespace Proyecto_ML
         {
             InitializeComponent();
 
-            var fecot = dateCOT_buscar.Value;
+            DataGridViewButtonColumn btn = new DataGridViewButtonColumn();
 
             string id, ot, eco, mon, fc, rs, nf, con, ciu, mci, estml;
 
@@ -71,6 +71,17 @@ namespace Proyecto_ML
             }
 
             dgvDatos.DataSource = consul.MostrarFacturas(id, ot, eco, mon, fc, rs, nf, con, ciu, mci, estml);
+            //if (dgvDatos.Columns.Count > 11)
+            //{
+            //}
+            //else
+            //{
+            //dgvDatos.Columns.Add(btn);
+            //btn.HeaderText = "ACTUALIZAR REGISTRO";
+            //btn.Text = "<---";
+            //btn.Name = "btn";
+            //btn.UseColumnTextForButtonValue = true;
+            //}
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -145,6 +156,10 @@ namespace Proyecto_ML
 
         private void button2_Click_1(object sender, EventArgs e)
         {
+            dgvDatos.Columns.Clear();
+            DataGridViewButtonColumn btn = new DataGridViewButtonColumn();
+            //dgvDatos.Columns.Remove(btn);
+
             string fecot = dateCOT_buscar.Value.ToShortDateString();
 
             DataTable dt = (DataTable)dgvDatos.DataSource;
@@ -219,6 +234,19 @@ namespace Proyecto_ML
             }
 
             dgvDatos.DataSource = consul.MostrarFacturas(id, ot, eco, mon, fc, rs, nf, con, ciu, mci, estml);
+            //if (dgvDatos.Columns.Count > 11)
+            //{
+
+            //}
+            //else
+            //{
+            dgvDatos.Columns.Add(btn);
+            btn.HeaderText = "ACTUALIZAR REGISTRO";
+            btn.Text = "<---";
+            btn.Name = "btn";
+            btn.UseColumnTextForButtonValue = true;
+            //}
+
 
             txtID_buscar.Text = "";
             txtOT_buscar.Text = "";
@@ -234,10 +262,71 @@ namespace Proyecto_ML
 
         }
 
-        private void dgvDatos_SelectionChanged(object sender, EventArgs e)
+        private void dgvDatos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            int index = dgvDatos.SelectedRows[0].Index;
+            if (e.ColumnIndex == 11)
+            {
+                //MessageBox.Show((e.RowIndex+1) + " Row " + (e.ColumnIndex+1) + " Column button clicked ");
+                string id_ml = dgvDatos.Rows[e.RowIndex].Cells[0].Value.ToString();
+                txtID_buscar.Text = id_ml;
+                string ot = dgvDatos.Rows[e.RowIndex].Cells[1].Value.ToString();
+                txtOT_buscar.Text = ot;
+                string eco = dgvDatos.Rows[e.RowIndex].Cells[2].Value.ToString();
+                txtECO_buscar.Text = eco;
+                string mon = dgvDatos.Rows[e.RowIndex].Cells[3].Value.ToString();
+                txtMON_buscar.Text = mon;
+                string fc = dgvDatos.Rows[e.RowIndex].Cells[4].Value.ToString();
+                dateCOT_buscar.Value = DateTime.Parse(fc);
+                string rs = dgvDatos.Rows[e.RowIndex].Cells[5].Value.ToString();
+                cboxRS_buscar.SelectedItem = rs;
+                string nf = dgvDatos.Rows[e.RowIndex].Cells[6].Value.ToString();
+                txtNFAC_buscar.Text = nf;
+                string con = dgvDatos.Rows[e.RowIndex].Cells[7].Value.ToString();
+                txtCON_buscar.Text = con;
+                string ciu = dgvDatos.Rows[e.RowIndex].Cells[8].Value.ToString();
+                cboxCIUDAD_buscar.SelectedItem = ciu;
+                string mci = dgvDatos.Rows[e.RowIndex].Cells[9].Value.ToString();
+                txtMCI_buscar.Text = mci;
+                string estml = dgvDatos.Rows[e.RowIndex].Cells[10].Value.ToString();
+                if (estml == "1")
+                {
+                    cboxActivo.SelectedItem = "Activo";
+                }
+                else
+                {
+                    cboxActivo.SelectedItem = "Inactivo";
+                }
+                txtID_buscar.Enabled = false;
+                button2.Enabled = false;
+                button2.Visible = false;
+                cboxActivo.Items.Remove("Mostrar todos");
+                button1.Enabled = true;
+                button1.Visible = true;
+            }
+        }
 
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            txtID_buscar.Enabled = true;
+            button2.Enabled = true;
+            button2.Visible = true;
+            cboxActivo.Items.Add("Mostrar todos");
+
+
+
+            txtID_buscar.Text = "";
+            txtOT_buscar.Text = "";
+            txtECO_buscar.Text = "";
+            txtMON_buscar.Text = "";
+            dateCOT_buscar.Value = DateTime.Now;
+            cboxRS_buscar.SelectedItem = null;
+            txtNFAC_buscar.Text = "";
+            txtCON_buscar.Text = "";
+            cboxCIUDAD_buscar.SelectedItem = null;
+            txtMCI_buscar.Text = "";
+            cboxActivo.SelectedItem = null;
+            button1.Enabled = false;
+            button1.Visible = false;
         }
     }
 }
