@@ -10,6 +10,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+//librerías para exportar .pdf
+using iTextSharp.text;
+using iTextSharp.text.pdf;
+using iTextSharp.tool.xml;
+using System.IO;
+
 namespace Proyecto_ML
 {
     public partial class FormConsulta : Form
@@ -369,5 +375,51 @@ namespace Proyecto_ML
             button1.Enabled = false;
             button1.Visible = false;
         }
+
+        //Exportar gridview a .pdf
+        private void btnPDF_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog guardar = new SaveFileDialog();
+            guardar.FileName = ("Reporte_Facturas_")+ DateTime.Now.ToString("dd-MM-yyyy") + (".pdf"); //Nombre que recibirá el archivo
+
+            string pagina_template = Properties.Resources.pdf_template.ToString();//Convierte el archivo html de resources a string
+
+            
+            string filas = string.Empty;
+
+            //REVISAR!!!
+
+            //foreach (DataGridView row in dgvDatos.Rows)
+            //{
+            //    filas += "<tr>";
+            //    filas += "<td>" + dgvDatos.Cells[0].Value.ToString(); + "</td>";
+            //    filas += "<td>" + dgvDatos.Cells[0].Value.ToString(); + "</td>";
+            //    filas += "</tr>";
+            //}
+
+
+            if(guardar.ShowDialog() == DialogResult.OK)
+            {
+                using (FileStream stream = new FileStream(guardar.FileName, FileMode.Create))
+                {
+                    Document pdf_reporte = new Document(PageSize.A4.Rotate(), 35, 35, 35, 35);//Formato de pagina
+
+                    PdfWriter pdf = PdfWriter.GetInstance(pdf_reporte, stream);
+
+                    pdf_reporte.Open();
+
+                    using (StringReader sr = new StringReader(pagina_template))
+                    {
+                        XMLWorkerHelper.GetInstance().ParseXHtml(pdf, pdf_reporte, sr);
+                    }
+
+                    pdf_reporte.Close();
+
+                    stream.Close();
+                }
+
+            }
+        }
+
     }
 }

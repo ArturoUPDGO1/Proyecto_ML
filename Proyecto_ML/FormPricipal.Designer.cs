@@ -42,10 +42,12 @@ namespace Proyecto_ML
             this.iconCurrentChildForm = new FontAwesome.Sharp.IconPictureBox();
             this.panelShadow = new System.Windows.Forms.Panel();
             this.panelDesktop = new System.Windows.Forms.Panel();
+            this.pers_design_btn_Mostrar = new Proyecto_ML.pers_design_btns();
             this.panelMenu.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panelBarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconCurrentChildForm)).BeginInit();
+            this.panelDesktop.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -57,11 +59,12 @@ namespace Proyecto_ML
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(220, 639);
+            this.panelMenu.Size = new System.Drawing.Size(220, 678);
             this.panelMenu.TabIndex = 12;
             // 
             // iconButton2
             // 
+            this.iconButton2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.iconButton2.Dock = System.Windows.Forms.DockStyle.Top;
             this.iconButton2.FlatAppearance.BorderSize = 0;
             this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -85,6 +88,7 @@ namespace Proyecto_ML
             // 
             // iconButton1
             // 
+            this.iconButton1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.iconButton1.Dock = System.Windows.Forms.DockStyle.Top;
             this.iconButton1.FlatAppearance.BorderSize = 0;
             this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -120,6 +124,7 @@ namespace Proyecto_ML
             this.btnHome.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.btnHome.BackColor = System.Drawing.Color.Transparent;
+            this.btnHome.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnHome.FlatAppearance.BorderSize = 0;
             this.btnHome.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnHome.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
@@ -127,9 +132,9 @@ namespace Proyecto_ML
             this.btnHome.IconChar = FontAwesome.Sharp.IconChar.Home;
             this.btnHome.IconColor = System.Drawing.Color.Gainsboro;
             this.btnHome.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnHome.Location = new System.Drawing.Point(61, 32);
+            this.btnHome.Location = new System.Drawing.Point(68, 40);
             this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(75, 75);
+            this.btnHome.Size = new System.Drawing.Size(71, 62);
             this.btnHome.TabIndex = 0;
             this.btnHome.UseVisualStyleBackColor = false;
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
@@ -145,7 +150,7 @@ namespace Proyecto_ML
             this.panelBarraTitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelBarraTitulo.Location = new System.Drawing.Point(220, 0);
             this.panelBarraTitulo.Name = "panelBarraTitulo";
-            this.panelBarraTitulo.Size = new System.Drawing.Size(900, 70);
+            this.panelBarraTitulo.Size = new System.Drawing.Size(916, 70);
             this.panelBarraTitulo.TabIndex = 13;
             this.panelBarraTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelBarraTitulo_MouseDown);
             // 
@@ -161,7 +166,7 @@ namespace Proyecto_ML
             this.btnMin.IconColor = System.Drawing.Color.Gainsboro;
             this.btnMin.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.btnMin.IconSize = 20;
-            this.btnMin.Location = new System.Drawing.Point(810, 0);
+            this.btnMin.Location = new System.Drawing.Point(826, 0);
             this.btnMin.Name = "btnMin";
             this.btnMin.Padding = new System.Windows.Forms.Padding(0, 3, 0, 0);
             this.btnMin.Size = new System.Drawing.Size(30, 20);
@@ -181,7 +186,7 @@ namespace Proyecto_ML
             this.btnMax.IconColor = System.Drawing.Color.Gainsboro;
             this.btnMax.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.btnMax.IconSize = 20;
-            this.btnMax.Location = new System.Drawing.Point(840, 0);
+            this.btnMax.Location = new System.Drawing.Point(856, 0);
             this.btnMax.Name = "btnMax";
             this.btnMax.Padding = new System.Windows.Forms.Padding(0, 3, 0, 0);
             this.btnMax.Size = new System.Drawing.Size(30, 20);
@@ -201,7 +206,7 @@ namespace Proyecto_ML
             this.btnCerrar.IconColor = System.Drawing.Color.Gainsboro;
             this.btnCerrar.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.btnCerrar.IconSize = 20;
-            this.btnCerrar.Location = new System.Drawing.Point(870, 0);
+            this.btnCerrar.Location = new System.Drawing.Point(886, 0);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Padding = new System.Windows.Forms.Padding(0, 3, 0, 0);
             this.btnCerrar.Size = new System.Drawing.Size(30, 20);
@@ -229,7 +234,7 @@ namespace Proyecto_ML
             this.iconCurrentChildForm.IconColor = System.Drawing.Color.MediumPurple;
             this.iconCurrentChildForm.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconCurrentChildForm.IconSize = 40;
-            this.iconCurrentChildForm.Location = new System.Drawing.Point(27, 22);
+            this.iconCurrentChildForm.Location = new System.Drawing.Point(27, 27);
             this.iconCurrentChildForm.Name = "iconCurrentChildForm";
             this.iconCurrentChildForm.Size = new System.Drawing.Size(40, 40);
             this.iconCurrentChildForm.TabIndex = 0;
@@ -241,17 +246,40 @@ namespace Proyecto_ML
             this.panelShadow.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelShadow.Location = new System.Drawing.Point(220, 70);
             this.panelShadow.Name = "panelShadow";
-            this.panelShadow.Size = new System.Drawing.Size(900, 9);
+            this.panelShadow.Size = new System.Drawing.Size(916, 9);
             this.panelShadow.TabIndex = 14;
             // 
             // panelDesktop
             // 
             this.panelDesktop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.panelDesktop.Controls.Add(this.pers_design_btn_Mostrar);
             this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelDesktop.Location = new System.Drawing.Point(220, 79);
             this.panelDesktop.Name = "panelDesktop";
-            this.panelDesktop.Size = new System.Drawing.Size(900, 560);
+            this.panelDesktop.Size = new System.Drawing.Size(916, 599);
             this.panelDesktop.TabIndex = 15;
+            this.panelDesktop.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDesktop_Paint);
+            // 
+            // pers_design_btn_Mostrar
+            // 
+            this.pers_design_btn_Mostrar.BackColor = System.Drawing.Color.SteelBlue;
+            this.pers_design_btn_Mostrar.BackgroundColor = System.Drawing.Color.SteelBlue;
+            this.pers_design_btn_Mostrar.BorderColor = System.Drawing.Color.White;
+            this.pers_design_btn_Mostrar.BorderRadius = 20;
+            this.pers_design_btn_Mostrar.BorderSize = 1;
+            this.pers_design_btn_Mostrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pers_design_btn_Mostrar.FlatAppearance.BorderSize = 0;
+            this.pers_design_btn_Mostrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.pers_design_btn_Mostrar.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pers_design_btn_Mostrar.ForeColor = System.Drawing.Color.White;
+            this.pers_design_btn_Mostrar.Location = new System.Drawing.Point(80, 61);
+            this.pers_design_btn_Mostrar.Name = "pers_design_btn_Mostrar";
+            this.pers_design_btn_Mostrar.Size = new System.Drawing.Size(213, 120);
+            this.pers_design_btn_Mostrar.TabIndex = 3;
+            this.pers_design_btn_Mostrar.Text = "MOSTRAR TODOS LOS DATOS";
+            this.pers_design_btn_Mostrar.TextColor = System.Drawing.Color.White;
+            this.pers_design_btn_Mostrar.UseVisualStyleBackColor = false;
+            this.pers_design_btn_Mostrar.Click += new System.EventHandler(this.pers_design_btns1_Click);
             // 
             // FormPricipal
             // 
@@ -262,6 +290,7 @@ namespace Proyecto_ML
             this.Controls.Add(this.panelShadow);
             this.Controls.Add(this.panelBarraTitulo);
             this.Controls.Add(this.panelMenu);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MinimumSize = new System.Drawing.Size(1136, 678);
             this.Name = "FormPricipal";
             this.Text = "Form Principal";
@@ -270,6 +299,7 @@ namespace Proyecto_ML
             this.panelBarraTitulo.ResumeLayout(false);
             this.panelBarraTitulo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconCurrentChildForm)).EndInit();
+            this.panelDesktop.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -289,5 +319,6 @@ namespace Proyecto_ML
         private FontAwesome.Sharp.IconButton btnCerrar;
         private FontAwesome.Sharp.IconButton btnMin;
         private FontAwesome.Sharp.IconButton btnMax;
+        private pers_design_btns pers_design_btn_Mostrar;
     }
 }
