@@ -20,7 +20,7 @@ namespace Proyecto_ML
 
             var fecot = dateCOT_buscar.Value;
 
-            string id, ot, eco, mon, fc, rs, nf, con, ciu, mci;
+            string id, ot, eco, mon, fc, rs, nf, con, ciu, mci, estml;
 
             id = (String.IsNullOrEmpty(txtID_buscar.Text)) ? null : txtID_buscar.Text;
             ot = (String.IsNullOrEmpty(txtOT_buscar.Text)) ? null : txtOT_buscar.Text;
@@ -48,8 +48,29 @@ namespace Proyecto_ML
                 ciu = cboxCIUDAD_buscar.SelectedItem.ToString();
             }
             mci = (String.IsNullOrEmpty(txtMCI_buscar.Text)) ? null : txtMCI_buscar.Text;
+            if (cboxActivo.SelectedItem == null ||
+                String.IsNullOrEmpty(cboxActivo.SelectedItem.ToString()))
+            {
+                estml = "1";
+            }
+            else
+            {
+                estml = cboxActivo.SelectedItem.ToString();
+                if (estml == "Activo")
+                {
+                    estml = "1";
+                }
+                else if (estml == "Inactivo")
+                {
+                    estml = "0";
+                }
+                else
+                {
+                    estml = null;
+                }
+            }
 
-            dgvDatos.DataSource = consul.MostrarFacturas(id, ot, eco, mon, fc, rs, nf, con, ciu, mci);
+            dgvDatos.DataSource = consul.MostrarFacturas(id, ot, eco, mon, fc, rs, nf, con, ciu, mci, estml);
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -137,7 +158,7 @@ namespace Proyecto_ML
             }
 
 
-            string id, ot, eco, mon, fc, rs, nf, con, ciu, mci;
+            string id, ot, eco, mon, fc, rs, nf, con, ciu, mci, estml;
             //DateTime fc = this.dateCOT_buscar.Value.Date;
 
             id = (String.IsNullOrEmpty(txtID_buscar.Text)) ? null : txtID_buscar.Text;
@@ -175,8 +196,29 @@ namespace Proyecto_ML
                 ciu = cboxCIUDAD_buscar.SelectedItem.ToString();
             }
             mci = (String.IsNullOrEmpty(txtMCI_buscar.Text)) ? null : txtMCI_buscar.Text;
+            if (cboxActivo.SelectedItem == null ||
+                String.IsNullOrEmpty(cboxActivo.SelectedItem.ToString()))
+            {
+                estml = "1";
+            }
+            else
+            {
+                estml = cboxActivo.SelectedItem.ToString();
+                if (estml == "Activo")
+                {
+                    estml = "1";
+                }
+                else if (estml == "Inactivo")
+                {
+                    estml = "0";
+                }
+                else
+                {
+                    estml = null;
+                }
+            }
 
-            dgvDatos.DataSource = consul.MostrarFacturas(id, ot, eco, mon, fc, rs, nf, con, ciu, mci);
+            dgvDatos.DataSource = consul.MostrarFacturas(id, ot, eco, mon, fc, rs, nf, con, ciu, mci, estml);
 
             txtID_buscar.Text = "";
             txtOT_buscar.Text = "";
@@ -188,14 +230,14 @@ namespace Proyecto_ML
             txtCON_buscar.Text = "";
             cboxCIUDAD_buscar.SelectedItem = null;
             txtMCI_buscar.Text = "";
+            cboxActivo.SelectedItem = null;
 
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
+        private void dgvDatos_SelectionChanged(object sender, EventArgs e)
         {
-            OpenChildForm(new FormAgregarRegistro());
-            Heredado.Load("Hola");
-            Heredado.Show();
+            int index = dgvDatos.SelectedRows[0].Index;
+
         }
     }
 }

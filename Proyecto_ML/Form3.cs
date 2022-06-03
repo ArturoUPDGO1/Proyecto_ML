@@ -18,7 +18,7 @@ namespace Proyecto_ML
         public FormUpdateDelete()
         {
             InitializeComponent();
-            dateCOT_updel.Value = DateTime.Now;
+            dateCOT_update.Value = DateTime.Now;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -99,23 +99,23 @@ namespace Proyecto_ML
             SqlCommand command = new SqlCommand("sp_InsertRegistroFacturas", cn);
             command.CommandType = CommandType.StoredProcedure;
 
-            SqlParameter param = new SqlParameter("@OrdenDeTrabajo", txtOT_updel.Text);
+            SqlParameter param = new SqlParameter("@OrdenDeTrabajo", txtOT_update.Text);
             command.Parameters.Add(param);
-            param = new SqlParameter("@NumEconomico", txtECO_updel.Text);
+            param = new SqlParameter("@NumEconomico", txtECO_update.Text);
             command.Parameters.Add(param);
-            param = new SqlParameter("@Monto", txtMON_updel.Text);
+            param = new SqlParameter("@Monto", txtMON_update.Text);
             command.Parameters.Add(param);
-            param = new SqlParameter("@FechaCot", Convert.ToDateTime(dateCOT_updel.Text).ToString("yyyy-MM-dd"));
+            param = new SqlParameter("@FechaCot", Convert.ToDateTime(dateCOT_update.Text).ToString("yyyy-MM-dd"));
             command.Parameters.Add(param);
-            param = new SqlParameter("@RazonSocial", cboxRS_reg.SelectedItem.ToString());
+            param = new SqlParameter("@RazonSocial", cboxRS_update.SelectedItem.ToString());
             command.Parameters.Add(param);
-            param = new SqlParameter("@NumFactura", txtNFAC_reg.Text);
+            param = new SqlParameter("@NumFactura", txtNFAC_update.Text);
             command.Parameters.Add(param);
-            param = new SqlParameter("@Conceptos", txtCON_reg.Text);
+            param = new SqlParameter("@Conceptos", txtCON_update.Text);
             command.Parameters.Add(param);
-            param = new SqlParameter("@Ciudad", cboxCIUDAD_reg.SelectedItem.ToString());
+            param = new SqlParameter("@Ciudad", cboxCIUDAD_update.SelectedItem.ToString());
             command.Parameters.Add(param);
-            param = new SqlParameter("@MontoCImpuesto", txtMCI_reg.Text);
+            param = new SqlParameter("@MontoCImpuesto", txtMCI_update.Text);
             command.Parameters.Add(param);
 
             command.ExecuteNonQuery();
@@ -123,16 +123,106 @@ namespace Proyecto_ML
 
             //MessageBox.Show("Insertado");
 
-            txtOT_updel.Text = "";
-            txtECO_updel.Text = "";
-            txtMON_updel.Text = "";
-            dateCOT_updel.Value = DateTime.Now;
-            cboxRS_reg.SelectedItem = null;
-            txtNFAC_reg.Text = "";
-            txtCON_reg.Text = "";
-            cboxCIUDAD_reg.SelectedItem = null;
-            txtMCI_reg.Text = "";
+            txtOT_update.Text = "";
+            txtECO_update.Text = "";
+            txtMON_update.Text = "";
+            dateCOT_update.Value = DateTime.Now;
+            cboxRS_update.SelectedItem = null;
+            txtNFAC_update.Text = "";
+            txtCON_update.Text = "";
+            cboxCIUDAD_update.SelectedItem = null;
+            txtMCI_update.Text = "";
         }
 
+        private void txtOT_updel_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtECO_updel_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtMON_updel_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dateCOT_updel_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cboxRS_reg_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label9_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtNFAC_reg_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCON_reg_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnPreview_Click(object sender, EventArgs e)
+        {
+            SqlConnection cn = new SqlConnection(ConfigurationManager.ConnectionStrings["unica"].ConnectionString);
+            cn.Open();
+
+            SqlCommand command = new SqlCommand("sp_PreviewRegistroFacturas", cn);
+            command.CommandType = CommandType.StoredProcedure;
+
+            SqlParameter param = new SqlParameter("@OrdenDeTrabajo", txtOT_update.Text);
+            command.Parameters.Add(param);
+            param = new SqlParameter("@OrdenDeTrabajo", txtOT_update.Text);
+            command.Parameters.Add(param);
+            param = new SqlParameter("@NumEconomico", txtECO_update.Text);
+            command.Parameters.Add(param);
+            param = new SqlParameter("@NumFactura", txtNFAC_update.Text);
+            command.Parameters.Add(param);
+
+            command.ExecuteNonQuery();
+            cn.Close();
+        }
     }
 }
