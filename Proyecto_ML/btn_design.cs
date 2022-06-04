@@ -1,6 +1,4 @@
-﻿//CLASE PARA AGREGAR DISEÑO A LOS COMPONENTES BOTONES
-
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,16 +10,15 @@ using System.ComponentModel;
 
 namespace Proyecto_ML
 {
-    public class pers_design_btns : Button
+    class btn_design : Button
     {
-
-        // FIELDS
+        //Fields
         private int borderSize = 0;
         private int borderRadius = 0;
         private Color borderColor = Color.PaleVioletRed;
 
         //Properties
-        [Category("Pers_Code")]
+        [Category("Button Design")]
         public int BorderSize
         {
             get { return borderSize; }
@@ -32,7 +29,7 @@ namespace Proyecto_ML
             }
         }
 
-        [Category("Pers_Code")]
+        [Category("Button Design")]
         public int BorderRadius
         {
             get { return borderRadius; }
@@ -43,7 +40,7 @@ namespace Proyecto_ML
             }
         }
 
-        [Category("Pers_Code")]
+        [Category("Button Design")]
         public Color BorderColor
         {
             get { return borderColor; }
@@ -53,14 +50,15 @@ namespace Proyecto_ML
                 this.Invalidate();
             }
         }
-        [Category("Pers_Code")]
+
+        [Category("Button Design")]
         public Color BackgroundColor
         {
             get { return this.BackColor; }
             set { this.BackColor = value; }
         }
 
-        [Category("Pers_Code")]
+        [Category("Button Design")]
         public Color TextColor
         {
             get { return this.ForeColor; }
@@ -68,7 +66,7 @@ namespace Proyecto_ML
         }
 
         //Constructor
-        public pers_design_btns()
+        public btn_design()
         {
             this.FlatStyle = FlatStyle.Flat;
             this.FlatAppearance.BorderSize = 0;
@@ -77,14 +75,9 @@ namespace Proyecto_ML
             this.ForeColor = Color.White;
             this.Resize += new EventHandler(Button_Resize);
         }
-        private void Button_Resize(object sender, EventArgs e)
-        {
-            if (borderRadius > this.Height)
-                borderRadius = this.Height;
-        }
 
-        //METHODS
-        private GraphicsPath GetFigurePath(Rectangle rect, float radius)
+        //Methods
+        private GraphicsPath GetFigurePath(Rectangle rect, int radius)
         {
             GraphicsPath path = new GraphicsPath();
             float curveSize = radius * 2F;
@@ -102,9 +95,10 @@ namespace Proyecto_ML
         {
             base.OnPaint(pevent);
 
+
             Rectangle rectSurface = this.ClientRectangle;
             Rectangle rectBorder = Rectangle.Inflate(rectSurface, -borderSize, -borderSize);
-            int smoothSize = 2;
+            int smoothSize = 1;
             if (borderSize > 0)
                 smoothSize = borderSize;
 
@@ -143,7 +137,6 @@ namespace Proyecto_ML
                 }
             }
         }
-
         protected override void OnHandleCreated(EventArgs e)
         {
             base.OnHandleCreated(e);
@@ -154,5 +147,11 @@ namespace Proyecto_ML
         {
             this.Invalidate();
         }
+        private void Button_Resize(object sender, EventArgs e)
+        {
+            if (borderRadius > this.Height)
+                borderRadius = this.Height;
+        }
+
     }
 }

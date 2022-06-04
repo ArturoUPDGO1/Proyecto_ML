@@ -170,9 +170,10 @@ namespace Proyecto_ML
 
         }
 
-        private void pers_design_btns1_Click(object sender, EventArgs e)
+        private void btn_design1_Click(object sender, EventArgs e)
         {
             OpenChildForm(new FormShowAll());
+
         }
     }
 }

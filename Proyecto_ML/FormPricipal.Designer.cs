@@ -40,9 +40,12 @@ namespace Proyecto_ML
             this.btnCerrar = new FontAwesome.Sharp.IconButton();
             this.lblTitleChildForm = new System.Windows.Forms.Label();
             this.iconCurrentChildForm = new FontAwesome.Sharp.IconPictureBox();
-            this.panelShadow = new System.Windows.Forms.Panel();
             this.panelDesktop = new System.Windows.Forms.Panel();
-            this.pers_design_btn_Mostrar = new Proyecto_ML.pers_design_btns();
+            this.panelShadow = new System.Windows.Forms.Panel();
+            this.btn_design_MostrarAll = new Proyecto_ML.btn_design();
+            this.btn_design = new Proyecto_ML.btn_design();
+            this.btn_design1 = new Proyecto_ML.btn_design();
+            this.btn_design2 = new Proyecto_ML.btn_design();
             this.panelMenu.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panelBarraTitulo.SuspendLayout();
@@ -240,19 +243,15 @@ namespace Proyecto_ML
             this.iconCurrentChildForm.TabIndex = 0;
             this.iconCurrentChildForm.TabStop = false;
             // 
-            // panelShadow
-            // 
-            this.panelShadow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(24)))), ((int)(((byte)(58)))));
-            this.panelShadow.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelShadow.Location = new System.Drawing.Point(220, 70);
-            this.panelShadow.Name = "panelShadow";
-            this.panelShadow.Size = new System.Drawing.Size(916, 9);
-            this.panelShadow.TabIndex = 14;
-            // 
             // panelDesktop
             // 
-            this.panelDesktop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.panelDesktop.Controls.Add(this.pers_design_btn_Mostrar);
+            this.panelDesktop.BackColor = System.Drawing.Color.White;
+            this.panelDesktop.BackgroundImage = global::Proyecto_ML.Properties.Resources.fondo_prin_figures;
+            this.panelDesktop.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelDesktop.Controls.Add(this.btn_design2);
+            this.panelDesktop.Controls.Add(this.btn_design1);
+            this.panelDesktop.Controls.Add(this.btn_design);
+            this.panelDesktop.Controls.Add(this.btn_design_MostrarAll);
             this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelDesktop.Location = new System.Drawing.Point(220, 79);
             this.panelDesktop.Name = "panelDesktop";
@@ -260,32 +259,100 @@ namespace Proyecto_ML
             this.panelDesktop.TabIndex = 15;
             this.panelDesktop.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDesktop_Paint);
             // 
-            // pers_design_btn_Mostrar
+            // panelShadow
             // 
-            this.pers_design_btn_Mostrar.BackColor = System.Drawing.Color.SteelBlue;
-            this.pers_design_btn_Mostrar.BackgroundColor = System.Drawing.Color.SteelBlue;
-            this.pers_design_btn_Mostrar.BorderColor = System.Drawing.Color.White;
-            this.pers_design_btn_Mostrar.BorderRadius = 20;
-            this.pers_design_btn_Mostrar.BorderSize = 1;
-            this.pers_design_btn_Mostrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pers_design_btn_Mostrar.FlatAppearance.BorderSize = 0;
-            this.pers_design_btn_Mostrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.pers_design_btn_Mostrar.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pers_design_btn_Mostrar.ForeColor = System.Drawing.Color.White;
-            this.pers_design_btn_Mostrar.Location = new System.Drawing.Point(80, 61);
-            this.pers_design_btn_Mostrar.Name = "pers_design_btn_Mostrar";
-            this.pers_design_btn_Mostrar.Size = new System.Drawing.Size(213, 120);
-            this.pers_design_btn_Mostrar.TabIndex = 3;
-            this.pers_design_btn_Mostrar.Text = "MOSTRAR TODOS LOS DATOS";
-            this.pers_design_btn_Mostrar.TextColor = System.Drawing.Color.White;
-            this.pers_design_btn_Mostrar.UseVisualStyleBackColor = false;
-            this.pers_design_btn_Mostrar.Click += new System.EventHandler(this.pers_design_btns1_Click);
+            this.panelShadow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(24)))), ((int)(((byte)(58)))));
+            this.panelShadow.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelShadow.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelShadow.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.panelShadow.Location = new System.Drawing.Point(220, 70);
+            this.panelShadow.Name = "panelShadow";
+            this.panelShadow.Size = new System.Drawing.Size(916, 9);
+            this.panelShadow.TabIndex = 14;
+            // 
+            // btn_design_MostrarAll
+            // 
+            this.btn_design_MostrarAll.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btn_design_MostrarAll.BackgroundColor = System.Drawing.Color.RoyalBlue;
+            this.btn_design_MostrarAll.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.btn_design_MostrarAll.BorderRadius = 10;
+            this.btn_design_MostrarAll.BorderSize = 0;
+            this.btn_design_MostrarAll.FlatAppearance.BorderSize = 0;
+            this.btn_design_MostrarAll.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_design_MostrarAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_design_MostrarAll.ForeColor = System.Drawing.Color.White;
+            this.btn_design_MostrarAll.Location = new System.Drawing.Point(106, 88);
+            this.btn_design_MostrarAll.Name = "btn_design_MostrarAll";
+            this.btn_design_MostrarAll.Size = new System.Drawing.Size(247, 128);
+            this.btn_design_MostrarAll.TabIndex = 0;
+            this.btn_design_MostrarAll.Text = "MOSTRAR TODOS";
+            this.btn_design_MostrarAll.TextColor = System.Drawing.Color.White;
+            this.btn_design_MostrarAll.UseVisualStyleBackColor = false;
+            this.btn_design_MostrarAll.Click += new System.EventHandler(this.btn_design1_Click);
+            // 
+            // btn_design
+            // 
+            this.btn_design.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btn_design.BackgroundColor = System.Drawing.Color.RoyalBlue;
+            this.btn_design.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.btn_design.BorderRadius = 10;
+            this.btn_design.BorderSize = 0;
+            this.btn_design.FlatAppearance.BorderSize = 0;
+            this.btn_design.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_design.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_design.ForeColor = System.Drawing.Color.White;
+            this.btn_design.Location = new System.Drawing.Point(428, 88);
+            this.btn_design.Name = "btn_design";
+            this.btn_design.Size = new System.Drawing.Size(247, 128);
+            this.btn_design.TabIndex = 2;
+            this.btn_design.Text = "NOSE AYUDA";
+            this.btn_design.TextColor = System.Drawing.Color.White;
+            this.btn_design.UseVisualStyleBackColor = false;
+            // 
+            // btn_design1
+            // 
+            this.btn_design1.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btn_design1.BackgroundColor = System.Drawing.Color.RoyalBlue;
+            this.btn_design1.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.btn_design1.BorderRadius = 10;
+            this.btn_design1.BorderSize = 0;
+            this.btn_design1.FlatAppearance.BorderSize = 0;
+            this.btn_design1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_design1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_design1.ForeColor = System.Drawing.Color.White;
+            this.btn_design1.Location = new System.Drawing.Point(428, 267);
+            this.btn_design1.Name = "btn_design1";
+            this.btn_design1.Size = new System.Drawing.Size(247, 128);
+            this.btn_design1.TabIndex = 3;
+            this.btn_design1.Text = "NOSE AYUDA";
+            this.btn_design1.TextColor = System.Drawing.Color.White;
+            this.btn_design1.UseVisualStyleBackColor = false;
+            // 
+            // btn_design2
+            // 
+            this.btn_design2.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btn_design2.BackgroundColor = System.Drawing.Color.RoyalBlue;
+            this.btn_design2.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.btn_design2.BorderRadius = 10;
+            this.btn_design2.BorderSize = 0;
+            this.btn_design2.FlatAppearance.BorderSize = 0;
+            this.btn_design2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_design2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_design2.ForeColor = System.Drawing.Color.White;
+            this.btn_design2.Location = new System.Drawing.Point(106, 267);
+            this.btn_design2.Name = "btn_design2";
+            this.btn_design2.Size = new System.Drawing.Size(247, 128);
+            this.btn_design2.TabIndex = 4;
+            this.btn_design2.Text = "NOSE AYUDA";
+            this.btn_design2.TextColor = System.Drawing.Color.White;
+            this.btn_design2.UseVisualStyleBackColor = false;
             // 
             // FormPricipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1120, 639);
+            this.ClientSize = new System.Drawing.Size(1136, 678);
+            this.ControlBox = false;
             this.Controls.Add(this.panelDesktop);
             this.Controls.Add(this.panelShadow);
             this.Controls.Add(this.panelBarraTitulo);
@@ -314,11 +381,14 @@ namespace Proyecto_ML
         private System.Windows.Forms.Panel panelBarraTitulo;
         private System.Windows.Forms.Label lblTitleChildForm;
         private FontAwesome.Sharp.IconPictureBox iconCurrentChildForm;
-        private System.Windows.Forms.Panel panelShadow;
-        private System.Windows.Forms.Panel panelDesktop;
         private FontAwesome.Sharp.IconButton btnCerrar;
         private FontAwesome.Sharp.IconButton btnMin;
         private FontAwesome.Sharp.IconButton btnMax;
-        private pers_design_btns pers_design_btn_Mostrar;
+        private System.Windows.Forms.Panel panelDesktop;
+        private System.Windows.Forms.Panel panelShadow;
+        private btn_design btn_design_MostrarAll;
+        private btn_design btn_design2;
+        private btn_design btn_design1;
+        private btn_design btn_design;
     }
 }

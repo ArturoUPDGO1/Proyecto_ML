@@ -81,6 +81,9 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="btn_design.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Conexion.cs" />
     <Compile Include="Form3.cs">
       <SubType>Form</SubType>
@@ -111,9 +114,6 @@
     </Compile>
     <Compile Include="FormShowAll.Designer.cs">
       <DependentUpon>FormShowAll.cs</DependentUpon>
-    </Compile>
-    <Compile Include="pers_design_btns.cs">
-      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -169,6 +169,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\pdf_template.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondo_prin_figures.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

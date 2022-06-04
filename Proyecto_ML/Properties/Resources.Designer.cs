@@ -61,18 +61,42 @@ namespace Proyecto_ML.Properties {
         }
         
         /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fondo_prin_figures {
+            get {
+                object obj = ResourceManager.GetObject("fondo_prin_figures", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a &lt;!DOCTYPE html&gt;
-        ///&lt;html lang=&quot;en&quot;&gt;
+        ///&lt;html&gt;
         ///&lt;head&gt;
-        ///    &lt;meta charset=&quot;UTF-8&quot;&gt;
-        ///    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
-        ///    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
-        ///    &lt;title&gt;&lt;/title&gt;
-        ///&lt;/head&gt;
-        ///&lt;body&gt;
-        ///    
-        ///&lt;/body&gt;
-        ///&lt;/html&gt;.
+        ///    &lt;style&gt;
+        ///        table.border {
+        ///            border-collapse: collapse;
+        ///        }
+        ///
+        ///            table.border th {
+        ///                padding: 10px;
+        ///                border: 1px solid black;
+        ///            }
+        ///
+        ///            table.border td {
+        ///                padding: 10px;
+        ///                border: 1px solid black;
+        ///            }
+        ///
+        ///        .texto {
+        ///            font-size: 12px;
+        ///            margin: 0px;
+        ///        }
+        ///
+        ///        .texto_datos {
+        ///            font-size: 12px;
+        ///     [resto de la cadena truncado]&quot;;.
         /// </summary>
         internal static string pdf_template {
             get {
