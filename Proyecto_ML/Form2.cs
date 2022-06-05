@@ -373,13 +373,21 @@ namespace Proyecto_ML
                     filas += "<td>" + row.Cells[0].Value.ToString() + "</td>";
                     filas += "<td>" + row.Cells[1].Value.ToString() + "</td>";
                     filas += "<td>" + row.Cells[2].Value.ToString() + "</td>";
-                    filas += "<td>" + row.Cells[3].Value.ToString() + "</td>";
+                    filas += "<td>$" + row.Cells[3].Value.ToString() + "</td>";
                     filas += "<td>" + Convert.ToDateTime(row.Cells[4].Value).ToString("dd/MM/yyyy") + "</td>";
                     filas += "<td>" + row.Cells[5].Value.ToString() + "</td>";
                     filas += "<td>" + row.Cells[6].Value.ToString() + "</td>";
                     filas += "<td>" + row.Cells[7].Value.ToString() + "</td>";
                     filas += "<td>" + row.Cells[8].Value.ToString() + "</td>";
-                    filas += "<td>" + row.Cells[9].Value.ToString() + "</td>";
+                    filas += "<td>$" + row.Cells[9].Value.ToString() + "</td>";
+                    if (row.Cells[10].Value.ToString() == "1")
+                    {
+                        filas += "<td>Activo</td>";
+                    }
+                    else
+                    {
+                        filas += "<td>Inactivo</td>";
+                    }
                     filas += "</tr>";
                 }
                 PaginaHTML_Texto = PaginaHTML_Texto.Replace("@FILAS", filas);
