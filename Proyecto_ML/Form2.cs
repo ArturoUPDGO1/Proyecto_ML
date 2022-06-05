@@ -25,9 +25,6 @@ namespace Proyecto_ML
         public FormConsulta()
         {
             InitializeComponent();
-
-            //DataGridViewButtonColumn btn = new DataGridViewButtonColumn();
-
             dateCOT_buscar.Value = DateTime.Today;
 
             string id, ot, eco, mon, fc, rs, nf, con, ciu, mci, estml;
@@ -81,17 +78,6 @@ namespace Proyecto_ML
             }
 
             dgvDatos.DataSource = consul.MostrarFacturas(id, ot, eco, mon, fc, rs, nf, con, ciu, mci, estml);
-            //if (dgvDatos.Columns.Count > 11)
-            //{
-            //}
-            //else
-            //{
-            //dgvDatos.Columns.Add(btn);
-            //btn.HeaderText = "ACTUALIZAR REGISTRO";
-            //btn.Text = "<---";
-            //btn.Name = "btn";
-            //btn.UseColumnTextForButtonValue = true;
-            //}
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -182,9 +168,7 @@ namespace Proyecto_ML
                 dt.Clear();
             }
 
-
             string id, ot, eco, mon, fc, rs, nf, con, ciu, mci, estml;
-            //DateTime fc = this.dateCOT_buscar.Value.Date;
 
             id = (String.IsNullOrEmpty(txtID_buscar.Text)) ? null : txtID_buscar.Text;
             ot = (String.IsNullOrEmpty(txtOT_buscar.Text)) ? null : txtOT_buscar.Text;
@@ -244,19 +228,11 @@ namespace Proyecto_ML
             }
 
             dgvDatos.DataSource = consul.MostrarFacturas(id, ot, eco, mon, fc, rs, nf, con, ciu, mci, estml);
-            //if (dgvDatos.Columns.Count > 11)
-            //{
-
-            //}
-            //else
-            //{
             dgvDatos.Columns.Add(btn);
             btn.HeaderText = "ACTUALIZAR REGISTRO";
             btn.Text = "<---";
             btn.Name = "btn";
             btn.UseColumnTextForButtonValue = true;
-            //}
-
 
             txtID_buscar.Text = "";
             txtOT_buscar.Text = "";
@@ -269,14 +245,12 @@ namespace Proyecto_ML
             cboxCIUDAD_buscar.SelectedItem = null;
             txtMCI_buscar.Text = "";
             cboxActivo.SelectedItem = null;
-
         }
 
         private void dgvDatos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.ColumnIndex == 11)
             {
-                //MessageBox.Show((e.RowIndex+1) + " Row " + (e.ColumnIndex+1) + " Column button clicked ");
                 string id_ml = dgvDatos.Rows[e.RowIndex].Cells[0].Value.ToString();
                 txtID_buscar.Text = id_ml;
                 string ot = dgvDatos.Rows[e.RowIndex].Cells[1].Value.ToString();
@@ -381,38 +355,35 @@ namespace Proyecto_ML
         //Exportar gridview a .pdf
         private void btnPDF_Click(object sender, EventArgs e)
         {
-            //Convierte el archivo html de resources a string
-            //string pagina_template = Properties.Resources.pdf_template.ToString();
-            //var font = new Font(BaseFont.TIMES_BOLD, 14, 1, new BaseColor(0, 0, 0));
-
             if (dgvDatos.Rows.Count > 0)
             {
-
                 SaveFileDialog savefile = new SaveFileDialog();
-                savefile.FileName = string.Format("{0}.pdf", DateTime.Now.ToString("dd/MM/yyyy"));
+                savefile.Filter = "PDF (*.pdf)|*.pdf";
+                savefile.FileName = ("Reporte_Facturas_") + DateTime.Now.ToString("dd-MM-yyyy") + (".pdf");
 
-
-
-                //string PaginaHTML_Texto = "<table border=\"1\"><tr><td>HOLA MUNDO</td></tr></table>";
                 string PaginaHTML_Texto = Properties.Resources.plantilla.ToString();
                 PaginaHTML_Texto = PaginaHTML_Texto.Replace("@CLIENTE", "");
                 PaginaHTML_Texto = PaginaHTML_Texto.Replace("@DOCUMENTO", "");
-                PaginaHTML_Texto = PaginaHTML_Texto.Replace("@FECHA", DateTime.Now.ToString("dd/MM/yyyy"));
+                PaginaHTML_Texto = PaginaHTML_Texto.Replace("@FECHA", DateTime.Today.ToString("dd/MM/yyyy"));
 
                 string filas = string.Empty;
-                decimal total = 0;
                 foreach (DataGridViewRow row in dgvDatos.Rows)
                 {
                     filas += "<tr>";
-                    filas += "<td>" + row.Cells["Cantidad"].Value.ToString() + "</td>";
-                    filas += "<td>" + row.Cells["Descripcion"].Value.ToString() + "</td>";
-                    filas += "<td>" + row.Cells["PrecioUnitario"].Value.ToString() + "</td>";
-                    filas += "<td>" + row.Cells["Importe"].Value.ToString() + "</td>";
+                    filas += "<td>" + row.Cells[0].Value.ToString() + "</td>";
+                    filas += "<td>" + row.Cells[1].Value.ToString() + "</td>";
+                    filas += "<td>" + row.Cells[2].Value.ToString() + "</td>";
+                    filas += "<td>" + row.Cells[3].Value.ToString() + "</td>";
+                    filas += "<td>" + Convert.ToDateTime(row.Cells[4].Value).ToString("dd/MM/yyyy") + "</td>";
+                    filas += "<td>" + row.Cells[5].Value.ToString() + "</td>";
+                    filas += "<td>" + row.Cells[6].Value.ToString() + "</td>";
+                    filas += "<td>" + row.Cells[7].Value.ToString() + "</td>";
+                    filas += "<td>" + row.Cells[8].Value.ToString() + "</td>";
+                    filas += "<td>" + row.Cells[9].Value.ToString() + "</td>";
                     filas += "</tr>";
-                    total += decimal.Parse(row.Cells["Importe"].Value.ToString());
                 }
                 PaginaHTML_Texto = PaginaHTML_Texto.Replace("@FILAS", filas);
-                PaginaHTML_Texto = PaginaHTML_Texto.Replace("@TOTAL", total.ToString());
+                PaginaHTML_Texto = PaginaHTML_Texto.Replace("@TOTAL", "");
 
 
 
@@ -421,7 +392,7 @@ namespace Proyecto_ML
                     using (FileStream stream = new FileStream(savefile.FileName, FileMode.Create))
                     {
                         //Creamos un nuevo documento y lo definimos como PDF
-                        Document pdfDoc = new Document(PageSize.A4, 25, 25, 25, 25);
+                        Document pdfDoc = new Document(PageSize.A4.Rotate(), 10, 10, 20, 20);
 
                         PdfWriter writer = PdfWriter.GetInstance(pdfDoc, stream);
                         pdfDoc.Open();
@@ -446,137 +417,8 @@ namespace Proyecto_ML
                         pdfDoc.Close();
                         stream.Close();
                     }
-
                 }
-
-                //    SaveFileDialog sfd = new SaveFileDialog();
-                //    sfd.Filter = "PDF (*.pdf)|*.pdf";
-                //    sfd.FileName = ("Reporte_Facturas_") + DateTime.Now.ToString("dd-MM-yyyy") + (".pdf");
-                //    bool fileError = false;
-                //    if (sfd.ShowDialog() == DialogResult.OK)
-                //    {
-                //        if (File.Exists(sfd.FileName))
-                //        {
-                //            try
-                //            {
-                //                File.Delete(sfd.FileName);
-                //            }
-                //            catch (IOException ex)
-                //            {
-                //                fileError = true;
-                //                MessageBox.Show("It wasn't possible to write the data to the disk." + ex.Message);
-                //            }
-                //        }
-                //        if (!fileError)
-                //        {
-                //            try
-                //            {
-                //                PdfPTable pdfTable = new PdfPTable(dgvDatos.Columns.Count);
-                //                pdfTable.DefaultCell.Padding = 2;
-                //                pdfTable.WidthPercentage = 100;
-                //                pdfTable.HorizontalAlignment = Element.ALIGN_CENTER;
-
-                //                //int nc = Convert.ToInt32(dgvDatos.Columns)-2;
-
-                //                foreach (DataGridViewColumn column in dgvDatos.Columns)
-                //                {
-                //                    Phrase phrase = new Phrase(column.HeaderText);
-                //                    phrase.Font = FontFactory.GetFont("Arial", 12);
-                //                    PdfPCell cell = new PdfPCell(phrase);
-                //                    cell.BackgroundColor = new BaseColor(175, 166, 166);
-                //                    pdfTable.AddCell(cell);
-                //                }
-
-                //                foreach (DataGridViewRow row in dgvDatos.Rows)
-                //                {
-                //                    foreach (DataGridViewCell cell in row.Cells)
-                //                    {
-                //                        pdfTable.AddCell(cell.Value.ToString());
-                //                        pdfTable.AddCell(row.Cells[0].Value.ToString());
-                //                        pdfTable.AddCell(row.Cells[1].Value.ToString());
-                //                        pdfTable.AddCell(row.Cells[2].Value.ToString());
-                //                        pdfTable.AddCell(row.Cells[3].Value.ToString());
-                //                        pdfTable.AddCell(Convert.ToDateTime(row.Cells[4].Value).ToString("dd/MM/yyyy"));
-                //                        pdfTable.AddCell(row.Cells[5].Value.ToString());
-                //                        pdfTable.AddCell(row.Cells[6].Value.ToString());
-                //                        pdfTable.AddCell(row.Cells[7].Value.ToString());
-                //                        pdfTable.AddCell(row.Cells[8].Value.ToString());
-                //                        pdfTable.AddCell(row.Cells[9].Value.ToString());
-                //                        pdfTable.AddCell(row.Cells[10].Value.ToString());
-                //                    }
-
-                //                }
-
-                //                using (FileStream stream = new FileStream(sfd.FileName, FileMode.Create))
-                //                {
-                //                    Document pdfDoc = new Document(PageSize.A4.Rotate(), 10f, 10f, 20f, 20f);
-                //                    PdfWriter pdf = PdfWriter.GetInstance(pdfDoc, stream);
-                //                    pdfDoc.Open();
-                //                    pdfDoc.Add(pdfTable);
-                //                    //using (StringReader sr = new StringReader(pagina_template))
-                //                    //{
-                //                    //    XMLWorkerHelper.GetInstance().ParseXHtml(pdf, pdfDoc, sr);
-                //                    //    pdfDoc.Add(pdfTable);
-                //                    //}
-                //                    pdfDoc.Close();
-                //                    stream.Close();
-                //                }
-
-                //                MessageBox.Show("Data Exported Successfully !!!", "Info");
-                //            }
-                //            catch (Exception ex)
-                //            {
-                //                MessageBox.Show("Error :" + ex.Message);
-                //            }
-                //        }
-                //    }
-                //}
-                //else
-                //{
-                //    MessageBox.Show("No Record To Export !!!", "Info");
-                //}
-
-                //SaveFileDialog guardar = new SaveFileDialog();
-                //guardar.Filter = "PDF (*.pdf)|*.pdf";
-                //guardar.FileName = ("Reporte_Facturas_") + DateTime.Now.ToString("dd-MM-yyyy") + (".pdf"); //Nombre que recibirá el archivo
-
-                //string pagina_template = Properties.Resources.pdf_template.ToString();//Convierte el archivo html de resources a string
-
-                //string filas = string.Empty;
-
-                ////REVISAR!!!
-
-                //foreach (DataGridView row in dgvDatos.Rows)
-                //{
-                //    filas += "<tr>";
-                //    filas += "<td>" + dgvDatos.Rows.Cells[0].Value.ToString(); +"</td>";
-                //    filas += "<td>" + dgvDatos.Rows.Cells[0].Value.ToString(); +"</td>";
-                //    filas += "</tr>";
-                //}
-
-
-                //if (guardar.ShowDialog() == DialogResult.OK)
-                //{
-                //    using (FileStream stream = new FileStream(guardar.FileName, FileMode.Create))
-                //    {
-                //        Document pdf_reporte = new Document(PageSize.A4.Rotate(), 35, 35, 35, 35);//Formato de pagina
-
-                //        PdfWriter pdf = PdfWriter.GetInstance(pdf_reporte, stream);
-
-                //        pdf_reporte.Open();
-
-                //        using (StringReader sr = new StringReader(pagina_template))
-                //        {
-                //            XMLWorkerHelper.GetInstance().ParseXHtml(pdf, pdf_reporte, sr);
-                //        }
-
-                //        pdf_reporte.Close();
-
-                //        stream.Close();
-                //    }
-
             }
         }
-
     }
 }
