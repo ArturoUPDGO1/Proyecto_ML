@@ -61,11 +61,11 @@ namespace Proyecto_ML
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvAllDatos.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvAllDatos.Location = new System.Drawing.Point(21, 29);
+            this.dgvAllDatos.Location = new System.Drawing.Point(20, 20);
             this.dgvAllDatos.Name = "dgvAllDatos";
             this.dgvAllDatos.ReadOnly = true;
             this.dgvAllDatos.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            this.dgvAllDatos.Size = new System.Drawing.Size(753, 395);
+            this.dgvAllDatos.Size = new System.Drawing.Size(759, 419);
             this.dgvAllDatos.TabIndex = 43;
             // 
             // FormShowAll

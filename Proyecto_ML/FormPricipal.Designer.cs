@@ -41,11 +41,11 @@ namespace Proyecto_ML
             this.lblTitleChildForm = new System.Windows.Forms.Label();
             this.iconCurrentChildForm = new FontAwesome.Sharp.IconPictureBox();
             this.panelDesktop = new System.Windows.Forms.Panel();
-            this.panelShadow = new System.Windows.Forms.Panel();
-            this.btn_design_MostrarAll = new Proyecto_ML.btn_design();
-            this.btn_design = new Proyecto_ML.btn_design();
-            this.btn_design1 = new Proyecto_ML.btn_design();
             this.btn_design2 = new Proyecto_ML.btn_design();
+            this.btn_design1 = new Proyecto_ML.btn_design();
+            this.btn_design = new Proyecto_ML.btn_design();
+            this.btn_design_MostrarAll = new Proyecto_ML.btn_design();
+            this.panelShadow = new System.Windows.Forms.Panel();
             this.panelMenu.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panelBarraTitulo.SuspendLayout();
@@ -135,7 +135,7 @@ namespace Proyecto_ML
             this.btnHome.IconChar = FontAwesome.Sharp.IconChar.Home;
             this.btnHome.IconColor = System.Drawing.Color.Gainsboro;
             this.btnHome.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnHome.Location = new System.Drawing.Point(68, 40);
+            this.btnHome.Location = new System.Drawing.Point(73, 40);
             this.btnHome.Name = "btnHome";
             this.btnHome.Size = new System.Drawing.Size(71, 62);
             this.btnHome.TabIndex = 0;
@@ -259,16 +259,62 @@ namespace Proyecto_ML
             this.panelDesktop.TabIndex = 15;
             this.panelDesktop.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDesktop_Paint);
             // 
-            // panelShadow
+            // btn_design2
             // 
-            this.panelShadow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(24)))), ((int)(((byte)(58)))));
-            this.panelShadow.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panelShadow.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelShadow.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.panelShadow.Location = new System.Drawing.Point(220, 70);
-            this.panelShadow.Name = "panelShadow";
-            this.panelShadow.Size = new System.Drawing.Size(916, 9);
-            this.panelShadow.TabIndex = 14;
+            this.btn_design2.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btn_design2.BackgroundColor = System.Drawing.Color.RoyalBlue;
+            this.btn_design2.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.btn_design2.BorderRadius = 10;
+            this.btn_design2.BorderSize = 0;
+            this.btn_design2.FlatAppearance.BorderSize = 0;
+            this.btn_design2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_design2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_design2.ForeColor = System.Drawing.Color.White;
+            this.btn_design2.Location = new System.Drawing.Point(106, 267);
+            this.btn_design2.Name = "btn_design2";
+            this.btn_design2.Size = new System.Drawing.Size(247, 128);
+            this.btn_design2.TabIndex = 4;
+            this.btn_design2.Text = "NOSE AYUDA";
+            this.btn_design2.TextColor = System.Drawing.Color.White;
+            this.btn_design2.UseVisualStyleBackColor = false;
+            // 
+            // btn_design1
+            // 
+            this.btn_design1.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btn_design1.BackgroundColor = System.Drawing.Color.RoyalBlue;
+            this.btn_design1.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.btn_design1.BorderRadius = 10;
+            this.btn_design1.BorderSize = 0;
+            this.btn_design1.FlatAppearance.BorderSize = 0;
+            this.btn_design1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_design1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_design1.ForeColor = System.Drawing.Color.White;
+            this.btn_design1.Location = new System.Drawing.Point(428, 267);
+            this.btn_design1.Name = "btn_design1";
+            this.btn_design1.Size = new System.Drawing.Size(247, 128);
+            this.btn_design1.TabIndex = 3;
+            this.btn_design1.Text = "NOSE AYUDA";
+            this.btn_design1.TextColor = System.Drawing.Color.White;
+            this.btn_design1.UseVisualStyleBackColor = false;
+            // 
+            // btn_design
+            // 
+            this.btn_design.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btn_design.BackgroundColor = System.Drawing.Color.RoyalBlue;
+            this.btn_design.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.btn_design.BorderRadius = 10;
+            this.btn_design.BorderSize = 0;
+            this.btn_design.FlatAppearance.BorderSize = 0;
+            this.btn_design.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_design.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_design.ForeColor = System.Drawing.Color.White;
+            this.btn_design.Location = new System.Drawing.Point(428, 88);
+            this.btn_design.Name = "btn_design";
+            this.btn_design.Size = new System.Drawing.Size(247, 128);
+            this.btn_design.TabIndex = 2;
+            this.btn_design.Text = "NOSE AYUDA";
+            this.btn_design.TextColor = System.Drawing.Color.White;
+            this.btn_design.UseVisualStyleBackColor = false;
             // 
             // btn_design_MostrarAll
             // 
@@ -290,62 +336,16 @@ namespace Proyecto_ML
             this.btn_design_MostrarAll.UseVisualStyleBackColor = false;
             this.btn_design_MostrarAll.Click += new System.EventHandler(this.btn_design1_Click);
             // 
-            // btn_design
+            // panelShadow
             // 
-            this.btn_design.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btn_design.BackgroundColor = System.Drawing.Color.RoyalBlue;
-            this.btn_design.BorderColor = System.Drawing.Color.RoyalBlue;
-            this.btn_design.BorderRadius = 10;
-            this.btn_design.BorderSize = 0;
-            this.btn_design.FlatAppearance.BorderSize = 0;
-            this.btn_design.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_design.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_design.ForeColor = System.Drawing.Color.White;
-            this.btn_design.Location = new System.Drawing.Point(428, 88);
-            this.btn_design.Name = "btn_design";
-            this.btn_design.Size = new System.Drawing.Size(247, 128);
-            this.btn_design.TabIndex = 2;
-            this.btn_design.Text = "NOSE AYUDA";
-            this.btn_design.TextColor = System.Drawing.Color.White;
-            this.btn_design.UseVisualStyleBackColor = false;
-            // 
-            // btn_design1
-            // 
-            this.btn_design1.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btn_design1.BackgroundColor = System.Drawing.Color.RoyalBlue;
-            this.btn_design1.BorderColor = System.Drawing.Color.RoyalBlue;
-            this.btn_design1.BorderRadius = 10;
-            this.btn_design1.BorderSize = 0;
-            this.btn_design1.FlatAppearance.BorderSize = 0;
-            this.btn_design1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_design1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_design1.ForeColor = System.Drawing.Color.White;
-            this.btn_design1.Location = new System.Drawing.Point(428, 267);
-            this.btn_design1.Name = "btn_design1";
-            this.btn_design1.Size = new System.Drawing.Size(247, 128);
-            this.btn_design1.TabIndex = 3;
-            this.btn_design1.Text = "NOSE AYUDA";
-            this.btn_design1.TextColor = System.Drawing.Color.White;
-            this.btn_design1.UseVisualStyleBackColor = false;
-            // 
-            // btn_design2
-            // 
-            this.btn_design2.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btn_design2.BackgroundColor = System.Drawing.Color.RoyalBlue;
-            this.btn_design2.BorderColor = System.Drawing.Color.RoyalBlue;
-            this.btn_design2.BorderRadius = 10;
-            this.btn_design2.BorderSize = 0;
-            this.btn_design2.FlatAppearance.BorderSize = 0;
-            this.btn_design2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_design2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_design2.ForeColor = System.Drawing.Color.White;
-            this.btn_design2.Location = new System.Drawing.Point(106, 267);
-            this.btn_design2.Name = "btn_design2";
-            this.btn_design2.Size = new System.Drawing.Size(247, 128);
-            this.btn_design2.TabIndex = 4;
-            this.btn_design2.Text = "NOSE AYUDA";
-            this.btn_design2.TextColor = System.Drawing.Color.White;
-            this.btn_design2.UseVisualStyleBackColor = false;
+            this.panelShadow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(24)))), ((int)(((byte)(58)))));
+            this.panelShadow.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelShadow.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelShadow.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.panelShadow.Location = new System.Drawing.Point(220, 70);
+            this.panelShadow.Name = "panelShadow";
+            this.panelShadow.Size = new System.Drawing.Size(916, 9);
+            this.panelShadow.TabIndex = 14;
             // 
             // FormPricipal
             // 
