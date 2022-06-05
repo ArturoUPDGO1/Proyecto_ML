@@ -29,8 +29,8 @@ namespace Proyecto_ML
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelContenedor = new System.Windows.Forms.Panel();
             this.panelConsulta = new System.Windows.Forms.Panel();
             this.btnPDF = new System.Windows.Forms.Button();
@@ -124,17 +124,20 @@ namespace Proyecto_ML
             this.btnPDF.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPDF.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPDF.ForeColor = System.Drawing.Color.White;
-            this.btnPDF.Location = new System.Drawing.Point(739, 491);
+            this.btnPDF.Location = new System.Drawing.Point(739, 488);
+            this.btnPDF.MaximumSize = new System.Drawing.Size(149, 35);
+            this.btnPDF.MinimumSize = new System.Drawing.Size(149, 35);
             this.btnPDF.Name = "btnPDF";
             this.btnPDF.Size = new System.Drawing.Size(149, 35);
             this.btnPDF.TabIndex = 46;
-            this.btnPDF.Text = "Exportar PDF";
+            this.btnPDF.Text = "EXPORTAR PDF";
             this.btnPDF.UseVisualStyleBackColor = false;
             this.btnPDF.Click += new System.EventHandler(this.btnPDF_Click);
             // 
             // button1
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(77)))), ((int)(((byte)(221)))));
             this.button1.Enabled = false;
             this.button1.FlatAppearance.BorderSize = 0;
@@ -143,7 +146,9 @@ namespace Proyecto_ML
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(236, 491);
+            this.button1.Location = new System.Drawing.Point(236, 488);
+            this.button1.MaximumSize = new System.Drawing.Size(124, 35);
+            this.button1.MinimumSize = new System.Drawing.Size(124, 35);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(124, 35);
             this.button1.TabIndex = 45;
@@ -163,6 +168,7 @@ namespace Proyecto_ML
             "Inactivo",
             "Mostrar todos"});
             this.cboxActivo.Location = new System.Drawing.Point(175, 439);
+            this.cboxActivo.MinimumSize = new System.Drawing.Size(185, 0);
             this.cboxActivo.Name = "cboxActivo";
             this.cboxActivo.Size = new System.Drawing.Size(185, 28);
             this.cboxActivo.TabIndex = 44;
@@ -188,23 +194,23 @@ namespace Proyecto_ML
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvDatos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.dgvDatos.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvDatos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDatos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dgvDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvDatos.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvDatos.DefaultCellStyle = dataGridViewCellStyle8;
             this.dgvDatos.Location = new System.Drawing.Point(366, 22);
             this.dgvDatos.Name = "dgvDatos";
             this.dgvDatos.ReadOnly = true;
@@ -221,6 +227,7 @@ namespace Proyecto_ML
             this.dateCOT_buscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateCOT_buscar.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateCOT_buscar.Location = new System.Drawing.Point(175, 168);
+            this.dateCOT_buscar.MinimumSize = new System.Drawing.Size(185, 26);
             this.dateCOT_buscar.Name = "dateCOT_buscar";
             this.dateCOT_buscar.Size = new System.Drawing.Size(185, 26);
             this.dateCOT_buscar.TabIndex = 41;
@@ -228,7 +235,8 @@ namespace Proyecto_ML
             // 
             // button2
             // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(77)))), ((int)(((byte)(221)))));
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(36)))), ((int)(((byte)(81)))));
@@ -236,7 +244,9 @@ namespace Proyecto_ML
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(270, 491);
+            this.button2.Location = new System.Drawing.Point(270, 488);
+            this.button2.MaximumSize = new System.Drawing.Size(90, 35);
+            this.button2.MinimumSize = new System.Drawing.Size(90, 35);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(90, 35);
             this.button2.TabIndex = 21;
@@ -262,6 +272,7 @@ namespace Proyecto_ML
             | System.Windows.Forms.AnchorStyles.Left)));
             this.txtID_buscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtID_buscar.Location = new System.Drawing.Point(175, 22);
+            this.txtID_buscar.MinimumSize = new System.Drawing.Size(185, 26);
             this.txtID_buscar.Name = "txtID_buscar";
             this.txtID_buscar.Size = new System.Drawing.Size(185, 26);
             this.txtID_buscar.TabIndex = 39;
@@ -272,6 +283,7 @@ namespace Proyecto_ML
             | System.Windows.Forms.AnchorStyles.Left)));
             this.txtOT_buscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtOT_buscar.Location = new System.Drawing.Point(175, 59);
+            this.txtOT_buscar.MinimumSize = new System.Drawing.Size(185, 26);
             this.txtOT_buscar.Name = "txtOT_buscar";
             this.txtOT_buscar.Size = new System.Drawing.Size(185, 26);
             this.txtOT_buscar.TabIndex = 0;
@@ -287,6 +299,7 @@ namespace Proyecto_ML
             "Monterrey",
             "Durango"});
             this.cboxCIUDAD_buscar.Location = new System.Drawing.Point(175, 363);
+            this.cboxCIUDAD_buscar.MinimumSize = new System.Drawing.Size(185, 0);
             this.cboxCIUDAD_buscar.Name = "cboxCIUDAD_buscar";
             this.cboxCIUDAD_buscar.Size = new System.Drawing.Size(185, 28);
             this.cboxCIUDAD_buscar.TabIndex = 20;
@@ -297,6 +310,7 @@ namespace Proyecto_ML
             | System.Windows.Forms.AnchorStyles.Left)));
             this.txtMON_buscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMON_buscar.Location = new System.Drawing.Point(175, 133);
+            this.txtMON_buscar.MinimumSize = new System.Drawing.Size(185, 26);
             this.txtMON_buscar.Name = "txtMON_buscar";
             this.txtMON_buscar.Size = new System.Drawing.Size(185, 26);
             this.txtMON_buscar.TabIndex = 5;
@@ -312,6 +326,7 @@ namespace Proyecto_ML
             "General Carriers",
             "Enlaces Terrestres Next"});
             this.cboxRS_buscar.Location = new System.Drawing.Point(175, 207);
+            this.cboxRS_buscar.MinimumSize = new System.Drawing.Size(185, 0);
             this.cboxRS_buscar.Name = "cboxRS_buscar";
             this.cboxRS_buscar.Size = new System.Drawing.Size(185, 28);
             this.cboxRS_buscar.TabIndex = 19;
@@ -334,6 +349,7 @@ namespace Proyecto_ML
             | System.Windows.Forms.AnchorStyles.Left)));
             this.txtECO_buscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtECO_buscar.Location = new System.Drawing.Point(175, 96);
+            this.txtECO_buscar.MinimumSize = new System.Drawing.Size(185, 26);
             this.txtECO_buscar.Name = "txtECO_buscar";
             this.txtECO_buscar.Size = new System.Drawing.Size(185, 26);
             this.txtECO_buscar.TabIndex = 6;
@@ -355,6 +371,7 @@ namespace Proyecto_ML
             this.txtMCI_buscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.txtMCI_buscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMCI_buscar.Location = new System.Drawing.Point(175, 402);
+            this.txtMCI_buscar.MinimumSize = new System.Drawing.Size(185, 26);
             this.txtMCI_buscar.Name = "txtMCI_buscar";
             this.txtMCI_buscar.Size = new System.Drawing.Size(185, 26);
             this.txtMCI_buscar.TabIndex = 7;
@@ -377,6 +394,8 @@ namespace Proyecto_ML
             | System.Windows.Forms.AnchorStyles.Left)));
             this.txtCON_buscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCON_buscar.Location = new System.Drawing.Point(175, 283);
+            this.txtCON_buscar.MaximumSize = new System.Drawing.Size(185, 69);
+            this.txtCON_buscar.MinimumSize = new System.Drawing.Size(185, 69);
             this.txtCON_buscar.Multiline = true;
             this.txtCON_buscar.Name = "txtCON_buscar";
             this.txtCON_buscar.Size = new System.Drawing.Size(185, 69);
@@ -400,6 +419,7 @@ namespace Proyecto_ML
             | System.Windows.Forms.AnchorStyles.Left)));
             this.txtNFAC_buscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNFAC_buscar.Location = new System.Drawing.Point(175, 248);
+            this.txtNFAC_buscar.MinimumSize = new System.Drawing.Size(185, 26);
             this.txtNFAC_buscar.Name = "txtNFAC_buscar";
             this.txtNFAC_buscar.Size = new System.Drawing.Size(185, 26);
             this.txtNFAC_buscar.TabIndex = 1;
@@ -469,10 +489,10 @@ namespace Proyecto_ML
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(900, 560);
+            this.ClientSize = new System.Drawing.Size(900, 544);
             this.Controls.Add(this.panelContenedor);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.MinimumSize = new System.Drawing.Size(900, 560);
+            this.MinimumSize = new System.Drawing.Size(900, 544);
             this.Name = "FormConsulta";
             this.Text = "Buscar Registro";
             this.panelContenedor.ResumeLayout(false);

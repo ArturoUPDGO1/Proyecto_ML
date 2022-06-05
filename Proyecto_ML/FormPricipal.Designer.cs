@@ -245,8 +245,7 @@ namespace Proyecto_ML
             // 
             // panelDesktop
             // 
-            this.panelDesktop.BackColor = System.Drawing.Color.White;
-            this.panelDesktop.BackgroundImage = global::Proyecto_ML.Properties.Resources.fondo_prin_figures;
+            this.panelDesktop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(12)))), ((int)(((byte)(73)))));
             this.panelDesktop.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panelDesktop.Controls.Add(this.btn_design2);
             this.panelDesktop.Controls.Add(this.btn_design1);
@@ -277,6 +276,7 @@ namespace Proyecto_ML
             this.btn_design2.Text = "NOSE AYUDA";
             this.btn_design2.TextColor = System.Drawing.Color.White;
             this.btn_design2.UseVisualStyleBackColor = false;
+            this.btn_design2.Visible = false;
             // 
             // btn_design1
             // 
@@ -296,6 +296,7 @@ namespace Proyecto_ML
             this.btn_design1.Text = "NOSE AYUDA";
             this.btn_design1.TextColor = System.Drawing.Color.White;
             this.btn_design1.UseVisualStyleBackColor = false;
+            this.btn_design1.Visible = false;
             // 
             // btn_design
             // 
@@ -315,6 +316,7 @@ namespace Proyecto_ML
             this.btn_design.Text = "NOSE AYUDA";
             this.btn_design.TextColor = System.Drawing.Color.White;
             this.btn_design.UseVisualStyleBackColor = false;
+            this.btn_design.Visible = false;
             // 
             // btn_design_MostrarAll
             // 
