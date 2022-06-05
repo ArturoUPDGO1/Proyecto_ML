@@ -173,5 +173,9 @@
   <ItemGroup>
     <None Include="Resources\fondo_prin_figures.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\plantilla.html" />
+    <Content Include="Resources\shop.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
