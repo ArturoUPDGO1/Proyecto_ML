@@ -15,9 +15,12 @@ using iTextSharp.text;
 using iTextSharp.text.pdf;
 using iTextSharp.tool.xml;
 using System.IO;
+using System.Diagnostics;
 
 namespace Proyecto_ML
 {
+    //DESKTOP-CNJV5RF\SQLEXPRESS Arturo
+    //DESKTOP-4JGUS2G\SQLEXPRESS Paul
     public partial class FormConsulta : Form
     {
         Consulta consul = new Consulta();
@@ -286,6 +289,25 @@ namespace Proyecto_ML
                 cboxActivo.Items.Remove("Mostrar todos");
                 button1.Enabled = true;
                 button1.Visible = true;
+            }
+            if (e.ColumnIndex == 1)
+            {
+                string ot = dgvDatos.Rows[e.RowIndex].Cells[1].Value.ToString();
+
+                Process.Start("C:\\Users\\Dell\\Desktop\\"+ot+".pdf");
+            }
+
+            if (e.ColumnIndex == 6)
+            {
+                string nf = dgvDatos.Rows[e.RowIndex].Cells[6].Value.ToString();
+                if (!File.Exists("C:\\Users\\Dell\\Desktop\\" + nf + ".pdf"))
+                {
+                    MessageBox.Show("El archivo " + nf + ".pdf no fue encontrado.");
+                }
+                else
+                {
+                    Process.Start("C:\\Users\\Dell\\Desktop\\" + nf + ".pdf");
+                }
             }
         }
 
