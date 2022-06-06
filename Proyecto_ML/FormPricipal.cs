@@ -115,8 +115,17 @@ namespace Proyecto_ML
 
         private void btnHome_Click(object sender, EventArgs e)
         {
-            currentChildForm.Close();
-            Reset();
+            
+            if (currentChildForm == null){
+                
+            }
+            else
+            {
+                currentChildForm.Close();
+                Reset();
+            }
+            
+            
         }
 
         private void Reset()

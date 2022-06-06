@@ -415,8 +415,6 @@ namespace Proyecto_ML
                         img.SetAbsolutePosition(pdfDoc.LeftMargin, pdfDoc.Top - 60);
                         pdfDoc.Add(img);
 
-
-                        //pdfDoc.Add(new Phrase("Hola Mundo"));
                         using (StringReader sr = new StringReader(PaginaHTML_Texto))
                         {
                             XMLWorkerHelper.GetInstance().ParseXHtml(writer, pdfDoc, sr);

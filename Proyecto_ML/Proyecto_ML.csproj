@@ -168,9 +168,6 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\pdf_template.html" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\fondo_prin_figures.jpg" />
   </ItemGroup>
   <ItemGroup>

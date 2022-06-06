@@ -245,7 +245,8 @@ namespace Proyecto_ML
             // 
             // panelDesktop
             // 
-            this.panelDesktop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(12)))), ((int)(((byte)(73)))));
+            this.panelDesktop.BackColor = System.Drawing.Color.Transparent;
+            this.panelDesktop.BackgroundImage = global::Proyecto_ML.Properties.Resources.fondo_prin_figures;
             this.panelDesktop.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panelDesktop.Controls.Add(this.btn_design2);
             this.panelDesktop.Controls.Add(this.btn_design1);
