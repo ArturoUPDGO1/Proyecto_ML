@@ -184,5 +184,10 @@ namespace Proyecto_ML
             OpenChildForm(new FormShowAll());
 
         }
+
+        private void btn_design_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
