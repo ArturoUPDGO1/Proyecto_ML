@@ -290,23 +290,47 @@ namespace Proyecto_ML
                 button1.Enabled = true;
                 button1.Visible = true;
             }
+
+            string directpathfolder = null;
+
+            SqlConnection cn = new SqlConnection(ConfigurationManager.ConnectionStrings["unica"].ConnectionString);
+            cn.Open();
+
+            SqlCommand command = new SqlCommand("sp_SelectPathFolder", cn);
+            command.CommandType = CommandType.StoredProcedure;
+
+            SqlDataReader dbpath = command.ExecuteReader();
+
+            if (dbpath.Read())
+            {
+                directpathfolder = dbpath["pathdirectory"].ToString();
+            }
+
+            cn.Close();
+
             if (e.ColumnIndex == 1)
             {
                 string ot = dgvDatos.Rows[e.RowIndex].Cells[1].Value.ToString();
-
-                Process.Start("C:\\Users\\Dell\\Desktop\\"+ot+".pdf");
+                if (!File.Exists(directpathfolder + "\\" + ot + ".pdf"))
+                {
+                    MessageBox.Show("El archivo " + ot + ".pdf no fue encontrado.");
+                }
+                else
+                {
+                    Process.Start(directpathfolder + "\\" + ot + ".pdf");
+                }
             }
 
             if (e.ColumnIndex == 6)
             {
                 string nf = dgvDatos.Rows[e.RowIndex].Cells[6].Value.ToString();
-                if (!File.Exists("C:\\Users\\Dell\\Desktop\\" + nf + ".pdf"))
+                if (!File.Exists(directpathfolder + "\\" + nf + ".pdf"))
                 {
                     MessageBox.Show("El archivo " + nf + ".pdf no fue encontrado.");
                 }
                 else
                 {
-                    Process.Start("C:\\Users\\Dell\\Desktop\\" + nf + ".pdf");
+                    Process.Start(directpathfolder + "\\" + nf + ".pdf");
                 }
             }
         }
