@@ -288,7 +288,6 @@ namespace Proyecto_ML
             this.btn_design2.Text = "NOSE AYUDA";
             this.btn_design2.TextColor = System.Drawing.Color.White;
             this.btn_design2.UseVisualStyleBackColor = false;
-            this.btn_design2.Visible = false;
             // 
             // btn_design1
             // 
