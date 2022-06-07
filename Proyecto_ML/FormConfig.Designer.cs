@@ -46,6 +46,7 @@ namespace Proyecto_ML
             this.panelConfig.Controls.Add(this.btnSelectFolder);
             this.panelConfig.Controls.Add(this.label1);
             this.panelConfig.Controls.Add(this.txtFilePath);
+            this.panelConfig.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panelConfig.Location = new System.Drawing.Point(0, 0);
             this.panelConfig.Name = "panelConfig";
             this.panelConfig.Size = new System.Drawing.Size(800, 450);
@@ -53,7 +54,6 @@ namespace Proyecto_ML
             // 
             // btnConfirmAll
             // 
-            this.btnConfirmAll.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnConfirmAll.AutoSize = true;
             this.btnConfirmAll.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(77)))), ((int)(((byte)(221)))));
             this.btnConfirmAll.FlatAppearance.BorderSize = 0;
@@ -62,10 +62,8 @@ namespace Proyecto_ML
             this.btnConfirmAll.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConfirmAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConfirmAll.ForeColor = System.Drawing.Color.White;
-            this.btnConfirmAll.Location = new System.Drawing.Point(595, 382);
+            this.btnConfirmAll.Location = new System.Drawing.Point(549, 325);
             this.btnConfirmAll.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnConfirmAll.MaximumSize = new System.Drawing.Size(192, 54);
-            this.btnConfirmAll.MinimumSize = new System.Drawing.Size(192, 54);
             this.btnConfirmAll.Name = "btnConfirmAll";
             this.btnConfirmAll.Size = new System.Drawing.Size(192, 54);
             this.btnConfirmAll.TabIndex = 47;
@@ -114,7 +112,10 @@ namespace Proyecto_ML
             | System.Windows.Forms.AnchorStyles.Left)));
             this.txtFilePath.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFilePath.Location = new System.Drawing.Point(50, 76);
+            this.txtFilePath.MaximumSize = new System.Drawing.Size(461, 35);
+            this.txtFilePath.MinimumSize = new System.Drawing.Size(461, 35);
             this.txtFilePath.Name = "txtFilePath";
+            this.txtFilePath.ReadOnly = true;
             this.txtFilePath.Size = new System.Drawing.Size(461, 35);
             this.txtFilePath.TabIndex = 0;
             // 
@@ -124,9 +125,10 @@ namespace Proyecto_ML
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.panelConfig);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormConfig";
-            this.Text = "FormConfig";
+            this.Text = "Ajustes";
             this.panelConfig.ResumeLayout(false);
             this.panelConfig.PerformLayout();
             this.ResumeLayout(false);
