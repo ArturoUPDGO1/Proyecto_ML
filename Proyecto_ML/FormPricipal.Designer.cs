@@ -29,6 +29,9 @@ namespace Proyecto_ML
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panelMenu = new System.Windows.Forms.Panel();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
@@ -41,16 +44,19 @@ namespace Proyecto_ML
             this.lblTitleChildForm = new System.Windows.Forms.Label();
             this.iconCurrentChildForm = new FontAwesome.Sharp.IconPictureBox();
             this.panelDesktop = new System.Windows.Forms.Panel();
-            this.panelShadow = new System.Windows.Forms.Panel();
-            this.btn_design2 = new Proyecto_ML.btn_design();
+            this.graphFechaCantidad = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.lblTotalFacturas = new System.Windows.Forms.Label();
+            this.lblFacturasRealiz = new System.Windows.Forms.Label();
             this.btn_design1 = new Proyecto_ML.btn_design();
             this.btn_design = new Proyecto_ML.btn_design();
             this.btn_design_MostrarAll = new Proyecto_ML.btn_design();
+            this.panelShadow = new System.Windows.Forms.Panel();
             this.panelMenu.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panelBarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconCurrentChildForm)).BeginInit();
             this.panelDesktop.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.graphFechaCantidad)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -248,7 +254,9 @@ namespace Proyecto_ML
             this.panelDesktop.BackColor = System.Drawing.Color.Transparent;
             this.panelDesktop.BackgroundImage = global::Proyecto_ML.Properties.Resources.fondo_prin_figures;
             this.panelDesktop.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panelDesktop.Controls.Add(this.btn_design2);
+            this.panelDesktop.Controls.Add(this.graphFechaCantidad);
+            this.panelDesktop.Controls.Add(this.lblTotalFacturas);
+            this.panelDesktop.Controls.Add(this.lblFacturasRealiz);
             this.panelDesktop.Controls.Add(this.btn_design1);
             this.panelDesktop.Controls.Add(this.btn_design);
             this.panelDesktop.Controls.Add(this.btn_design_MostrarAll);
@@ -259,36 +267,53 @@ namespace Proyecto_ML
             this.panelDesktop.TabIndex = 15;
             this.panelDesktop.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDesktop_Paint);
             // 
-            // panelShadow
+            // graphFechaCantidad
             // 
-            this.panelShadow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(24)))), ((int)(((byte)(58)))));
-            this.panelShadow.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panelShadow.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelShadow.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.panelShadow.Location = new System.Drawing.Point(220, 70);
-            this.panelShadow.Name = "panelShadow";
-            this.panelShadow.Size = new System.Drawing.Size(916, 9);
-            this.panelShadow.TabIndex = 14;
+            this.graphFechaCantidad.BackColor = System.Drawing.Color.Transparent;
+            this.graphFechaCantidad.BorderSkin.BackColor = System.Drawing.Color.White;
+            this.graphFechaCantidad.BorderSkin.BorderColor = System.Drawing.Color.White;
+            chartArea1.AxisX.IntervalAutoMode = System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode.VariableCount;
+            chartArea1.BackColor = System.Drawing.Color.Transparent;
+            chartArea1.Name = "ChartArea1";
+            this.graphFechaCantidad.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.graphFechaCantidad.Legends.Add(legend1);
+            this.graphFechaCantidad.Location = new System.Drawing.Point(106, 282);
+            this.graphFechaCantidad.Name = "graphFechaCantidad";
+            this.graphFechaCantidad.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Pastel;
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bar;
+            series1.IsVisibleInLegend = false;
+            series1.LabelAngle = 90;
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.graphFechaCantidad.Series.Add(series1);
+            this.graphFechaCantidad.Size = new System.Drawing.Size(356, 216);
+            this.graphFechaCantidad.TabIndex = 7;
+            this.graphFechaCantidad.Text = "chart1";
             // 
-            // btn_design2
+            // lblTotalFacturas
             // 
-            this.btn_design2.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btn_design2.BackgroundColor = System.Drawing.Color.RoyalBlue;
-            this.btn_design2.BorderColor = System.Drawing.Color.RoyalBlue;
-            this.btn_design2.BorderRadius = 10;
-            this.btn_design2.BorderSize = 0;
-            this.btn_design2.FlatAppearance.BorderSize = 0;
-            this.btn_design2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_design2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_design2.ForeColor = System.Drawing.Color.White;
-            this.btn_design2.Location = new System.Drawing.Point(106, 267);
-            this.btn_design2.Name = "btn_design2";
-            this.btn_design2.Size = new System.Drawing.Size(247, 128);
-            this.btn_design2.TabIndex = 4;
-            this.btn_design2.Text = "NOSE AYUDA";
-            this.btn_design2.TextColor = System.Drawing.Color.White;
-            this.btn_design2.UseVisualStyleBackColor = false;
-            this.btn_design2.Visible = false;
+            this.lblTotalFacturas.AutoSize = true;
+            this.lblTotalFacturas.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalFacturas.ForeColor = System.Drawing.Color.White;
+            this.lblTotalFacturas.Location = new System.Drawing.Point(162, 18);
+            this.lblTotalFacturas.Name = "lblTotalFacturas";
+            this.lblTotalFacturas.Size = new System.Drawing.Size(15, 13);
+            this.lblTotalFacturas.TabIndex = 6;
+            this.lblTotalFacturas.Text = "..";
+            this.lblTotalFacturas.Click += new System.EventHandler(this.lblTotalFacturas_Click);
+            // 
+            // lblFacturasRealiz
+            // 
+            this.lblFacturasRealiz.AutoSize = true;
+            this.lblFacturasRealiz.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFacturasRealiz.ForeColor = System.Drawing.Color.White;
+            this.lblFacturasRealiz.Location = new System.Drawing.Point(24, 18);
+            this.lblFacturasRealiz.Name = "lblFacturasRealiz";
+            this.lblFacturasRealiz.Size = new System.Drawing.Size(141, 13);
+            this.lblFacturasRealiz.TabIndex = 5;
+            this.lblFacturasRealiz.Text = "TOTAL DE FACTURAS:";
             // 
             // btn_design1
             // 
@@ -301,7 +326,7 @@ namespace Proyecto_ML
             this.btn_design1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_design1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_design1.ForeColor = System.Drawing.Color.White;
-            this.btn_design1.Location = new System.Drawing.Point(428, 110);
+            this.btn_design1.Location = new System.Drawing.Point(542, 110);
             this.btn_design1.Name = "btn_design1";
             this.btn_design1.Size = new System.Drawing.Size(247, 128);
             this.btn_design1.TabIndex = 3;
@@ -322,7 +347,7 @@ namespace Proyecto_ML
             this.btn_design.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_design.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_design.ForeColor = System.Drawing.Color.White;
-            this.btn_design.Location = new System.Drawing.Point(428, 267);
+            this.btn_design.Location = new System.Drawing.Point(542, 359);
             this.btn_design.Name = "btn_design";
             this.btn_design.Size = new System.Drawing.Size(247, 128);
             this.btn_design.TabIndex = 2;
@@ -352,6 +377,17 @@ namespace Proyecto_ML
             this.btn_design_MostrarAll.UseVisualStyleBackColor = false;
             this.btn_design_MostrarAll.Click += new System.EventHandler(this.btn_design1_Click);
             // 
+            // panelShadow
+            // 
+            this.panelShadow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(24)))), ((int)(((byte)(58)))));
+            this.panelShadow.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelShadow.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelShadow.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.panelShadow.Location = new System.Drawing.Point(220, 70);
+            this.panelShadow.Name = "panelShadow";
+            this.panelShadow.Size = new System.Drawing.Size(916, 9);
+            this.panelShadow.TabIndex = 14;
+            // 
             // FormPricipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -365,12 +401,15 @@ namespace Proyecto_ML
             this.MinimumSize = new System.Drawing.Size(1136, 678);
             this.Name = "FormPricipal";
             this.Text = "Form Principal";
+            this.Load += new System.EventHandler(this.FormPricipal_Load);
             this.panelMenu.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panelBarraTitulo.ResumeLayout(false);
             this.panelBarraTitulo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconCurrentChildForm)).EndInit();
             this.panelDesktop.ResumeLayout(false);
+            this.panelDesktop.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.graphFechaCantidad)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -391,8 +430,10 @@ namespace Proyecto_ML
         private System.Windows.Forms.Panel panelDesktop;
         private System.Windows.Forms.Panel panelShadow;
         private btn_design btn_design_MostrarAll;
-        private btn_design btn_design2;
         private btn_design btn_design1;
         private btn_design btn_design;
+        private System.Windows.Forms.Label lblFacturasRealiz;
+        private System.Windows.Forms.Label lblTotalFacturas;
+        private System.Windows.Forms.DataVisualization.Charting.Chart graphFechaCantidad;
     }
 }

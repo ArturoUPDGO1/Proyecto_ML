@@ -1,7 +1,10 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Runtime.InteropServices;
@@ -187,7 +190,59 @@ namespace Proyecto_ML
 
         private void btn_design_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new FormConfig());
+
+        }
+
+        private void lblTotalFacturas_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FormPricipal_Load(object sender, EventArgs e)
+        {
+            lblFacturas();//Para imprimir label al momento de hacer load
+            graphDate();//Para imprimir grafico al momento de hacer load
+
+        }
+
+        private void lblFacturas()
+        {
+            SqlConnection cn = new SqlConnection(ConfigurationManager.ConnectionStrings["unica"].ConnectionString);
+            cn.Open();
+
+            //Imprimir en label el numero de facturas activas con una consulta tipo COUNT
+            SqlCommand cmd = new SqlCommand("SELECT COUNT(*) FROM registros WHERE estat LIKE 1", cn);
+            lblTotalFacturas.Text = (string)cmd.ExecuteScalar().ToString() + ".";
+
+            cn.Close();
+        }
+
+        ArrayList graph_cantidad = new ArrayList();
+        ArrayList graph_fecha = new ArrayList();
+
+        private void graphDate()
+        {
+            SqlConnection cn = new SqlConnection(ConfigurationManager.ConnectionStrings["unica"].ConnectionString);
+            cn.Open();
+
+            //Usar SqlReader para llenar la gráfica con un proceso almacenado.
+            SqlCommand cmdgraph = new SqlCommand("SELECT TOP 5 razon_social, COUNT(*) AS cantidad FROM registros GROUP BY razon_social ORDER  BY cantidad DESC", cn);
+            SqlDataReader drgraph;
+
+            drgraph = cmdgraph.ExecuteReader();
+
+            while (drgraph.Read())
+            {
+                graph_cantidad.Add(drgraph.GetInt32(1));
+                graph_fecha.Add(drgraph.GetString(0));
+            }
+
+            graphFechaCantidad.ChartAreas[0].AxisX.LabelStyle.ForeColor = Color.White;
+            graphFechaCantidad.ChartAreas[0].AxisY.LabelStyle.ForeColor = Color.White;
+            graphFechaCantidad.Series[0].Points.DataBindXY(graph_fecha, graph_cantidad);
+
+            drgraph.Close();
+            cn.Close();
         }
     }
 }
