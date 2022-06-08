@@ -126,7 +126,7 @@ namespace Proyecto_ML
             this.Controls.Add(this.panelConfig);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormConfig";
-            this.Text = "FormConfig";
+            this.Text = "Ajustes";
             this.panelConfig.ResumeLayout(false);
             this.panelConfig.PerformLayout();
             this.ResumeLayout(false);

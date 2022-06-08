@@ -41,11 +41,11 @@ namespace Proyecto_ML
             this.lblTitleChildForm = new System.Windows.Forms.Label();
             this.iconCurrentChildForm = new FontAwesome.Sharp.IconPictureBox();
             this.panelDesktop = new System.Windows.Forms.Panel();
-            this.panelShadow = new System.Windows.Forms.Panel();
             this.btn_design2 = new Proyecto_ML.btn_design();
             this.btn_design1 = new Proyecto_ML.btn_design();
             this.btn_design = new Proyecto_ML.btn_design();
             this.btn_design_MostrarAll = new Proyecto_ML.btn_design();
+            this.panelShadow = new System.Windows.Forms.Panel();
             this.panelMenu.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panelBarraTitulo.SuspendLayout();
@@ -61,8 +61,9 @@ namespace Proyecto_ML
             this.panelMenu.Controls.Add(this.panel2);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
+            this.panelMenu.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(220, 678);
+            this.panelMenu.Size = new System.Drawing.Size(330, 1043);
             this.panelMenu.TabIndex = 12;
             // 
             // iconButton2
@@ -78,10 +79,11 @@ namespace Proyecto_ML
             this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton2.IconSize = 32;
             this.iconButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton2.Location = new System.Drawing.Point(0, 200);
+            this.iconButton2.Location = new System.Drawing.Point(0, 307);
+            this.iconButton2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.iconButton2.Name = "iconButton2";
-            this.iconButton2.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.iconButton2.Size = new System.Drawing.Size(220, 60);
+            this.iconButton2.Padding = new System.Windows.Forms.Padding(15, 0, 30, 0);
+            this.iconButton2.Size = new System.Drawing.Size(330, 92);
             this.iconButton2.TabIndex = 2;
             this.iconButton2.Text = "Buscar registro";
             this.iconButton2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -102,10 +104,11 @@ namespace Proyecto_ML
             this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton1.IconSize = 32;
             this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton1.Location = new System.Drawing.Point(0, 140);
+            this.iconButton1.Location = new System.Drawing.Point(0, 215);
+            this.iconButton1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.iconButton1.Size = new System.Drawing.Size(220, 60);
+            this.iconButton1.Padding = new System.Windows.Forms.Padding(15, 0, 30, 0);
+            this.iconButton1.Size = new System.Drawing.Size(330, 92);
             this.iconButton1.TabIndex = 1;
             this.iconButton1.Text = "Agregar registro";
             this.iconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -118,8 +121,9 @@ namespace Proyecto_ML
             this.panel2.Controls.Add(this.btnHome);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(220, 140);
+            this.panel2.Size = new System.Drawing.Size(330, 215);
             this.panel2.TabIndex = 0;
             // 
             // btnHome
@@ -135,9 +139,10 @@ namespace Proyecto_ML
             this.btnHome.IconChar = FontAwesome.Sharp.IconChar.Home;
             this.btnHome.IconColor = System.Drawing.Color.Gainsboro;
             this.btnHome.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnHome.Location = new System.Drawing.Point(73, 40);
+            this.btnHome.Location = new System.Drawing.Point(110, 62);
+            this.btnHome.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(71, 62);
+            this.btnHome.Size = new System.Drawing.Size(106, 95);
             this.btnHome.TabIndex = 0;
             this.btnHome.UseVisualStyleBackColor = false;
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
@@ -151,9 +156,10 @@ namespace Proyecto_ML
             this.panelBarraTitulo.Controls.Add(this.lblTitleChildForm);
             this.panelBarraTitulo.Controls.Add(this.iconCurrentChildForm);
             this.panelBarraTitulo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelBarraTitulo.Location = new System.Drawing.Point(220, 0);
+            this.panelBarraTitulo.Location = new System.Drawing.Point(330, 0);
+            this.panelBarraTitulo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelBarraTitulo.Name = "panelBarraTitulo";
-            this.panelBarraTitulo.Size = new System.Drawing.Size(916, 70);
+            this.panelBarraTitulo.Size = new System.Drawing.Size(1374, 108);
             this.panelBarraTitulo.TabIndex = 13;
             this.panelBarraTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelBarraTitulo_MouseDown);
             // 
@@ -169,10 +175,11 @@ namespace Proyecto_ML
             this.btnMin.IconColor = System.Drawing.Color.Gainsboro;
             this.btnMin.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.btnMin.IconSize = 20;
-            this.btnMin.Location = new System.Drawing.Point(826, 0);
+            this.btnMin.Location = new System.Drawing.Point(1239, 0);
+            this.btnMin.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnMin.Name = "btnMin";
-            this.btnMin.Padding = new System.Windows.Forms.Padding(0, 3, 0, 0);
-            this.btnMin.Size = new System.Drawing.Size(30, 20);
+            this.btnMin.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
+            this.btnMin.Size = new System.Drawing.Size(45, 31);
             this.btnMin.TabIndex = 5;
             this.btnMin.UseVisualStyleBackColor = false;
             this.btnMin.Click += new System.EventHandler(this.btnMin_Click);
@@ -189,10 +196,11 @@ namespace Proyecto_ML
             this.btnMax.IconColor = System.Drawing.Color.Gainsboro;
             this.btnMax.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.btnMax.IconSize = 20;
-            this.btnMax.Location = new System.Drawing.Point(856, 0);
+            this.btnMax.Location = new System.Drawing.Point(1284, 0);
+            this.btnMax.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnMax.Name = "btnMax";
-            this.btnMax.Padding = new System.Windows.Forms.Padding(0, 3, 0, 0);
-            this.btnMax.Size = new System.Drawing.Size(30, 20);
+            this.btnMax.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
+            this.btnMax.Size = new System.Drawing.Size(45, 31);
             this.btnMax.TabIndex = 4;
             this.btnMax.UseVisualStyleBackColor = false;
             this.btnMax.Click += new System.EventHandler(this.btnMax_Click);
@@ -209,10 +217,11 @@ namespace Proyecto_ML
             this.btnCerrar.IconColor = System.Drawing.Color.Gainsboro;
             this.btnCerrar.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.btnCerrar.IconSize = 20;
-            this.btnCerrar.Location = new System.Drawing.Point(886, 0);
+            this.btnCerrar.Location = new System.Drawing.Point(1329, 0);
+            this.btnCerrar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Padding = new System.Windows.Forms.Padding(0, 3, 0, 0);
-            this.btnCerrar.Size = new System.Drawing.Size(30, 20);
+            this.btnCerrar.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
+            this.btnCerrar.Size = new System.Drawing.Size(45, 31);
             this.btnCerrar.TabIndex = 3;
             this.btnCerrar.UseVisualStyleBackColor = false;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
@@ -223,9 +232,10 @@ namespace Proyecto_ML
             this.lblTitleChildForm.BackColor = System.Drawing.Color.Transparent;
             this.lblTitleChildForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitleChildForm.ForeColor = System.Drawing.Color.Gainsboro;
-            this.lblTitleChildForm.Location = new System.Drawing.Point(73, 20);
+            this.lblTitleChildForm.Location = new System.Drawing.Point(107, 26);
+            this.lblTitleChildForm.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTitleChildForm.Name = "lblTitleChildForm";
-            this.lblTitleChildForm.Size = new System.Drawing.Size(117, 42);
+            this.lblTitleChildForm.Size = new System.Drawing.Size(177, 64);
             this.lblTitleChildForm.TabIndex = 1;
             this.lblTitleChildForm.Text = "Home";
             // 
@@ -236,42 +246,32 @@ namespace Proyecto_ML
             this.iconCurrentChildForm.IconChar = FontAwesome.Sharp.IconChar.Home;
             this.iconCurrentChildForm.IconColor = System.Drawing.Color.MediumPurple;
             this.iconCurrentChildForm.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconCurrentChildForm.IconSize = 40;
-            this.iconCurrentChildForm.Location = new System.Drawing.Point(27, 27);
+            this.iconCurrentChildForm.IconSize = 64;
+            this.iconCurrentChildForm.Location = new System.Drawing.Point(29, 31);
+            this.iconCurrentChildForm.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.iconCurrentChildForm.Name = "iconCurrentChildForm";
-            this.iconCurrentChildForm.Size = new System.Drawing.Size(40, 40);
+            this.iconCurrentChildForm.Size = new System.Drawing.Size(73, 64);
             this.iconCurrentChildForm.TabIndex = 0;
             this.iconCurrentChildForm.TabStop = false;
             // 
             // panelDesktop
             // 
-            this.panelDesktop.BackColor = System.Drawing.Color.Transparent;
-            this.panelDesktop.BackgroundImage = global::Proyecto_ML.Properties.Resources.fondo_prin_figures;
-            this.panelDesktop.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelDesktop.BackColor = System.Drawing.SystemColors.Control;
             this.panelDesktop.Controls.Add(this.btn_design2);
             this.panelDesktop.Controls.Add(this.btn_design1);
             this.panelDesktop.Controls.Add(this.btn_design);
             this.panelDesktop.Controls.Add(this.btn_design_MostrarAll);
             this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelDesktop.Location = new System.Drawing.Point(220, 79);
+            this.panelDesktop.Location = new System.Drawing.Point(330, 122);
+            this.panelDesktop.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelDesktop.Name = "panelDesktop";
-            this.panelDesktop.Size = new System.Drawing.Size(916, 599);
+            this.panelDesktop.Size = new System.Drawing.Size(1374, 921);
             this.panelDesktop.TabIndex = 15;
             this.panelDesktop.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDesktop_Paint);
             // 
-            // panelShadow
-            // 
-            this.panelShadow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(24)))), ((int)(((byte)(58)))));
-            this.panelShadow.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panelShadow.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelShadow.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.panelShadow.Location = new System.Drawing.Point(220, 70);
-            this.panelShadow.Name = "panelShadow";
-            this.panelShadow.Size = new System.Drawing.Size(916, 9);
-            this.panelShadow.TabIndex = 14;
-            // 
             // btn_design2
             // 
+            this.btn_design2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.btn_design2.BackColor = System.Drawing.Color.RoyalBlue;
             this.btn_design2.BackgroundColor = System.Drawing.Color.RoyalBlue;
             this.btn_design2.BorderColor = System.Drawing.Color.RoyalBlue;
@@ -281,9 +281,10 @@ namespace Proyecto_ML
             this.btn_design2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_design2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_design2.ForeColor = System.Drawing.Color.White;
-            this.btn_design2.Location = new System.Drawing.Point(106, 267);
+            this.btn_design2.Location = new System.Drawing.Point(274, 474);
+            this.btn_design2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_design2.Name = "btn_design2";
-            this.btn_design2.Size = new System.Drawing.Size(247, 128);
+            this.btn_design2.Size = new System.Drawing.Size(370, 197);
             this.btn_design2.TabIndex = 4;
             this.btn_design2.Text = "NOSE AYUDA";
             this.btn_design2.TextColor = System.Drawing.Color.White;
@@ -291,6 +292,7 @@ namespace Proyecto_ML
             // 
             // btn_design1
             // 
+            this.btn_design1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.btn_design1.BackColor = System.Drawing.Color.RoyalBlue;
             this.btn_design1.BackgroundColor = System.Drawing.Color.RoyalBlue;
             this.btn_design1.BorderColor = System.Drawing.Color.RoyalBlue;
@@ -300,9 +302,10 @@ namespace Proyecto_ML
             this.btn_design1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_design1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_design1.ForeColor = System.Drawing.Color.White;
-            this.btn_design1.Location = new System.Drawing.Point(428, 110);
+            this.btn_design1.Location = new System.Drawing.Point(757, 232);
+            this.btn_design1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_design1.Name = "btn_design1";
-            this.btn_design1.Size = new System.Drawing.Size(247, 128);
+            this.btn_design1.Size = new System.Drawing.Size(370, 197);
             this.btn_design1.TabIndex = 3;
             this.btn_design1.Text = "NOSE AYUDA";
             this.btn_design1.TextColor = System.Drawing.Color.White;
@@ -311,6 +314,7 @@ namespace Proyecto_ML
             // 
             // btn_design
             // 
+            this.btn_design.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.btn_design.BackColor = System.Drawing.Color.RoyalBlue;
             this.btn_design.BackgroundColor = System.Drawing.Color.RoyalBlue;
             this.btn_design.BorderColor = System.Drawing.Color.RoyalBlue;
@@ -321,9 +325,10 @@ namespace Proyecto_ML
             this.btn_design.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_design.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_design.ForeColor = System.Drawing.Color.White;
-            this.btn_design.Location = new System.Drawing.Point(428, 267);
+            this.btn_design.Location = new System.Drawing.Point(757, 474);
+            this.btn_design.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_design.Name = "btn_design";
-            this.btn_design.Size = new System.Drawing.Size(247, 128);
+            this.btn_design.Size = new System.Drawing.Size(370, 197);
             this.btn_design.TabIndex = 2;
             this.btn_design.Text = "AJUSTES";
             this.btn_design.TextColor = System.Drawing.Color.White;
@@ -332,6 +337,7 @@ namespace Proyecto_ML
             // 
             // btn_design_MostrarAll
             // 
+            this.btn_design_MostrarAll.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.btn_design_MostrarAll.BackColor = System.Drawing.Color.RoyalBlue;
             this.btn_design_MostrarAll.BackgroundColor = System.Drawing.Color.RoyalBlue;
             this.btn_design_MostrarAll.BorderColor = System.Drawing.Color.RoyalBlue;
@@ -342,26 +348,40 @@ namespace Proyecto_ML
             this.btn_design_MostrarAll.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_design_MostrarAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_design_MostrarAll.ForeColor = System.Drawing.Color.White;
-            this.btn_design_MostrarAll.Location = new System.Drawing.Point(106, 110);
+            this.btn_design_MostrarAll.Location = new System.Drawing.Point(274, 232);
+            this.btn_design_MostrarAll.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_design_MostrarAll.Name = "btn_design_MostrarAll";
-            this.btn_design_MostrarAll.Size = new System.Drawing.Size(247, 128);
+            this.btn_design_MostrarAll.Size = new System.Drawing.Size(370, 197);
             this.btn_design_MostrarAll.TabIndex = 0;
             this.btn_design_MostrarAll.Text = "MOSTRAR TODOS";
             this.btn_design_MostrarAll.TextColor = System.Drawing.Color.White;
             this.btn_design_MostrarAll.UseVisualStyleBackColor = false;
             this.btn_design_MostrarAll.Click += new System.EventHandler(this.btn_design1_Click);
             // 
+            // panelShadow
+            // 
+            this.panelShadow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(24)))), ((int)(((byte)(58)))));
+            this.panelShadow.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelShadow.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelShadow.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.panelShadow.Location = new System.Drawing.Point(330, 108);
+            this.panelShadow.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panelShadow.Name = "panelShadow";
+            this.panelShadow.Size = new System.Drawing.Size(1374, 14);
+            this.panelShadow.TabIndex = 14;
+            // 
             // FormPricipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1136, 678);
+            this.ClientSize = new System.Drawing.Size(1704, 1043);
             this.ControlBox = false;
             this.Controls.Add(this.panelDesktop);
             this.Controls.Add(this.panelShadow);
             this.Controls.Add(this.panelBarraTitulo);
             this.Controls.Add(this.panelMenu);
-            this.MinimumSize = new System.Drawing.Size(1136, 678);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MinimumSize = new System.Drawing.Size(1693, 1013);
             this.Name = "FormPricipal";
             this.Text = "Form Principal";
             this.panelMenu.ResumeLayout(false);

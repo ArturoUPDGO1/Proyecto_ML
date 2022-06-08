@@ -185,5 +185,11 @@
   <ItemGroup>
     <None Include="Resources\plantilla.html" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bgImage1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Wallpaper 4k Abstract Blue Texture 5k 4k wallpapers 5k wallpapers.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

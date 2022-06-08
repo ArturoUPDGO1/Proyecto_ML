@@ -74,6 +74,8 @@ namespace Proyecto_ML
             }
 
             cn.Close();
+
+            MessageBox.Show("¡Cambios realizados con éxito!");
         }
     }
 }

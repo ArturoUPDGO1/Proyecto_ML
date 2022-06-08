@@ -191,6 +191,8 @@ namespace Proyecto_ML
         private void btn_design_Click(object sender, EventArgs e)
         {
             OpenChildForm(new FormConfig());
+            iconCurrentChildForm.IconChar = IconChar.Home;
+            iconCurrentChildForm.IconColor = Color.MediumPurple;
         }
 
     }
