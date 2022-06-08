@@ -126,6 +126,8 @@ namespace Proyecto_ML
             {
                 currentChildForm.Close();
                 Reset();
+                lblFacturas();
+                graphDate();
             }
             
             
@@ -195,5 +197,52 @@ namespace Proyecto_ML
             iconCurrentChildForm.IconColor = Color.MediumPurple;
         }
 
+
+
+        private void lblFacturas()
+        {
+            SqlConnection cn = new SqlConnection(ConfigurationManager.ConnectionStrings["unica"].ConnectionString);
+            cn.Open();
+
+            //Imprimir en label el numero de facturas activas con una consulta tipo COUNT
+            SqlCommand cmd = new SqlCommand("USE testfacturas; SELECT COUNT(*) FROM registros WHERE estat LIKE 1; ", cn);
+
+            lblTotalFacturas.Text = (string)cmd.ExecuteScalar().ToString() + ".";
+
+            cn.Close();
+        }
+
+
+        ArrayList graph_cantidad = new ArrayList();
+        ArrayList graph_fecha = new ArrayList();
+
+        private void graphDate()
+        {
+            SqlConnection cn = new SqlConnection(ConfigurationManager.ConnectionStrings["unica"].ConnectionString);
+            cn.Open();
+
+            //Usar SqlReader para llenar la gráfica con un proceso almacenado.
+            SqlCommand cmdgraph = new SqlCommand(" USE testfacturas; SELECT TOP 5 fecha_cot, COUNT(*) AS cantidad FROM registros GROUP BY fecha_cot ORDER  BY fecha_cot DESC", cn);
+            SqlDataReader drgraph;
+
+            drgraph = cmdgraph.ExecuteReader();
+
+            while (drgraph.Read())
+            {
+                graph_cantidad.Add(drgraph.GetInt32(1));
+                graph_fecha.Add(drgraph.GetDateTime(0));
+            }
+
+            graphFechaCantidad.Series[0].Points.DataBindXY(graph_fecha, graph_cantidad);
+
+            drgraph.Close();
+            cn.Close();
+        }
+
+        private void FormPricipal_Load(object sender, EventArgs e)
+        {
+            lblFacturas();
+            graphDate();
+        }
     }
 }

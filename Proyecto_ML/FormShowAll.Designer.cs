@@ -61,23 +61,22 @@ namespace Proyecto_ML
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvAllDatos.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvAllDatos.Location = new System.Drawing.Point(30, 31);
-            this.dgvAllDatos.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dgvAllDatos.Location = new System.Drawing.Point(20, 20);
             this.dgvAllDatos.Name = "dgvAllDatos";
             this.dgvAllDatos.ReadOnly = true;
             this.dgvAllDatos.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            this.dgvAllDatos.Size = new System.Drawing.Size(1138, 645);
+            this.dgvAllDatos.Size = new System.Drawing.Size(759, 419);
             this.dgvAllDatos.TabIndex = 43;
+            this.dgvAllDatos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAllDatos_CellContentClick);
             // 
             // FormShowAll
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1200, 692);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.dgvAllDatos);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.HelpButton = true;
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FormShowAll";
             this.Text = "Mostrar Todos";
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllDatos)).EndInit();

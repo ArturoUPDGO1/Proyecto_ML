@@ -35,7 +35,9 @@ namespace Proyecto_ML
             dgvAllDatos.DataSource = consulshow.MostrarFacturas(id, ot, eco, mon, fc, rs, nf, con, ciu, mci, estml);
         }
 
+        private void dgvAllDatos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
-
+        }
     }
 }
