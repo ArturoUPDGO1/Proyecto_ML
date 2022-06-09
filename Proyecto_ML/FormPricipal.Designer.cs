@@ -29,9 +29,9 @@ namespace Proyecto_ML
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panelMenu = new System.Windows.Forms.Panel();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
@@ -281,34 +281,39 @@ namespace Proyecto_ML
             // 
             this.graphFechaCantidad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.graphFechaCantidad.BackColor = System.Drawing.Color.Transparent;
-            this.graphFechaCantidad.BorderlineColor = System.Drawing.Color.LightGray;
+            this.graphFechaCantidad.BorderlineColor = System.Drawing.Color.Transparent;
             this.graphFechaCantidad.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
-            chartArea1.BackColor = System.Drawing.Color.Transparent;
-            chartArea1.BorderColor = System.Drawing.Color.Transparent;
-            chartArea1.Name = "ChartArea1";
-            chartArea1.ShadowColor = System.Drawing.Color.Gray;
-            this.graphFechaCantidad.ChartAreas.Add(chartArea1);
-            legend1.BackColor = System.Drawing.Color.Transparent;
-            legend1.Name = "Legend1";
-            this.graphFechaCantidad.Legends.Add(legend1);
+            this.graphFechaCantidad.BorderSkin.BackColor = System.Drawing.Color.Transparent;
+            this.graphFechaCantidad.BorderSkin.BorderColor = System.Drawing.Color.Transparent;
+            this.graphFechaCantidad.BorderSkin.PageColor = System.Drawing.Color.Transparent;
+            chartArea2.BackColor = System.Drawing.Color.Transparent;
+            chartArea2.BorderColor = System.Drawing.Color.Transparent;
+            chartArea2.Name = "ChartArea1";
+            chartArea2.ShadowColor = System.Drawing.Color.Gray;
+            this.graphFechaCantidad.ChartAreas.Add(chartArea2);
+            legend2.BackColor = System.Drawing.Color.Transparent;
+            legend2.Name = "Legend1";
+            this.graphFechaCantidad.Legends.Add(legend2);
             this.graphFechaCantidad.Location = new System.Drawing.Point(62, 432);
             this.graphFechaCantidad.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.graphFechaCantidad.Name = "graphFechaCantidad";
             this.graphFechaCantidad.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SemiTransparent;
-            series1.BackSecondaryColor = System.Drawing.Color.Transparent;
-            series1.ChartArea = "ChartArea1";
-            series1.Color = System.Drawing.Color.MediumPurple;
-            series1.Legend = "Legend1";
-            series1.MarkerColor = System.Drawing.Color.Transparent;
-            series1.Name = "Facturas por día";
-            this.graphFechaCantidad.Series.Add(series1);
+            series2.BackSecondaryColor = System.Drawing.Color.Transparent;
+            series2.ChartArea = "ChartArea1";
+            series2.Color = System.Drawing.Color.MediumPurple;
+            series2.Legend = "Legend1";
+            series2.MarkerColor = System.Drawing.Color.Transparent;
+            series2.Name = "Facturas por día";
+            this.graphFechaCantidad.Series.Add(series2);
             this.graphFechaCantidad.Size = new System.Drawing.Size(561, 314);
             this.graphFechaCantidad.TabIndex = 7;
             // 
             // lblTotalFacturas
             // 
             this.lblTotalFacturas.AutoSize = true;
+            this.lblTotalFacturas.BackColor = System.Drawing.Color.Transparent;
             this.lblTotalFacturas.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalFacturas.ForeColor = System.Drawing.Color.Black;
             this.lblTotalFacturas.Location = new System.Drawing.Point(213, 31);
             this.lblTotalFacturas.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTotalFacturas.Name = "lblTotalFacturas";
@@ -319,7 +324,9 @@ namespace Proyecto_ML
             // lblPlainText
             // 
             this.lblPlainText.AutoSize = true;
+            this.lblPlainText.BackColor = System.Drawing.Color.Transparent;
             this.lblPlainText.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPlainText.ForeColor = System.Drawing.Color.Black;
             this.lblPlainText.Location = new System.Drawing.Point(24, 31);
             this.lblPlainText.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPlainText.Name = "lblPlainText";
