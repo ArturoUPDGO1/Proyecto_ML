@@ -29,9 +29,9 @@ namespace Proyecto_ML
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panelMenu = new System.Windows.Forms.Panel();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
@@ -47,10 +47,10 @@ namespace Proyecto_ML
             this.graphFechaCantidad = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.lblTotalFacturas = new System.Windows.Forms.Label();
             this.lblPlainText = new System.Windows.Forms.Label();
-            this.panelShadow = new System.Windows.Forms.Panel();
             this.btn_design1 = new Proyecto_ML.btn_design();
             this.btn_design = new Proyecto_ML.btn_design();
             this.btn_design_MostrarAll = new Proyecto_ML.btn_design();
+            this.panelShadow = new System.Windows.Forms.Panel();
             this.panelMenu.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panelBarraTitulo.SuspendLayout();
@@ -67,8 +67,9 @@ namespace Proyecto_ML
             this.panelMenu.Controls.Add(this.panel2);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
+            this.panelMenu.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(220, 690);
+            this.panelMenu.Size = new System.Drawing.Size(330, 1001);
             this.panelMenu.TabIndex = 12;
             // 
             // iconButton2
@@ -84,10 +85,11 @@ namespace Proyecto_ML
             this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton2.IconSize = 32;
             this.iconButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton2.Location = new System.Drawing.Point(0, 200);
+            this.iconButton2.Location = new System.Drawing.Point(0, 307);
+            this.iconButton2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.iconButton2.Name = "iconButton2";
-            this.iconButton2.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.iconButton2.Size = new System.Drawing.Size(220, 60);
+            this.iconButton2.Padding = new System.Windows.Forms.Padding(15, 0, 30, 0);
+            this.iconButton2.Size = new System.Drawing.Size(330, 92);
             this.iconButton2.TabIndex = 2;
             this.iconButton2.Text = "Buscar registro";
             this.iconButton2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -108,10 +110,11 @@ namespace Proyecto_ML
             this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton1.IconSize = 32;
             this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton1.Location = new System.Drawing.Point(0, 140);
+            this.iconButton1.Location = new System.Drawing.Point(0, 215);
+            this.iconButton1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.iconButton1.Size = new System.Drawing.Size(220, 60);
+            this.iconButton1.Padding = new System.Windows.Forms.Padding(15, 0, 30, 0);
+            this.iconButton1.Size = new System.Drawing.Size(330, 92);
             this.iconButton1.TabIndex = 1;
             this.iconButton1.Text = "Agregar registro";
             this.iconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -124,8 +127,9 @@ namespace Proyecto_ML
             this.panel2.Controls.Add(this.btnHome);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(220, 140);
+            this.panel2.Size = new System.Drawing.Size(330, 215);
             this.panel2.TabIndex = 0;
             // 
             // btnHome
@@ -141,9 +145,10 @@ namespace Proyecto_ML
             this.btnHome.IconChar = FontAwesome.Sharp.IconChar.Home;
             this.btnHome.IconColor = System.Drawing.Color.Gainsboro;
             this.btnHome.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnHome.Location = new System.Drawing.Point(73, 40);
+            this.btnHome.Location = new System.Drawing.Point(110, 62);
+            this.btnHome.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(71, 62);
+            this.btnHome.Size = new System.Drawing.Size(106, 95);
             this.btnHome.TabIndex = 0;
             this.btnHome.UseVisualStyleBackColor = false;
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
@@ -157,9 +162,10 @@ namespace Proyecto_ML
             this.panelBarraTitulo.Controls.Add(this.lblTitleChildForm);
             this.panelBarraTitulo.Controls.Add(this.iconCurrentChildForm);
             this.panelBarraTitulo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelBarraTitulo.Location = new System.Drawing.Point(220, 0);
+            this.panelBarraTitulo.Location = new System.Drawing.Point(330, 0);
+            this.panelBarraTitulo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelBarraTitulo.Name = "panelBarraTitulo";
-            this.panelBarraTitulo.Size = new System.Drawing.Size(862, 70);
+            this.panelBarraTitulo.Size = new System.Drawing.Size(1293, 108);
             this.panelBarraTitulo.TabIndex = 13;
             this.panelBarraTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelBarraTitulo_MouseDown);
             // 
@@ -175,10 +181,11 @@ namespace Proyecto_ML
             this.btnMin.IconColor = System.Drawing.Color.Gainsboro;
             this.btnMin.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.btnMin.IconSize = 20;
-            this.btnMin.Location = new System.Drawing.Point(772, 0);
+            this.btnMin.Location = new System.Drawing.Point(1158, 0);
+            this.btnMin.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnMin.Name = "btnMin";
-            this.btnMin.Padding = new System.Windows.Forms.Padding(0, 3, 0, 0);
-            this.btnMin.Size = new System.Drawing.Size(30, 20);
+            this.btnMin.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
+            this.btnMin.Size = new System.Drawing.Size(45, 31);
             this.btnMin.TabIndex = 5;
             this.btnMin.UseVisualStyleBackColor = false;
             this.btnMin.Click += new System.EventHandler(this.btnMin_Click);
@@ -195,10 +202,11 @@ namespace Proyecto_ML
             this.btnMax.IconColor = System.Drawing.Color.Gainsboro;
             this.btnMax.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.btnMax.IconSize = 20;
-            this.btnMax.Location = new System.Drawing.Point(802, 0);
+            this.btnMax.Location = new System.Drawing.Point(1203, 0);
+            this.btnMax.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnMax.Name = "btnMax";
-            this.btnMax.Padding = new System.Windows.Forms.Padding(0, 3, 0, 0);
-            this.btnMax.Size = new System.Drawing.Size(30, 20);
+            this.btnMax.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
+            this.btnMax.Size = new System.Drawing.Size(45, 31);
             this.btnMax.TabIndex = 4;
             this.btnMax.UseVisualStyleBackColor = false;
             this.btnMax.Click += new System.EventHandler(this.btnMax_Click);
@@ -215,10 +223,11 @@ namespace Proyecto_ML
             this.btnCerrar.IconColor = System.Drawing.Color.Gainsboro;
             this.btnCerrar.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.btnCerrar.IconSize = 20;
-            this.btnCerrar.Location = new System.Drawing.Point(832, 0);
+            this.btnCerrar.Location = new System.Drawing.Point(1248, 0);
+            this.btnCerrar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Padding = new System.Windows.Forms.Padding(0, 3, 0, 0);
-            this.btnCerrar.Size = new System.Drawing.Size(30, 20);
+            this.btnCerrar.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
+            this.btnCerrar.Size = new System.Drawing.Size(45, 31);
             this.btnCerrar.TabIndex = 3;
             this.btnCerrar.UseVisualStyleBackColor = false;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
@@ -229,9 +238,10 @@ namespace Proyecto_ML
             this.lblTitleChildForm.BackColor = System.Drawing.Color.Transparent;
             this.lblTitleChildForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitleChildForm.ForeColor = System.Drawing.Color.Gainsboro;
-            this.lblTitleChildForm.Location = new System.Drawing.Point(71, 17);
+            this.lblTitleChildForm.Location = new System.Drawing.Point(106, 26);
+            this.lblTitleChildForm.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTitleChildForm.Name = "lblTitleChildForm";
-            this.lblTitleChildForm.Size = new System.Drawing.Size(117, 42);
+            this.lblTitleChildForm.Size = new System.Drawing.Size(177, 64);
             this.lblTitleChildForm.TabIndex = 1;
             this.lblTitleChildForm.Text = "Home";
             // 
@@ -242,10 +252,11 @@ namespace Proyecto_ML
             this.iconCurrentChildForm.IconChar = FontAwesome.Sharp.IconChar.Home;
             this.iconCurrentChildForm.IconColor = System.Drawing.Color.MediumPurple;
             this.iconCurrentChildForm.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconCurrentChildForm.IconSize = 42;
-            this.iconCurrentChildForm.Location = new System.Drawing.Point(19, 20);
+            this.iconCurrentChildForm.IconSize = 65;
+            this.iconCurrentChildForm.Location = new System.Drawing.Point(28, 31);
+            this.iconCurrentChildForm.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.iconCurrentChildForm.Name = "iconCurrentChildForm";
-            this.iconCurrentChildForm.Size = new System.Drawing.Size(49, 42);
+            this.iconCurrentChildForm.Size = new System.Drawing.Size(74, 65);
             this.iconCurrentChildForm.TabIndex = 0;
             this.iconCurrentChildForm.TabStop = false;
             // 
@@ -260,11 +271,11 @@ namespace Proyecto_ML
             this.panelDesktop.Controls.Add(this.btn_design);
             this.panelDesktop.Controls.Add(this.btn_design_MostrarAll);
             this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelDesktop.Location = new System.Drawing.Point(220, 79);
+            this.panelDesktop.Location = new System.Drawing.Point(330, 122);
+            this.panelDesktop.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelDesktop.Name = "panelDesktop";
-            this.panelDesktop.Size = new System.Drawing.Size(862, 611);
+            this.panelDesktop.Size = new System.Drawing.Size(1293, 879);
             this.panelDesktop.TabIndex = 15;
-            this.panelDesktop.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDesktop_Paint);
             // 
             // graphFechaCantidad
             // 
@@ -272,34 +283,36 @@ namespace Proyecto_ML
             this.graphFechaCantidad.BackColor = System.Drawing.Color.Transparent;
             this.graphFechaCantidad.BorderlineColor = System.Drawing.Color.LightGray;
             this.graphFechaCantidad.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
-            chartArea2.BackColor = System.Drawing.Color.Transparent;
-            chartArea2.BorderColor = System.Drawing.Color.Transparent;
-            chartArea2.Name = "ChartArea1";
-            chartArea2.ShadowColor = System.Drawing.Color.Gray;
-            this.graphFechaCantidad.ChartAreas.Add(chartArea2);
-            legend2.BackColor = System.Drawing.Color.Transparent;
-            legend2.Name = "Legend1";
-            this.graphFechaCantidad.Legends.Add(legend2);
-            this.graphFechaCantidad.Location = new System.Drawing.Point(41, 281);
+            chartArea1.BackColor = System.Drawing.Color.Transparent;
+            chartArea1.BorderColor = System.Drawing.Color.Transparent;
+            chartArea1.Name = "ChartArea1";
+            chartArea1.ShadowColor = System.Drawing.Color.Gray;
+            this.graphFechaCantidad.ChartAreas.Add(chartArea1);
+            legend1.BackColor = System.Drawing.Color.Transparent;
+            legend1.Name = "Legend1";
+            this.graphFechaCantidad.Legends.Add(legend1);
+            this.graphFechaCantidad.Location = new System.Drawing.Point(62, 432);
+            this.graphFechaCantidad.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.graphFechaCantidad.Name = "graphFechaCantidad";
             this.graphFechaCantidad.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SemiTransparent;
-            series2.BackSecondaryColor = System.Drawing.Color.Transparent;
-            series2.ChartArea = "ChartArea1";
-            series2.Color = System.Drawing.Color.MediumPurple;
-            series2.Legend = "Legend1";
-            series2.MarkerColor = System.Drawing.Color.Transparent;
-            series2.Name = "Facturas por día";
-            this.graphFechaCantidad.Series.Add(series2);
-            this.graphFechaCantidad.Size = new System.Drawing.Size(374, 244);
+            series1.BackSecondaryColor = System.Drawing.Color.Transparent;
+            series1.ChartArea = "ChartArea1";
+            series1.Color = System.Drawing.Color.MediumPurple;
+            series1.Legend = "Legend1";
+            series1.MarkerColor = System.Drawing.Color.Transparent;
+            series1.Name = "Facturas por día";
+            this.graphFechaCantidad.Series.Add(series1);
+            this.graphFechaCantidad.Size = new System.Drawing.Size(561, 314);
             this.graphFechaCantidad.TabIndex = 7;
             // 
             // lblTotalFacturas
             // 
             this.lblTotalFacturas.AutoSize = true;
             this.lblTotalFacturas.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalFacturas.Location = new System.Drawing.Point(142, 20);
+            this.lblTotalFacturas.Location = new System.Drawing.Point(213, 31);
+            this.lblTotalFacturas.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTotalFacturas.Name = "lblTotalFacturas";
-            this.lblTotalFacturas.Size = new System.Drawing.Size(16, 18);
+            this.lblTotalFacturas.Size = new System.Drawing.Size(25, 29);
             this.lblTotalFacturas.TabIndex = 6;
             this.lblTotalFacturas.Text = "..";
             // 
@@ -307,22 +320,12 @@ namespace Proyecto_ML
             // 
             this.lblPlainText.AutoSize = true;
             this.lblPlainText.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPlainText.Location = new System.Drawing.Point(16, 20);
+            this.lblPlainText.Location = new System.Drawing.Point(24, 31);
+            this.lblPlainText.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPlainText.Name = "lblPlainText";
-            this.lblPlainText.Size = new System.Drawing.Size(126, 18);
+            this.lblPlainText.Size = new System.Drawing.Size(203, 29);
             this.lblPlainText.TabIndex = 5;
             this.lblPlainText.Text = "Total de facturas: ";
-            // 
-            // panelShadow
-            // 
-            this.panelShadow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(24)))), ((int)(((byte)(58)))));
-            this.panelShadow.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panelShadow.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelShadow.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.panelShadow.Location = new System.Drawing.Point(220, 70);
-            this.panelShadow.Name = "panelShadow";
-            this.panelShadow.Size = new System.Drawing.Size(862, 9);
-            this.panelShadow.TabIndex = 14;
             // 
             // btn_design1
             // 
@@ -336,9 +339,10 @@ namespace Proyecto_ML
             this.btn_design1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_design1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_design1.ForeColor = System.Drawing.Color.White;
-            this.btn_design1.Location = new System.Drawing.Point(603, 97);
+            this.btn_design1.Location = new System.Drawing.Point(904, 149);
+            this.btn_design1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_design1.Name = "btn_design1";
-            this.btn_design1.Size = new System.Drawing.Size(247, 140);
+            this.btn_design1.Size = new System.Drawing.Size(370, 154);
             this.btn_design1.TabIndex = 3;
             this.btn_design1.Text = "NOSE AYUDA";
             this.btn_design1.TextColor = System.Drawing.Color.White;
@@ -357,9 +361,10 @@ namespace Proyecto_ML
             this.btn_design.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_design.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_design.ForeColor = System.Drawing.Color.White;
-            this.btn_design.Location = new System.Drawing.Point(324, 97);
+            this.btn_design.Location = new System.Drawing.Point(486, 149);
+            this.btn_design.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_design.Name = "btn_design";
-            this.btn_design.Size = new System.Drawing.Size(247, 140);
+            this.btn_design.Size = new System.Drawing.Size(370, 154);
             this.btn_design.TabIndex = 2;
             this.btn_design.Text = "AJUSTES";
             this.btn_design.TextColor = System.Drawing.Color.White;
@@ -379,26 +384,40 @@ namespace Proyecto_ML
             this.btn_design_MostrarAll.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_design_MostrarAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_design_MostrarAll.ForeColor = System.Drawing.Color.White;
-            this.btn_design_MostrarAll.Location = new System.Drawing.Point(41, 97);
+            this.btn_design_MostrarAll.Location = new System.Drawing.Point(62, 149);
+            this.btn_design_MostrarAll.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_design_MostrarAll.Name = "btn_design_MostrarAll";
-            this.btn_design_MostrarAll.Size = new System.Drawing.Size(247, 140);
+            this.btn_design_MostrarAll.Size = new System.Drawing.Size(370, 154);
             this.btn_design_MostrarAll.TabIndex = 0;
             this.btn_design_MostrarAll.Text = "MOSTRAR TODOS";
             this.btn_design_MostrarAll.TextColor = System.Drawing.Color.White;
             this.btn_design_MostrarAll.UseVisualStyleBackColor = false;
             this.btn_design_MostrarAll.Click += new System.EventHandler(this.btn_design1_Click);
             // 
+            // panelShadow
+            // 
+            this.panelShadow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(24)))), ((int)(((byte)(58)))));
+            this.panelShadow.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelShadow.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelShadow.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.panelShadow.Location = new System.Drawing.Point(330, 108);
+            this.panelShadow.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panelShadow.Name = "panelShadow";
+            this.panelShadow.Size = new System.Drawing.Size(1293, 14);
+            this.panelShadow.TabIndex = 14;
+            // 
             // FormPricipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1082, 690);
+            this.ClientSize = new System.Drawing.Size(1623, 1001);
             this.ControlBox = false;
             this.Controls.Add(this.panelDesktop);
             this.Controls.Add(this.panelShadow);
             this.Controls.Add(this.panelBarraTitulo);
             this.Controls.Add(this.panelMenu);
-            this.MinimumSize = new System.Drawing.Size(911, 486);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MinimumSize = new System.Drawing.Size(1356, 718);
             this.Name = "FormPricipal";
             this.Text = "Form Principal";
             this.Load += new System.EventHandler(this.FormPricipal_Load);

@@ -173,12 +173,6 @@ namespace Proyecto_ML
             WindowState = FormWindowState.Minimized;
         }
 
-
-        private void panelDesktop_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void iconButton3_Click_1(object sender, EventArgs e)
         {
 

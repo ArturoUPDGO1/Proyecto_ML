@@ -61,7 +61,7 @@ namespace Proyecto_ML
             this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContenedor.Location = new System.Drawing.Point(0, 0);
             this.panelContenedor.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.panelContenedor.MinimumSize = new System.Drawing.Size(630, 708);
+            this.panelContenedor.MinimumSize = new System.Drawing.Size(630, 849);
             this.panelContenedor.Name = "panelContenedor";
             this.panelContenedor.Size = new System.Drawing.Size(630, 849);
             this.panelContenedor.TabIndex = 11;
@@ -93,7 +93,7 @@ namespace Proyecto_ML
             this.panelRegistrar.ForeColor = System.Drawing.Color.Black;
             this.panelRegistrar.Location = new System.Drawing.Point(0, 0);
             this.panelRegistrar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.panelRegistrar.MinimumSize = new System.Drawing.Size(630, 708);
+            this.panelRegistrar.MinimumSize = new System.Drawing.Size(630, 849);
             this.panelRegistrar.Name = "panelRegistrar";
             this.panelRegistrar.Size = new System.Drawing.Size(630, 849);
             this.panelRegistrar.TabIndex = 23;
@@ -351,7 +351,7 @@ namespace Proyecto_ML
             this.Controls.Add(this.panelContenedor);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.MinimumSize = new System.Drawing.Size(630, 708);
+            this.MinimumSize = new System.Drawing.Size(630, 49);
             this.Name = "FormAgregarRegistro";
             this.Text = "Agregar Registro";
             this.panelContenedor.ResumeLayout(false);

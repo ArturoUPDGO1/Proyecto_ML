@@ -396,6 +396,77 @@ namespace Proyecto_ML
             cboxActivo.SelectedItem = null;
             button1.Enabled = false;
             button1.Visible = false;
+
+            dgvDatos.Columns.Clear();
+            DataGridViewButtonColumn btn = new DataGridViewButtonColumn();
+
+            DataTable dt = (DataTable)dgvDatos.DataSource;
+            if (dt == null)
+            {
+
+            }
+            else
+            {
+                dt.Clear();
+            }
+
+            string id, ot, eco, mon, fc, rs, nf, con, ciu, mci;
+
+            id = (String.IsNullOrEmpty(txtID_buscar.Text)) ? null : txtID_buscar.Text;
+            ot = (String.IsNullOrEmpty(txtOT_buscar.Text)) ? null : txtOT_buscar.Text;
+            eco = (String.IsNullOrEmpty(txtECO_buscar.Text)) ? null : txtECO_buscar.Text;
+            mon = (String.IsNullOrEmpty(txtMON_buscar.Text)) ? null : txtMON_buscar.Text;
+            fc = null;
+            if (cboxRS_buscar.SelectedItem == null ||
+                String.IsNullOrEmpty(cboxRS_buscar.SelectedItem.ToString()))
+            {
+                rs = null;
+            }
+            else
+            {
+                rs = cboxRS_buscar.SelectedItem.ToString();
+            }
+            nf = (String.IsNullOrEmpty(txtNFAC_buscar.Text)) ? null : txtNFAC_buscar.Text;
+            con = (String.IsNullOrEmpty(txtCON_buscar.Text)) ? null : txtCON_buscar.Text;
+            if (cboxCIUDAD_buscar.SelectedItem == null ||
+                String.IsNullOrEmpty(cboxCIUDAD_buscar.SelectedItem.ToString()))
+            {
+                ciu = null;
+            }
+            else
+            {
+                ciu = cboxCIUDAD_buscar.SelectedItem.ToString();
+            }
+            mci = (String.IsNullOrEmpty(txtMCI_buscar.Text)) ? null : txtMCI_buscar.Text;
+            if (cboxActivo.SelectedItem == null ||
+                String.IsNullOrEmpty(cboxActivo.SelectedItem.ToString()))
+            {
+                estml = "1";
+            }
+            else
+            {
+                estml = cboxActivo.SelectedItem.ToString();
+                if (estml == "Activo")
+                {
+                    estml = "1";
+                }
+                else if (estml == "Inactivo")
+                {
+                    estml = "0";
+                }
+                else
+                {
+                    estml = null;
+                }
+            }
+
+            dgvDatos.DataSource = consul.MostrarFacturas(id, ot, eco, mon, fc, rs, nf, con, ciu, mci, estml);
+            dgvDatos.Columns.Add(btn);
+            btn.HeaderText = "ACTUALIZAR REGISTRO";
+            btn.Text = "<---";
+            btn.Name = "btn";
+            btn.UseColumnTextForButtonValue = true;
+
         }
 
         //Exportar gridview a .pdf
