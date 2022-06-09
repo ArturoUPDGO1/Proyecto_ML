@@ -125,9 +125,10 @@ namespace Proyecto_ML
             else
             {
                 currentChildForm.Close();
-                Reset();
                 lblFacturas();
                 graphDate();
+                chartEstado();
+                Reset();
             }
             
             
@@ -239,8 +240,10 @@ namespace Proyecto_ML
         ArrayList graph_cant = new ArrayList();
         ArrayList graph_raz = new ArrayList();
 
-        private void graphRazon()
+        private void chartEstado()
         {
+            //chrtRazonSocial.Series.Clear();
+
             SqlConnection cn = new SqlConnection(ConfigurationManager.ConnectionStrings["unica"].ConnectionString);
             cn.Open();
 
@@ -271,8 +274,9 @@ namespace Proyecto_ML
         {
             lblFacturas();
             graphDate();
-            graphRazon();
+            chartEstado();
             getlblFecha();
+
         }
     }
 }

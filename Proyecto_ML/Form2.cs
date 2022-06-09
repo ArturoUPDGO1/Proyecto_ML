@@ -252,7 +252,7 @@ namespace Proyecto_ML
 
         private void dgvDatos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == 11)
+            if (e.ColumnIndex == 11 && e.RowIndex >= 0)
             {
                 string id_ml = dgvDatos.Rows[e.RowIndex].Cells[0].Value.ToString();
                 txtID_buscar.Text = id_ml;
@@ -308,7 +308,7 @@ namespace Proyecto_ML
 
             cn.Close();
 
-            if (e.ColumnIndex == 1)
+            if (e.ColumnIndex == 1 && e.RowIndex >= 0)
             {
                 string ot = dgvDatos.Rows[e.RowIndex].Cells[1].Value.ToString();
                 if (!File.Exists(directpathfolder + "\\" + ot + ".pdf"))
@@ -321,7 +321,7 @@ namespace Proyecto_ML
                 }
             }
 
-            if (e.ColumnIndex == 6)
+            if (e.ColumnIndex == 6 && e.RowIndex >= 0)
             {
                 string nf = dgvDatos.Rows[e.RowIndex].Cells[6].Value.ToString();
                 if (!File.Exists(directpathfolder + "\\" + nf + ".pdf"))
