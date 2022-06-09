@@ -216,7 +216,7 @@ namespace Proyecto_ML
             cn.Open();
 
             //Usar SqlReader para llenar la gráfica con un proceso almacenado.
-            SqlCommand cmdgraph = new SqlCommand(" USE testfacturas; SELECT TOP 5 fecha_cot, COUNT(*) AS cantidad FROM registros GROUP BY fecha_cot ORDER  BY fecha_cot DESC", cn);
+            SqlCommand cmdgraph = new SqlCommand(" USE testfacturas; SELECT TOP 4 fecha_cot, COUNT(*) AS cantidad FROM registros GROUP BY fecha_cot ORDER  BY fecha_cot DESC", cn);
             SqlDataReader drgraph;
 
             drgraph = cmdgraph.ExecuteReader();
@@ -227,16 +227,52 @@ namespace Proyecto_ML
                 graph_fecha.Add(drgraph.GetDateTime(0));
             }
 
-            graphFechaCantidad.Series[0].Points.DataBindXY(graph_fecha, graph_cantidad);
+            chrtFechaCantidad.ChartAreas[0].AxisX.LabelStyle.ForeColor = Color.White;
+            chrtFechaCantidad.ChartAreas[0].AxisY.LabelStyle.ForeColor = Color.White;
+            chrtFechaCantidad.Series[0].Points.DataBindXY(graph_fecha, graph_cantidad);
 
             drgraph.Close();
             cn.Close();
+        }
+
+
+        ArrayList graph_cant = new ArrayList();
+        ArrayList graph_raz = new ArrayList();
+
+        private void graphRazon()
+        {
+            SqlConnection cn = new SqlConnection(ConfigurationManager.ConnectionStrings["unica"].ConnectionString);
+            cn.Open();
+
+            //Usar SqlReader para llenar la gráfica con un proceso almacenado.
+            SqlCommand cmdchartraz = new SqlCommand(" USE testfacturas; SELECT TOP 5 ciudad, COUNT(*) AS cantidad FROM registros GROUP BY ciudad ORDER  BY cantidad DESC", cn);
+            SqlDataReader drcharrazon;
+
+            drcharrazon = cmdchartraz.ExecuteReader();
+
+            while (drcharrazon.Read())
+            {
+                graph_cant.Add(drcharrazon.GetInt32(1));
+                graph_raz.Add(drcharrazon.GetString(0));
+            }
+
+            chrtRazonSocial.Series[0].Points.DataBindXY(graph_raz, graph_cant);
+
+            drcharrazon.Close();
+            cn.Close();
+        }
+
+        private void getlblFecha()
+        {
+            lblFecha.Text = DateTime.Now.ToLongDateString()+ ".";
         }
 
         private void FormPricipal_Load(object sender, EventArgs e)
         {
             lblFacturas();
             graphDate();
+            graphRazon();
+            getlblFecha();
         }
     }
 }

@@ -47,8 +47,9 @@ namespace Proyecto_ML
             this.panelConfig.Controls.Add(this.label1);
             this.panelConfig.Controls.Add(this.txtFilePath);
             this.panelConfig.Location = new System.Drawing.Point(0, 0);
+            this.panelConfig.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelConfig.Name = "panelConfig";
-            this.panelConfig.Size = new System.Drawing.Size(800, 450);
+            this.panelConfig.Size = new System.Drawing.Size(533, 292);
             this.panelConfig.TabIndex = 0;
             // 
             // btnConfirmAll
@@ -62,12 +63,11 @@ namespace Proyecto_ML
             this.btnConfirmAll.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConfirmAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConfirmAll.ForeColor = System.Drawing.Color.White;
-            this.btnConfirmAll.Location = new System.Drawing.Point(595, 382);
-            this.btnConfirmAll.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnConfirmAll.MaximumSize = new System.Drawing.Size(192, 54);
-            this.btnConfirmAll.MinimumSize = new System.Drawing.Size(192, 54);
+            this.btnConfirmAll.Location = new System.Drawing.Point(397, 248);
+            this.btnConfirmAll.MaximumSize = new System.Drawing.Size(128, 35);
+            this.btnConfirmAll.MinimumSize = new System.Drawing.Size(128, 35);
             this.btnConfirmAll.Name = "btnConfirmAll";
-            this.btnConfirmAll.Size = new System.Drawing.Size(192, 54);
+            this.btnConfirmAll.Size = new System.Drawing.Size(128, 35);
             this.btnConfirmAll.TabIndex = 47;
             this.btnConfirmAll.Text = "Confirmar Todo";
             this.btnConfirmAll.UseVisualStyleBackColor = false;
@@ -75,8 +75,6 @@ namespace Proyecto_ML
             // 
             // btnSelectFolder
             // 
-            this.btnSelectFolder.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
             this.btnSelectFolder.AutoSize = true;
             this.btnSelectFolder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(77)))), ((int)(((byte)(221)))));
             this.btnSelectFolder.FlatAppearance.BorderSize = 0;
@@ -85,12 +83,10 @@ namespace Proyecto_ML
             this.btnSelectFolder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSelectFolder.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSelectFolder.ForeColor = System.Drawing.Color.White;
-            this.btnSelectFolder.Location = new System.Drawing.Point(514, 74);
-            this.btnSelectFolder.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnSelectFolder.MaximumSize = new System.Drawing.Size(237, 39);
-            this.btnSelectFolder.MinimumSize = new System.Drawing.Size(237, 39);
+            this.btnSelectFolder.Location = new System.Drawing.Point(347, 45);
+            this.btnSelectFolder.MinimumSize = new System.Drawing.Size(158, 25);
             this.btnSelectFolder.Name = "btnSelectFolder";
-            this.btnSelectFolder.Size = new System.Drawing.Size(237, 39);
+            this.btnSelectFolder.Size = new System.Drawing.Size(160, 34);
             this.btnSelectFolder.TabIndex = 46;
             this.btnSelectFolder.Text = "Seleccionar carpeta";
             this.btnSelectFolder.UseVisualStyleBackColor = false;
@@ -102,9 +98,10 @@ namespace Proyecto_ML
             | System.Windows.Forms.AnchorStyles.Left)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(20, 20);
+            this.label1.Location = new System.Drawing.Point(13, 13);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(269, 29);
+            this.label1.Size = new System.Drawing.Size(183, 20);
             this.label1.TabIndex = 1;
             this.label1.Text = "Directorio de archivos";
             // 
@@ -113,18 +110,20 @@ namespace Proyecto_ML
             this.txtFilePath.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.txtFilePath.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFilePath.Location = new System.Drawing.Point(50, 76);
+            this.txtFilePath.Location = new System.Drawing.Point(33, 49);
+            this.txtFilePath.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtFilePath.Name = "txtFilePath";
-            this.txtFilePath.Size = new System.Drawing.Size(461, 35);
+            this.txtFilePath.Size = new System.Drawing.Size(309, 26);
             this.txtFilePath.TabIndex = 0;
             // 
             // FormConfig
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(533, 292);
             this.Controls.Add(this.panelConfig);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FormConfig";
             this.Text = "Ajustes";
             this.panelConfig.ResumeLayout(false);
