@@ -118,7 +118,9 @@ namespace Proyecto_ML
 
         private void btnHome_Click(object sender, EventArgs e)
         {
+
             
+
             if (currentChildForm == null){
                 
             }
@@ -242,7 +244,8 @@ namespace Proyecto_ML
 
         private void chartEstado()
         {
-            //chrtRazonSocial.Series.Clear();
+            graph_cant.Clear();
+            graph_raz.Clear();
 
             SqlConnection cn = new SqlConnection(ConfigurationManager.ConnectionStrings["unica"].ConnectionString);
             cn.Open();

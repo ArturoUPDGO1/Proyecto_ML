@@ -60,9 +60,10 @@ namespace Proyecto_ML
             this.panelContenedor.Controls.Add(this.panelRegistrar);
             this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContenedor.Location = new System.Drawing.Point(0, 0);
-            this.panelContenedor.MinimumSize = new System.Drawing.Size(420, 552);
+            this.panelContenedor.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panelContenedor.MinimumSize = new System.Drawing.Size(630, 849);
             this.panelContenedor.Name = "panelContenedor";
-            this.panelContenedor.Size = new System.Drawing.Size(420, 552);
+            this.panelContenedor.Size = new System.Drawing.Size(630, 849);
             this.panelContenedor.TabIndex = 11;
             // 
             // panelRegistrar
@@ -91,9 +92,10 @@ namespace Proyecto_ML
             this.panelRegistrar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelRegistrar.ForeColor = System.Drawing.Color.Black;
             this.panelRegistrar.Location = new System.Drawing.Point(0, 0);
-            this.panelRegistrar.MinimumSize = new System.Drawing.Size(420, 552);
+            this.panelRegistrar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panelRegistrar.MinimumSize = new System.Drawing.Size(630, 849);
             this.panelRegistrar.Name = "panelRegistrar";
-            this.panelRegistrar.Size = new System.Drawing.Size(420, 552);
+            this.panelRegistrar.Size = new System.Drawing.Size(630, 849);
             this.panelRegistrar.TabIndex = 23;
             // 
             // dateCOT_reg
@@ -102,11 +104,12 @@ namespace Proyecto_ML
             this.dateCOT_reg.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dateCOT_reg.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateCOT_reg.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateCOT_reg.Location = new System.Drawing.Point(196, 191);
+            this.dateCOT_reg.Location = new System.Drawing.Point(294, 294);
+            this.dateCOT_reg.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dateCOT_reg.MinDate = new System.DateTime(2021, 1, 1, 0, 0, 0, 0);
-            this.dateCOT_reg.MinimumSize = new System.Drawing.Size(185, 26);
+            this.dateCOT_reg.MinimumSize = new System.Drawing.Size(276, 26);
             this.dateCOT_reg.Name = "dateCOT_reg";
-            this.dateCOT_reg.Size = new System.Drawing.Size(185, 26);
+            this.dateCOT_reg.Size = new System.Drawing.Size(276, 35);
             this.dateCOT_reg.TabIndex = 42;
             this.dateCOT_reg.Value = new System.DateTime(2022, 6, 1, 0, 0, 0, 0);
             // 
@@ -120,10 +123,11 @@ namespace Proyecto_ML
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnGuardar.Location = new System.Drawing.Point(279, 483);
-            this.btnGuardar.MinimumSize = new System.Drawing.Size(102, 35);
+            this.btnGuardar.Location = new System.Drawing.Point(418, 743);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnGuardar.MinimumSize = new System.Drawing.Size(153, 54);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(102, 35);
+            this.btnGuardar.Size = new System.Drawing.Size(153, 54);
             this.btnGuardar.TabIndex = 21;
             this.btnGuardar.Text = "GUARDAR";
             this.btnGuardar.UseVisualStyleBackColor = false;
@@ -133,10 +137,11 @@ namespace Proyecto_ML
             // 
             this.txtOT_reg.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.txtOT_reg.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtOT_reg.Location = new System.Drawing.Point(196, 80);
-            this.txtOT_reg.MinimumSize = new System.Drawing.Size(185, 26);
+            this.txtOT_reg.Location = new System.Drawing.Point(294, 123);
+            this.txtOT_reg.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtOT_reg.MinimumSize = new System.Drawing.Size(276, 26);
             this.txtOT_reg.Name = "txtOT_reg";
-            this.txtOT_reg.Size = new System.Drawing.Size(185, 26);
+            this.txtOT_reg.Size = new System.Drawing.Size(276, 35);
             this.txtOT_reg.TabIndex = 0;
             // 
             // cboxCIUDAD_reg
@@ -146,7 +151,7 @@ namespace Proyecto_ML
             this.cboxCIUDAD_reg.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboxCIUDAD_reg.FormattingEnabled = true;
             this.cboxCIUDAD_reg.IntegralHeight = false;
-            this.cboxCIUDAD_reg.ItemHeight = 20;
+            this.cboxCIUDAD_reg.ItemHeight = 29;
             this.cboxCIUDAD_reg.Items.AddRange(new object[] {
             "Aguascalientes",
             "Baja California",
@@ -179,20 +184,22 @@ namespace Proyecto_ML
             "Veracruz",
             "Yucatán",
             "Zacatecas"});
-            this.cboxCIUDAD_reg.Location = new System.Drawing.Point(196, 384);
-            this.cboxCIUDAD_reg.MinimumSize = new System.Drawing.Size(185, 0);
+            this.cboxCIUDAD_reg.Location = new System.Drawing.Point(294, 591);
+            this.cboxCIUDAD_reg.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cboxCIUDAD_reg.MinimumSize = new System.Drawing.Size(276, 0);
             this.cboxCIUDAD_reg.Name = "cboxCIUDAD_reg";
-            this.cboxCIUDAD_reg.Size = new System.Drawing.Size(185, 28);
+            this.cboxCIUDAD_reg.Size = new System.Drawing.Size(276, 37);
             this.cboxCIUDAD_reg.TabIndex = 20;
             // 
             // txtMON_reg
             // 
             this.txtMON_reg.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.txtMON_reg.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMON_reg.Location = new System.Drawing.Point(196, 154);
-            this.txtMON_reg.MinimumSize = new System.Drawing.Size(185, 26);
+            this.txtMON_reg.Location = new System.Drawing.Point(294, 237);
+            this.txtMON_reg.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtMON_reg.MinimumSize = new System.Drawing.Size(276, 26);
             this.txtMON_reg.Name = "txtMON_reg";
-            this.txtMON_reg.Size = new System.Drawing.Size(185, 26);
+            this.txtMON_reg.Size = new System.Drawing.Size(276, 35);
             this.txtMON_reg.TabIndex = 5;
             // 
             // cboxRS_reg
@@ -204,20 +211,22 @@ namespace Proyecto_ML
             this.cboxRS_reg.Items.AddRange(new object[] {
             "General Carriers",
             "Enlaces Terrestres Next"});
-            this.cboxRS_reg.Location = new System.Drawing.Point(196, 228);
-            this.cboxRS_reg.MinimumSize = new System.Drawing.Size(185, 0);
+            this.cboxRS_reg.Location = new System.Drawing.Point(294, 351);
+            this.cboxRS_reg.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cboxRS_reg.MinimumSize = new System.Drawing.Size(276, 0);
             this.cboxRS_reg.Name = "cboxRS_reg";
-            this.cboxRS_reg.Size = new System.Drawing.Size(185, 28);
+            this.cboxRS_reg.Size = new System.Drawing.Size(276, 37);
             this.cboxRS_reg.TabIndex = 19;
             // 
             // txtNFAC_reg
             // 
             this.txtNFAC_reg.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.txtNFAC_reg.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNFAC_reg.Location = new System.Drawing.Point(196, 267);
-            this.txtNFAC_reg.MinimumSize = new System.Drawing.Size(185, 26);
+            this.txtNFAC_reg.Location = new System.Drawing.Point(294, 411);
+            this.txtNFAC_reg.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtNFAC_reg.MinimumSize = new System.Drawing.Size(276, 26);
             this.txtNFAC_reg.Name = "txtNFAC_reg";
-            this.txtNFAC_reg.Size = new System.Drawing.Size(185, 26);
+            this.txtNFAC_reg.Size = new System.Drawing.Size(276, 35);
             this.txtNFAC_reg.TabIndex = 3;
             // 
             // label10
@@ -225,9 +234,10 @@ namespace Proyecto_ML
             this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(32, 196);
+            this.label10.Location = new System.Drawing.Point(48, 302);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(154, 20);
+            this.label10.Size = new System.Drawing.Size(232, 29);
             this.label10.TabIndex = 18;
             this.label10.Text = "Fecha de Cotización";
             // 
@@ -235,10 +245,11 @@ namespace Proyecto_ML
             // 
             this.txtECO_reg.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.txtECO_reg.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtECO_reg.Location = new System.Drawing.Point(196, 117);
-            this.txtECO_reg.MinimumSize = new System.Drawing.Size(185, 26);
+            this.txtECO_reg.Location = new System.Drawing.Point(294, 180);
+            this.txtECO_reg.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtECO_reg.MinimumSize = new System.Drawing.Size(276, 26);
             this.txtECO_reg.Name = "txtECO_reg";
-            this.txtECO_reg.Size = new System.Drawing.Size(185, 26);
+            this.txtECO_reg.Size = new System.Drawing.Size(276, 35);
             this.txtECO_reg.TabIndex = 6;
             // 
             // label9
@@ -246,9 +257,10 @@ namespace Proyecto_ML
             this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(87, 231);
+            this.label9.Location = new System.Drawing.Point(130, 355);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(100, 20);
+            this.label9.Size = new System.Drawing.Size(150, 29);
             this.label9.TabIndex = 17;
             this.label9.Text = "Razón social";
             // 
@@ -256,10 +268,11 @@ namespace Proyecto_ML
             // 
             this.txtMCI_reg.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.txtMCI_reg.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMCI_reg.Location = new System.Drawing.Point(196, 423);
-            this.txtMCI_reg.MinimumSize = new System.Drawing.Size(185, 26);
+            this.txtMCI_reg.Location = new System.Drawing.Point(294, 651);
+            this.txtMCI_reg.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtMCI_reg.MinimumSize = new System.Drawing.Size(276, 26);
             this.txtMCI_reg.Name = "txtMCI_reg";
-            this.txtMCI_reg.Size = new System.Drawing.Size(185, 26);
+            this.txtMCI_reg.Size = new System.Drawing.Size(276, 35);
             this.txtMCI_reg.TabIndex = 7;
             // 
             // label7
@@ -267,9 +280,10 @@ namespace Proyecto_ML
             this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(32, 426);
+            this.label7.Location = new System.Drawing.Point(48, 655);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(155, 20);
+            this.label7.Size = new System.Drawing.Size(230, 29);
             this.label7.TabIndex = 15;
             this.label7.Text = "Monto con Impuesto";
             // 
@@ -277,11 +291,12 @@ namespace Proyecto_ML
             // 
             this.txtCON_reg.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtCON_reg.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCON_reg.Location = new System.Drawing.Point(196, 304);
-            this.txtCON_reg.MinimumSize = new System.Drawing.Size(185, 69);
+            this.txtCON_reg.Location = new System.Drawing.Point(294, 468);
+            this.txtCON_reg.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtCON_reg.MinimumSize = new System.Drawing.Size(276, 104);
             this.txtCON_reg.Multiline = true;
             this.txtCON_reg.Name = "txtCON_reg";
-            this.txtCON_reg.Size = new System.Drawing.Size(185, 69);
+            this.txtCON_reg.Size = new System.Drawing.Size(276, 104);
             this.txtCON_reg.TabIndex = 8;
             // 
             // label6
@@ -289,9 +304,10 @@ namespace Proyecto_ML
             this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(14, 387);
+            this.label6.Location = new System.Drawing.Point(21, 595);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(173, 20);
+            this.label6.Size = new System.Drawing.Size(262, 29);
             this.label6.TabIndex = 14;
             this.label6.Text = "Estado de la Republica";
             // 
@@ -300,9 +316,10 @@ namespace Proyecto_ML
             this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(101, 307);
+            this.label5.Location = new System.Drawing.Point(152, 472);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(86, 20);
+            this.label5.Size = new System.Drawing.Size(129, 29);
             this.label5.TabIndex = 13;
             this.label5.Text = "Conceptos";
             // 
@@ -311,9 +328,10 @@ namespace Proyecto_ML
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(55, 83);
+            this.label1.Location = new System.Drawing.Point(82, 128);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(132, 20);
+            this.label1.Size = new System.Drawing.Size(205, 29);
             this.label1.TabIndex = 9;
             this.label1.Text = "Orden de Trabajo";
             // 
@@ -322,9 +340,10 @@ namespace Proyecto_ML
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(82, 270);
+            this.label4.Location = new System.Drawing.Point(123, 415);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(105, 20);
+            this.label4.Size = new System.Drawing.Size(156, 29);
             this.label4.TabIndex = 12;
             this.label4.Text = "Num. Factura";
             // 
@@ -333,9 +352,10 @@ namespace Proyecto_ML
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(133, 157);
+            this.label2.Location = new System.Drawing.Point(200, 242);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(54, 20);
+            this.label2.Size = new System.Drawing.Size(80, 29);
             this.label2.TabIndex = 10;
             this.label2.Text = "Monto";
             // 
@@ -344,22 +364,24 @@ namespace Proyecto_ML
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(39, 120);
+            this.label3.Location = new System.Drawing.Point(58, 185);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(148, 20);
+            this.label3.Size = new System.Drawing.Size(227, 29);
             this.label3.TabIndex = 11;
             this.label3.Text = "Número Económico";
             // 
             // FormAgregarRegistro
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(420, 512);
+            this.ClientSize = new System.Drawing.Size(630, 788);
             this.Controls.Add(this.panelContenedor);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.MinimumSize = new System.Drawing.Size(420, 32);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MinimumSize = new System.Drawing.Size(630, 49);
             this.Name = "FormAgregarRegistro";
             this.Text = "Agregar Registro";
             this.panelContenedor.ResumeLayout(false);
