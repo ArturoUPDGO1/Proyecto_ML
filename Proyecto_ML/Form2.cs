@@ -524,7 +524,7 @@ namespace Proyecto_ML
                         pdfDoc.Add(new Phrase(""));
 
                         //Agregamos la imagen del banner al documento
-                        iTextSharp.text.Image img = iTextSharp.text.Image.GetInstance(Properties.Resources.shop, System.Drawing.Imaging.ImageFormat.Png);
+                        iTextSharp.text.Image img = iTextSharp.text.Image.GetInstance(Properties.Resources.logo, System.Drawing.Imaging.ImageFormat.Png);
                         img.ScaleToFit(60, 60);
                         img.Alignment = iTextSharp.text.Image.UNDERLYING;
 

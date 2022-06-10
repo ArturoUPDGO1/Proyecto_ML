@@ -91,6 +91,16 @@ namespace Proyecto_ML.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logo {
+            get {
+                object obj = ResourceManager.GetObject("logo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to &lt;!DOCTYPE html&gt;
         ///&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
         ///&lt;head&gt;
@@ -118,16 +128,6 @@ namespace Proyecto_ML.Properties {
         internal static string plantilla {
             get {
                 return ResourceManager.GetString("plantilla", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap shop {
-            get {
-                object obj = ResourceManager.GetObject("shop", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
             }
         }
     }

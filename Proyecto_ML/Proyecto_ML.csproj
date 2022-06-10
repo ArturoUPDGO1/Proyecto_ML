@@ -50,6 +50,9 @@
     <StartupObject />
   </PropertyGroup>
   <PropertyGroup />
+  <PropertyGroup>
+    <ApplicationIcon>logo.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="BouncyCastle.Crypto, Version=1.8.9.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
       <HintPath>..\packages\BouncyCastle.1.8.9\lib\BouncyCastle.Crypto.dll</HintPath>
@@ -172,9 +175,6 @@
     <None Include="Resources\fondo_prin_figures.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\shop.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\plantilla.html" />
   </ItemGroup>
   <ItemGroup>
@@ -182,6 +182,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Wallpaper 4k Abstract Blue Texture 5k 4k wallpapers 5k wallpapers.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="logo.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
