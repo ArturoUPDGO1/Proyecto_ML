@@ -215,11 +215,14 @@ namespace Proyecto_ML
 
         private void graphDate()
         {
+            graph_cantidad.Clear();
+            graph_fecha.Clear();
+
             SqlConnection cn = new SqlConnection(ConfigurationManager.ConnectionStrings["unica"].ConnectionString);
             cn.Open();
 
             //Usar SqlReader para llenar la gráfica con un proceso almacenado.
-            SqlCommand cmdgraph = new SqlCommand(" USE testfacturas; SELECT TOP 4 fecha_cot, COUNT(*) AS cantidad FROM registros GROUP BY fecha_cot ORDER  BY fecha_cot DESC", cn);
+            SqlCommand cmdgraph = new SqlCommand("USE testfacturas; SELECT TOP 4 fecha_cot, COUNT(*) AS cantidad FROM registros WHERE estat = '1' GROUP BY fecha_cot ORDER  BY fecha_cot DESC", cn);
             SqlDataReader drgraph;
 
             drgraph = cmdgraph.ExecuteReader();
@@ -251,7 +254,7 @@ namespace Proyecto_ML
             cn.Open();
 
             //Usar SqlReader para llenar la gráfica con un proceso almacenado.
-            SqlCommand cmdchartraz = new SqlCommand(" USE testfacturas; SELECT TOP 5 ciudad, COUNT(*) AS cantidad FROM registros GROUP BY ciudad ORDER  BY cantidad DESC", cn);
+            SqlCommand cmdchartraz = new SqlCommand("USE testfacturas; SELECT TOP 5 ciudad, COUNT(*) AS cantidad FROM registros WHERE estat = '1' GROUP BY ciudad ORDER  BY cantidad DESC", cn);
             SqlDataReader drcharrazon;
 
             drcharrazon = cmdchartraz.ExecuteReader();
