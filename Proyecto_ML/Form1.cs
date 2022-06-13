@@ -100,7 +100,7 @@ namespace Proyecto_ML
 
             if (otcheck != "" & ecocheck != "" & moncheck != "" & razoncheck != "" & nfaccheck != "" & concheck != "" & ciucheck != "" & mcicheck != "")
             {
-                SqlConnection cn = new SqlConnection(ConfigurationManager.ConnectionStrings["principalDB"].ConnectionString);
+                SqlConnection cn = new SqlConnection(ConfigurationManager.ConnectionStrings["unica"].ConnectionString);
                 cn.Open();
 
                 SqlCommand command = new SqlCommand("sp_InsertRegistroFacturas", cn);

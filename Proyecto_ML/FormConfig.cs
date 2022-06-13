@@ -19,7 +19,7 @@ namespace Proyecto_ML
         {
             InitializeComponent();
 
-            SqlConnection cn = new SqlConnection(ConfigurationManager.ConnectionStrings["principalDB"].ConnectionString);
+            SqlConnection cn = new SqlConnection(ConfigurationManager.ConnectionStrings["unica"].ConnectionString);
             cn.Open();
 
             SqlCommand command = new SqlCommand("sp_SelectPathFolder", cn);
@@ -49,7 +49,7 @@ namespace Proyecto_ML
         private void btnConfirmAll_Click(object sender, EventArgs e)
         {
             string folderpath = txtFilePath.Text;
-            SqlConnection cn = new SqlConnection(ConfigurationManager.ConnectionStrings["principalDB"].ConnectionString);
+            SqlConnection cn = new SqlConnection(ConfigurationManager.ConnectionStrings["unica"].ConnectionString);
             cn.Open();
 
             SqlCommand command = new SqlCommand("sp_UpdateFolderPath", cn);

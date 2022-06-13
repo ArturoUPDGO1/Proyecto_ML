@@ -17,7 +17,7 @@ namespace Proyecto_ML
         {
             DataTable dt = new DataTable();
 
-            SqlConnection cn = new SqlConnection(ConfigurationManager.ConnectionStrings["principalDB"].ConnectionString);
+            SqlConnection cn = new SqlConnection(ConfigurationManager.ConnectionStrings["unica"].ConnectionString);
             cn.Open();
 
             SqlCommand command = new SqlCommand("sp_SelectRegistroFacturas", cn);
