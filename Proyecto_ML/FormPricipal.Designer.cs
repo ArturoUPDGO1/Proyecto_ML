@@ -29,12 +29,12 @@ namespace Proyecto_ML
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panelMenu = new System.Windows.Forms.Panel();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
@@ -52,9 +52,9 @@ namespace Proyecto_ML
             this.chrtFechaCantidad = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.lblTotalFacturas = new System.Windows.Forms.Label();
             this.lblPlainText = new System.Windows.Forms.Label();
+            this.panelShadow = new System.Windows.Forms.Panel();
             this.btn_design = new Proyecto_ML.btn_design();
             this.btn_design_MostrarAll = new Proyecto_ML.btn_design();
-            this.panelShadow = new System.Windows.Forms.Panel();
             this.panelMenu.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panelBarraTitulo.SuspendLayout();
@@ -170,7 +170,7 @@ namespace Proyecto_ML
             this.panelBarraTitulo.Location = new System.Drawing.Point(330, 0);
             this.panelBarraTitulo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelBarraTitulo.Name = "panelBarraTitulo";
-            this.panelBarraTitulo.Size = new System.Drawing.Size(1206, 108);
+            this.panelBarraTitulo.Size = new System.Drawing.Size(1418, 108);
             this.panelBarraTitulo.TabIndex = 13;
             this.panelBarraTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelBarraTitulo_MouseDown);
             // 
@@ -186,7 +186,7 @@ namespace Proyecto_ML
             this.btnMin.IconColor = System.Drawing.Color.Gainsboro;
             this.btnMin.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.btnMin.IconSize = 20;
-            this.btnMin.Location = new System.Drawing.Point(1071, 0);
+            this.btnMin.Location = new System.Drawing.Point(1283, 0);
             this.btnMin.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnMin.Name = "btnMin";
             this.btnMin.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
@@ -207,7 +207,7 @@ namespace Proyecto_ML
             this.btnMax.IconColor = System.Drawing.Color.Gainsboro;
             this.btnMax.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.btnMax.IconSize = 20;
-            this.btnMax.Location = new System.Drawing.Point(1116, 0);
+            this.btnMax.Location = new System.Drawing.Point(1328, 0);
             this.btnMax.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnMax.Name = "btnMax";
             this.btnMax.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
@@ -228,7 +228,7 @@ namespace Proyecto_ML
             this.btnCerrar.IconColor = System.Drawing.Color.Gainsboro;
             this.btnCerrar.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.btnCerrar.IconSize = 20;
-            this.btnCerrar.Location = new System.Drawing.Point(1161, 0);
+            this.btnCerrar.Location = new System.Drawing.Point(1373, 0);
             this.btnCerrar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
@@ -282,7 +282,7 @@ namespace Proyecto_ML
             this.panelDesktop.Location = new System.Drawing.Point(330, 122);
             this.panelDesktop.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelDesktop.Name = "panelDesktop";
-            this.panelDesktop.Size = new System.Drawing.Size(1206, 829);
+            this.panelDesktop.Size = new System.Drawing.Size(1418, 829);
             this.panelDesktop.TabIndex = 15;
             // 
             // lblFecha
@@ -292,7 +292,7 @@ namespace Proyecto_ML
             this.lblFecha.BackColor = System.Drawing.Color.Transparent;
             this.lblFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFecha.ForeColor = System.Drawing.Color.White;
-            this.lblFecha.Location = new System.Drawing.Point(876, 17);
+            this.lblFecha.Location = new System.Drawing.Point(1088, 17);
             this.lblFecha.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFecha.Name = "lblFecha";
             this.lblFecha.Size = new System.Drawing.Size(317, 29);
@@ -303,14 +303,14 @@ namespace Proyecto_ML
             // 
             this.chrtRazonSocial.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.chrtRazonSocial.BackColor = System.Drawing.Color.Transparent;
-            chartArea1.BackColor = System.Drawing.Color.Transparent;
-            chartArea1.Name = "ChartArea1";
-            this.chrtRazonSocial.ChartAreas.Add(chartArea1);
-            legend1.BackColor = System.Drawing.Color.Transparent;
-            legend1.ForeColor = System.Drawing.Color.White;
-            legend1.Name = "Legend1";
-            this.chrtRazonSocial.Legends.Add(legend1);
-            this.chrtRazonSocial.Location = new System.Drawing.Point(686, 375);
+            chartArea3.BackColor = System.Drawing.Color.Transparent;
+            chartArea3.Name = "ChartArea1";
+            this.chrtRazonSocial.ChartAreas.Add(chartArea3);
+            legend3.BackColor = System.Drawing.Color.Transparent;
+            legend3.ForeColor = System.Drawing.Color.White;
+            legend3.Name = "Legend1";
+            this.chrtRazonSocial.Legends.Add(legend3);
+            this.chrtRazonSocial.Location = new System.Drawing.Point(792, 375);
             this.chrtRazonSocial.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.chrtRazonSocial.Name = "chrtRazonSocial";
             this.chrtRazonSocial.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
@@ -320,14 +320,14 @@ namespace Proyecto_ML
         System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(66)))), ((int)(((byte)(112))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(112)))), ((int)(((byte)(171))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(141)))), ((int)(((byte)(204)))))};
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
-            series1.Color = System.Drawing.Color.Transparent;
-            series1.IsValueShownAsLabel = true;
-            series1.LabelForeColor = System.Drawing.Color.White;
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chrtRazonSocial.Series.Add(series1);
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
+            series3.Color = System.Drawing.Color.Transparent;
+            series3.IsValueShownAsLabel = true;
+            series3.LabelForeColor = System.Drawing.Color.White;
+            series3.Legend = "Legend1";
+            series3.Name = "Series1";
+            this.chrtRazonSocial.Series.Add(series3);
             this.chrtRazonSocial.Size = new System.Drawing.Size(525, 368);
             this.chrtRazonSocial.TabIndex = 8;
             this.chrtRazonSocial.Text = "chart1";
@@ -341,36 +341,36 @@ namespace Proyecto_ML
             this.chrtFechaCantidad.BorderSkin.BackColor = System.Drawing.Color.Transparent;
             this.chrtFechaCantidad.BorderSkin.BorderColor = System.Drawing.Color.Transparent;
             this.chrtFechaCantidad.BorderSkin.PageColor = System.Drawing.Color.Transparent;
-            chartArea2.AxisX.InterlacedColor = System.Drawing.Color.White;
-            chartArea2.AxisX.LineColor = System.Drawing.Color.White;
-            chartArea2.AxisX.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.NotSet;
-            chartArea2.AxisX.MajorGrid.LineColor = System.Drawing.Color.White;
-            chartArea2.AxisX.ScrollBar.BackColor = System.Drawing.Color.White;
-            chartArea2.AxisX2.LineColor = System.Drawing.Color.White;
-            chartArea2.AxisY.LineColor = System.Drawing.Color.White;
-            chartArea2.AxisY.MajorGrid.LineColor = System.Drawing.Color.White;
-            chartArea2.AxisY2.LineColor = System.Drawing.Color.White;
-            chartArea2.BackColor = System.Drawing.Color.Transparent;
-            chartArea2.BorderColor = System.Drawing.Color.Transparent;
-            chartArea2.Name = "ChartArea1";
-            chartArea2.ShadowColor = System.Drawing.Color.Gray;
-            this.chrtFechaCantidad.ChartAreas.Add(chartArea2);
-            legend2.BackColor = System.Drawing.Color.Transparent;
-            legend2.ForeColor = System.Drawing.Color.White;
-            legend2.Name = "Legend1";
-            this.chrtFechaCantidad.Legends.Add(legend2);
-            this.chrtFechaCantidad.Location = new System.Drawing.Point(68, 375);
+            chartArea4.AxisX.InterlacedColor = System.Drawing.Color.White;
+            chartArea4.AxisX.LineColor = System.Drawing.Color.White;
+            chartArea4.AxisX.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.NotSet;
+            chartArea4.AxisX.MajorGrid.LineColor = System.Drawing.Color.White;
+            chartArea4.AxisX.ScrollBar.BackColor = System.Drawing.Color.White;
+            chartArea4.AxisX2.LineColor = System.Drawing.Color.White;
+            chartArea4.AxisY.LineColor = System.Drawing.Color.White;
+            chartArea4.AxisY.MajorGrid.LineColor = System.Drawing.Color.White;
+            chartArea4.AxisY2.LineColor = System.Drawing.Color.White;
+            chartArea4.BackColor = System.Drawing.Color.Transparent;
+            chartArea4.BorderColor = System.Drawing.Color.Transparent;
+            chartArea4.Name = "ChartArea1";
+            chartArea4.ShadowColor = System.Drawing.Color.Gray;
+            this.chrtFechaCantidad.ChartAreas.Add(chartArea4);
+            legend4.BackColor = System.Drawing.Color.Transparent;
+            legend4.ForeColor = System.Drawing.Color.White;
+            legend4.Name = "Legend1";
+            this.chrtFechaCantidad.Legends.Add(legend4);
+            this.chrtFechaCantidad.Location = new System.Drawing.Point(174, 375);
             this.chrtFechaCantidad.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.chrtFechaCantidad.Name = "chrtFechaCantidad";
             this.chrtFechaCantidad.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SemiTransparent;
-            series2.BackSecondaryColor = System.Drawing.Color.Transparent;
-            series2.ChartArea = "ChartArea1";
-            series2.Color = System.Drawing.Color.DarkCyan;
-            series2.LabelForeColor = System.Drawing.Color.White;
-            series2.Legend = "Legend1";
-            series2.MarkerColor = System.Drawing.Color.Transparent;
-            series2.Name = "Facturas por día";
-            this.chrtFechaCantidad.Series.Add(series2);
+            series4.BackSecondaryColor = System.Drawing.Color.Transparent;
+            series4.ChartArea = "ChartArea1";
+            series4.Color = System.Drawing.Color.DarkCyan;
+            series4.LabelForeColor = System.Drawing.Color.White;
+            series4.Legend = "Legend1";
+            series4.MarkerColor = System.Drawing.Color.Transparent;
+            series4.Name = "Facturas por día";
+            this.chrtFechaCantidad.Series.Add(series4);
             this.chrtFechaCantidad.Size = new System.Drawing.Size(590, 368);
             this.chrtFechaCantidad.TabIndex = 7;
             // 
@@ -402,6 +402,18 @@ namespace Proyecto_ML
             this.lblPlainText.TabIndex = 5;
             this.lblPlainText.Text = "Total de facturas: ";
             // 
+            // panelShadow
+            // 
+            this.panelShadow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(24)))), ((int)(((byte)(58)))));
+            this.panelShadow.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelShadow.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelShadow.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.panelShadow.Location = new System.Drawing.Point(330, 108);
+            this.panelShadow.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panelShadow.Name = "panelShadow";
+            this.panelShadow.Size = new System.Drawing.Size(1418, 14);
+            this.panelShadow.TabIndex = 14;
+            // 
             // btn_design
             // 
             this.btn_design.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -415,7 +427,7 @@ namespace Proyecto_ML
             this.btn_design.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_design.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_design.ForeColor = System.Drawing.Color.White;
-            this.btn_design.Location = new System.Drawing.Point(706, 149);
+            this.btn_design.Location = new System.Drawing.Point(812, 149);
             this.btn_design.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_design.Name = "btn_design";
             this.btn_design.Size = new System.Drawing.Size(370, 195);
@@ -438,7 +450,7 @@ namespace Proyecto_ML
             this.btn_design_MostrarAll.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_design_MostrarAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_design_MostrarAll.ForeColor = System.Drawing.Color.White;
-            this.btn_design_MostrarAll.Location = new System.Drawing.Point(168, 149);
+            this.btn_design_MostrarAll.Location = new System.Drawing.Point(274, 149);
             this.btn_design_MostrarAll.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_design_MostrarAll.Name = "btn_design_MostrarAll";
             this.btn_design_MostrarAll.Size = new System.Drawing.Size(370, 195);
@@ -448,23 +460,11 @@ namespace Proyecto_ML
             this.btn_design_MostrarAll.UseVisualStyleBackColor = false;
             this.btn_design_MostrarAll.Click += new System.EventHandler(this.btn_design1_Click);
             // 
-            // panelShadow
-            // 
-            this.panelShadow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(24)))), ((int)(((byte)(58)))));
-            this.panelShadow.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panelShadow.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelShadow.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.panelShadow.Location = new System.Drawing.Point(330, 108);
-            this.panelShadow.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.panelShadow.Name = "panelShadow";
-            this.panelShadow.Size = new System.Drawing.Size(1206, 14);
-            this.panelShadow.TabIndex = 14;
-            // 
             // FormPricipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1536, 951);
+            this.ClientSize = new System.Drawing.Size(1748, 951);
             this.ControlBox = false;
             this.Controls.Add(this.panelDesktop);
             this.Controls.Add(this.panelShadow);
@@ -472,7 +472,7 @@ namespace Proyecto_ML
             this.Controls.Add(this.panelMenu);
             this.ForeColor = System.Drawing.Color.Black;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.MinimumSize = new System.Drawing.Size(1350, 699);
+            this.MinimumSize = new System.Drawing.Size(1770, 1007);
             this.Name = "FormPricipal";
             this.Text = "Form Principal";
             this.Load += new System.EventHandler(this.FormPricipal_Load);

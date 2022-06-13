@@ -293,7 +293,7 @@ namespace Proyecto_ML
 
             string directpathfolder = null;
 
-            SqlConnection cn = new SqlConnection(ConfigurationManager.ConnectionStrings["unica"].ConnectionString);
+            SqlConnection cn = new SqlConnection(ConfigurationManager.ConnectionStrings["principalDB"].ConnectionString);
             cn.Open();
 
             SqlCommand command = new SqlCommand("sp_SelectPathFolder", cn);
@@ -342,7 +342,7 @@ namespace Proyecto_ML
             button2.Visible = true;
             cboxActivo.Items.Add("Mostrar todos");
 
-            SqlConnection cn = new SqlConnection(ConfigurationManager.ConnectionStrings["unica"].ConnectionString);
+            SqlConnection cn = new SqlConnection(ConfigurationManager.ConnectionStrings["principalDB"].ConnectionString);
             cn.Open();
 
             SqlCommand command = new SqlCommand("sp_UpdateRegistroFacturas", cn);

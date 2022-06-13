@@ -198,11 +198,11 @@ namespace Proyecto_ML
 
         private void lblFacturas()
         {
-            SqlConnection cn = new SqlConnection(ConfigurationManager.ConnectionStrings["unica"].ConnectionString);
+            SqlConnection cn = new SqlConnection(ConfigurationManager.ConnectionStrings["principalDB"].ConnectionString);
             cn.Open();
 
             //Imprimir en label el numero de facturas activas con una consulta tipo COUNT
-            SqlCommand cmd = new SqlCommand("USE testfacturas; SELECT COUNT(*) FROM registros WHERE estat LIKE 1; ", cn);
+            SqlCommand cmd = new SqlCommand("USE db_mlfacturas; SELECT COUNT(*) FROM registros WHERE estat LIKE 1; ", cn);
 
             lblTotalFacturas.Text = (string)cmd.ExecuteScalar().ToString() + ".";
 
@@ -218,11 +218,11 @@ namespace Proyecto_ML
             graph_cantidad.Clear();
             graph_fecha.Clear();
 
-            SqlConnection cn = new SqlConnection(ConfigurationManager.ConnectionStrings["unica"].ConnectionString);
+            SqlConnection cn = new SqlConnection(ConfigurationManager.ConnectionStrings["principalDB"].ConnectionString);
             cn.Open();
 
             //Usar SqlReader para llenar la gráfica con un proceso almacenado.
-            SqlCommand cmdgraph = new SqlCommand("USE testfacturas; SELECT TOP 4 fecha_cot, COUNT(*) AS cantidad FROM registros WHERE estat = '1' GROUP BY fecha_cot ORDER  BY fecha_cot DESC", cn);
+            SqlCommand cmdgraph = new SqlCommand("USE db_mlfacturas; SELECT TOP 4 fecha_cot, COUNT(*) AS cantidad FROM registros WHERE estat = '1' GROUP BY fecha_cot ORDER  BY fecha_cot DESC", cn);
             SqlDataReader drgraph;
 
             drgraph = cmdgraph.ExecuteReader();
@@ -250,11 +250,11 @@ namespace Proyecto_ML
             graph_cant.Clear();
             graph_raz.Clear();
 
-            SqlConnection cn = new SqlConnection(ConfigurationManager.ConnectionStrings["unica"].ConnectionString);
+            SqlConnection cn = new SqlConnection(ConfigurationManager.ConnectionStrings["principalDB"].ConnectionString);
             cn.Open();
 
             //Usar SqlReader para llenar la gráfica con un proceso almacenado.
-            SqlCommand cmdchartraz = new SqlCommand("USE testfacturas; SELECT TOP 5 ciudad, COUNT(*) AS cantidad FROM registros WHERE estat = '1' GROUP BY ciudad ORDER  BY cantidad DESC", cn);
+            SqlCommand cmdchartraz = new SqlCommand("USE db_mlfacturas; SELECT TOP 5 ciudad, COUNT(*) AS cantidad FROM registros WHERE estat = '1' GROUP BY ciudad ORDER  BY cantidad DESC", cn);
             SqlDataReader drcharrazon;
 
             drcharrazon = cmdchartraz.ExecuteReader();
@@ -273,16 +273,252 @@ namespace Proyecto_ML
 
         private void getlblFecha()
         {
-            lblFecha.Text = DateTime.Now.ToLongDateString()+ ".";
+            lblFecha.Text = DateTime.Today.ToLongDateString()+ ".";
         }
 
         private void FormPricipal_Load(object sender, EventArgs e)
         {
+            SqlConnection cn = new SqlConnection(ConfigurationManager.ConnectionStrings["unica"].ConnectionString);
+            cn.Open();
+
+            SqlCommand ifcommand = new SqlCommand("IF EXISTS (SELECT name FROM master.dbo.sysdatabases WHERE name = N'db_mlfacturas') BEGIN SELECT 'TRUE' AS Message END ELSE BEGIN SELECT 'FALSE' AS Message END", cn);
+            SqlDataReader ifdr = ifcommand.ExecuteReader();
+
+            if (ifdr.Read())
+            {
+                string res = ifdr["Message"].ToString();
+                if (res == "FALSE")
+                {
+                    CrearBD();
+                    //MessageBox.Show("La base de datos fue creada");
+                }
+                else
+                {
+                    //MessageBox.Show("La base de datos ya existe");
+                }
+            }
+
+            ifdr.Close();
+            cn.Close();
+
             lblFacturas();
             graphDate();
             chartEstado();
             getlblFecha();
 
+        }
+
+        public void CrearBD()
+        {
+            string querycreatedb = @"CREATE DATABASE[db_mlfacturas]";
+
+            string querycreatetbs = @"USE [db_mlfacturas]
+            CREATE TABLE[dbo].[folderpath](
+            [id_path][int] IDENTITY(1, 1) NOT NULL,
+            [pathdirectory] [varchar](500) NULL,
+            CONSTRAINT[PK_path] PRIMARY KEY CLUSTERED
+            (
+            [id_path] ASC
+            )WITH(PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON[PRIMARY]
+            ) ON[PRIMARY];
+            
+            CREATE TABLE[dbo].[registros](
+            [id_main][int] IDENTITY(1, 1) NOT NULL,
+            [ot] [varchar](50) NULL,
+            [eco] [varchar](50) NULL,
+            [monto] [varchar](50) NULL,
+            [fecha_cot] [date] NULL,
+            [razon_social] [varchar](100) NULL,
+            [num_factura] [varchar](50) NULL,
+            [conceptos] [varchar](300) NULL,
+            [ciudad] [varchar](50) NULL,
+            [monto_cimpuesto] [varchar](50) NULL,
+            [estat] [varchar](50) NOT NULL,
+            CONSTRAINT[PK_registros] PRIMARY KEY CLUSTERED(
+            [id_main] ASC
+            )WITH(PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON[PRIMARY]
+            ) ON[PRIMARY];";
+
+            string querycreatesp1 = @"
+            CREATE PROCEDURE [dbo].[sp_DeleteRegistroFacturas]
+            @IdMain int = NULL,
+            @OrdenDeTrabajo varchar(50) = NULL,
+            @NumEconomico varchar(50) = NULL,
+            @NumFactura varchar(50) = NULL
+            AS
+            BEGIN
+	            DELETE FROM registros
+                WHERE  (@IdMain IS NULL OR id_main = @IdMain) AND
+			            (@OrdenDeTrabajo IS NULL OR ot = @OrdenDeTrabajo) AND
+			            (@NumEconomico IS NULL OR eco = @NumEconomico) AND
+			            (@NumFactura IS NULL OR num_factura = @NumFactura)
+
+            END";
+
+            string querycreatesp2 = @"
+            CREATE PROCEDURE [dbo].[sp_InsertRegistroFacturas]
+            @OrdenDeTrabajo varchar(50),
+            @NumEconomico varchar(50),
+            @Monto varchar(50),
+            @FechaCot date = NULL,
+            @RazonSocial varchar(100),
+            @NumFactura varchar(50),
+            @Conceptos varchar(300),
+            @Ciudad varchar(50),
+            @MontoCImpuesto varchar(50)
+            AS
+            BEGIN
+                INSERT INTO registros
+                (ot, eco, monto, fecha_cot, razon_social, num_factura, conceptos, ciudad, monto_cimpuesto, estat)
+                VALUES
+                (@OrdenDeTrabajo, @NumEconomico, @Monto, @FechaCot, @RazonSocial, @NumFactura, @Conceptos, @Ciudad, @MontoCImpuesto, '1')
+            END";
+
+            string querycreatesp3 = @"
+            CREATE PROCEDURE[dbo].[sp_PreviewRegistroFacturas]
+            @IdMain varchar(50) = NULL,
+            @OrdenDeTrabajo varchar(50) = NULL,
+            @NumEconomico varchar(50) = NULL,
+            @NumFactura varchar(50) = NULL
+            AS
+            BEGIN
+                SELECT* FROM registros
+                WHERE(@IdMain IS NULL OR id_main = @IdMain) AND
+                     (@OrdenDeTrabajo IS NULL OR ot = @OrdenDeTrabajo) AND
+                     (@NumEconomico IS NULL OR eco = @NumEconomico) AND
+                     (@NumFactura IS NULL OR num_factura = @NumFactura)
+            END";
+
+            string querycreatesp4 = @"
+            CREATE PROCEDURE[dbo].[sp_SelectPathFolder]
+            AS
+            BEGIN
+                SELECT(pathdirectory) FROM folderpath
+                WHERE(id_path = '1')
+            END";
+
+            string querycreatesp5 = @"
+            CREATE PROCEDURE[dbo].[sp_SelectRegistroFacturas]
+            @IdMain varchar(50) = NULL,
+            @OrdenDeTrabajo varchar(50) = NULL,
+            @NumEconomico varchar(50) = NULL,
+            @Monto varchar(50) = NULL,
+            @FechaCot varchar(50) = NULL,
+            @RazonSocial varchar(100) = NULL,
+            @NumFactura varchar(50) = NULL,
+            @Conceptos varchar(300) = NULL,
+            @Ciudad varchar(50) = NULL,
+            @MontoCImpuesto varchar(50) = NULL,
+            @Estatus varchar(50) = NULL
+            AS
+            BEGIN
+                SELECT
+                    id_main AS 'ID PRINCIPAL',
+                    ot AS 'ORDEN DE TRABAJO' ,
+                    eco AS 'NUMERO ECONOMICO',
+                    monto AS MONTO,
+                    fecha_cot AS 'FECHA COTIZACION',
+                    razon_social AS 'RAZON SOCIAL',
+                    num_factura AS 'NUMERO DE FACTURA',
+                    conceptos AS CONCEPTOS,
+                    ciudad AS ESTADO,
+                    monto_cimpuesto AS 'MONTO CON IMPUESTO',
+                    estat AS ESTATUS
+                FROM registros
+                    WHERE(@IdMain IS NULL OR id_main LIKE @IdMain + '%') AND
+                         (@OrdenDeTrabajo IS NULL OR ot LIKE @OrdenDeTrabajo + '%') AND
+                         (@NumEconomico IS NULL OR eco LIKE @NumEconomico + '%') AND
+                         (@Monto IS NULL OR monto LIKE @Monto + '%') AND
+                         (@FechaCot IS NULL OR fecha_cot = @FechaCot) AND
+                         (@RazonSocial IS NULL OR razon_social LIKE @RazonSocial + '%') AND
+                         (@NumFactura IS NULL OR num_factura LIKE @NumFactura + '%') AND
+                         (@Conceptos IS NULL OR conceptos LIKE @Conceptos + '%') AND
+                         (@Ciudad IS NULL OR ciudad LIKE @Ciudad + '%') AND
+                         (@MontoCImpuesto IS NULL OR monto_cimpuesto LIKE @MontoCImpuesto + '%') AND
+                         (@Estatus IS NULL OR estat LIKE @Estatus)
+            END";
+
+            string querycreatesp6 = @"
+            CREATE PROCEDURE[dbo].[sp_UpdateFolderPath]
+            @DirectoryPath varchar(500)
+            AS
+            BEGIN
+                UPDATE folderpath
+                    SET pathdirectory = @DirectoryPath
+                        WHERE id_path = '1'
+            END";
+
+            string querycreatesp7 = @"
+            CREATE PROCEDURE[dbo].[sp_UpdateRegistroFacturas]
+            @IdMain int,
+            @OrdenDeTrabajo varchar(50),
+            @NumEconomico varchar(50),
+            @Monto varchar(50),
+            @FechaCot date,
+            @RazonSocial varchar(100),
+            @NumFactura varchar(50),
+            @Conceptos varchar(300),
+            @Ciudad varchar(50),
+            @MontoCImpuesto varchar(50),
+            @Estatus varchar(50)
+            AS
+            BEGIN
+                UPDATE registros
+                    SET ot = @OrdenDeTrabajo,
+                        eco = @NumEconomico,
+                        monto = @Monto,
+                        fecha_cot = @FechaCot,
+                        razon_social = @RazonSocial,
+                        num_factura = @NumFactura,
+                        conceptos = @Conceptos,
+                        ciudad = @Ciudad,
+                        monto_cimpuesto = @MontoCImpuesto,
+                        estat = @Estatus
+                    WHERE id_main = @IdMain
+            END";
+
+            string querydefaultinsertfolderpath = @"
+            INSERT INTO[dbo].[folderpath]
+                ([pathdirectory])
+            VALUES
+                ('Seleccione un directorio')";
+            
+
+            SqlConnection cn = new SqlConnection(ConfigurationManager.ConnectionStrings["unica"].ConnectionString);
+            cn.Open();
+
+            SqlCommand createdbcommand = new SqlCommand(querycreatedb, cn);
+            createdbcommand.ExecuteNonQuery();
+
+            SqlCommand createtbscommand = new SqlCommand(querycreatetbs, cn);
+            createtbscommand.ExecuteNonQuery();
+
+            SqlCommand createSP1command = new SqlCommand(querycreatesp1, cn);
+            createSP1command.ExecuteNonQuery();
+
+            SqlCommand createSP2command = new SqlCommand(querycreatesp2, cn);
+            createSP2command.ExecuteNonQuery();
+
+            SqlCommand createSP3command = new SqlCommand(querycreatesp3, cn);
+            createSP3command.ExecuteNonQuery();
+
+            SqlCommand createSP4command = new SqlCommand(querycreatesp4, cn);
+            createSP4command.ExecuteNonQuery();
+
+            SqlCommand createSP5command = new SqlCommand(querycreatesp5, cn);
+            createSP5command.ExecuteNonQuery();
+
+            SqlCommand createSP6command = new SqlCommand(querycreatesp6, cn);
+            createSP6command.ExecuteNonQuery();
+
+            SqlCommand createSP7command = new SqlCommand(querycreatesp7, cn);
+            createSP7command.ExecuteNonQuery();
+
+            SqlCommand insertdefaultpathcommand = new SqlCommand(querydefaultinsertfolderpath, cn);
+            insertdefaultpathcommand.ExecuteNonQuery();
+            
+
+            cn.Close();
         }
     }
 }
